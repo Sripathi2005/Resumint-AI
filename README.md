@@ -1,4 +1,4 @@
-# CareerMatch AI 🚀
+# Resumint AI 🚀
 ### AI-Powered Resume Analyzer, Job Recommendation & Career-Readiness Platform
 
 [![Python](https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.12-blue?logo=python&logoColor=white)](https://www.python.org/)
@@ -8,15 +8,15 @@
 [![Bootstrap](https://img.shields.io/badge/Frontend-Bootstrap%205-purple?logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-**CareerMatch AI** is a production-ready, privacy-focused web application designed to help job seekers, students, and career switchers bridge the gap between their current skills and industry expectations. 
+**Resumint AI** is a production-ready, privacy-focused web application designed to help job seekers, students, and career switchers bridge the gap between their current skills and industry expectations. 
 
-Powered by natural language processing (NLP), hybrid semantic text similarity, and a dataset of real Kaggle tech job postings, CareerMatch AI provides explainable job recommendations, single-job benchmark comparisons, and personalized sequential career roadmaps.
+Powered by natural language processing (NLP), hybrid semantic text similarity, and a dataset of real Kaggle tech job postings, Resumint AI provides explainable job recommendations, single-job benchmark comparisons, and personalized sequential career roadmaps.
 
 ---
 
 ## 🌟 Core Features
 
-CareerMatch AI features three distinct, independent workflows:
+Resumint AI features three distinct, independent workflows:
 
 ### 1. 📄 Analyze Resume – General Job Recommendations
 * **Automated Skill Extraction**: Uses regular expression boundary parsing and NLP normalization to identify **230+ technical skills**, **18 soft skills**, and degree/academic credentials from uploaded PDF resumes (handling complex symbols like `C++`, `C#`, and `.NET` accurately).
@@ -62,7 +62,7 @@ CareerMatch AI features three distinct, independent workflows:
 ## 📂 Project Directory Structure
 
 ```text
-CareerMatch-AI/
+Resumint-AI/
 ├── app.py                      # Core Flask application, routes, and error handlers
 ├── database.py                 # SQLite database access layer (analyses & applications)
 ├── requirements.txt            # Clean production Python dependencies
@@ -114,8 +114,8 @@ CareerMatch-AI/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/Sripathi2005/CareerMatch-AI.git
-cd CareerMatch-AI
+git clone https://github.com/Sripathi2005/Resumint-AI.git
+cd Resumint-AI
 ```
 
 ### 2. Create and Activate a Virtual Environment
@@ -171,7 +171,7 @@ python tests/eval_matching.py
 ### Deploy to Render.com (Recommended — Free)
 1. Fork or push this repository to your GitHub account.
 2. Sign in to [Render](https://render.com) and click **New +** → **Web Service**.
-3. Connect your `CareerMatch-AI` repository.
+3. Connect your `Resumint-AI` repository.
 4. Set the configuration:
    - **Environment**: `Python 3`
    - **Build Command**: `pip install -r requirements.txt`
@@ -183,10 +183,10 @@ python tests/eval_matching.py
 ### Deploy with Docker
 ```bash
 # Build the Docker container
-docker build -t careermatch-ai .
+docker build -t resumint-ai .
 
 # Run the container
-docker run -d -p 5000:5000 -e SECRET_KEY="your-secret-key" --name careermatch careermatch-ai
+docker run -d -p 5000:5000 -e SECRET_KEY="your-secret-key" --name resumint resumint-ai
 ```
 
 ---
@@ -201,7 +201,7 @@ docker run -d -p 5000:5000 -e SECRET_KEY="your-secret-key" --name careermatch ca
 
 ## 👨‍💻 Author & Contributions
 
-* **Repository**: [https://github.com/Sripathi2005/CareerMatch-AI](https://github.com/Sripathi2005/CareerMatch-AI)
+* **Repository**: [https://github.com/Sripathi2005/Resumint-AI](https://github.com/Sripathi2005/Resumint-AI)
 * **Author**: Sripathi ([@Sripathi2005](https://github.com/Sripathi2005))
 * Contributions, issues, and feature requests are welcome! Feel free to open an issue or submit a pull request.
 
