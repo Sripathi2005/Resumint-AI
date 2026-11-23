@@ -1,0 +1,178 @@
+{% extends "base.html" %}
+
+{% block title %}Compare Resume Against {{ job.title }} ({{ job.job_id }}) - AI Resume Analyzer{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center py-2">
+  <div class="col-lg-9">
+
+    <!-- Back Navigation -->
+    <div class="mb-3">
+      <a href="{{ url_for('jobs_catalog') }}" class="btn btn-sm btn-outline-secondary shadow-xs">
+        <i class="bi bi-arrow-left me-1"></i> Back to Explore Job Benchmarks
+      </a>
+    </div>
+
+    <!-- Selected Job Benchmark Card -->
+    <div class="card card-elevated p-4 p-md-5 mb-4 bg-white border-0">
+      <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-3">
+        <div>
+          <div class="d-flex align-items-center gap-2 mb-2 flex-wrap">
+            <span class="badge bg-secondary-subtle text-secondary border fw-semibold">{{ job.job_id }}</span>
+            <span class="badge bg-primary-subtle text-primary border border-primary-subtle fw-semibold">{{ job.category }}</span>
+            <span class="badge bg-light text-dark border">{{ job.experience_level }}</span>
+            {% if job.company %}
+              <span class="badge bg-info-subtle text-info-emphasis border border-info-subtle">
+                <i class="bi bi-building me-1"></i>{{ job.company }}
+              </span>
+            {% else %}
+              <span class="badge bg-light text-muted border">
+                <i class="bi bi-building me-1"></i>Industry Benchmark
+              </span>
+            {% endif %}
+          </div>
+          <h2 class="h3 fw-bold text-dark mb-1">{{ job.title }}</h2>
+          <p class="text-muted small mb-0">
+            Selected benchmark job posting for candidate qualification and skill-gap evaluation.
+          </p>
+        </div>
+        <a href="{{ url_for('roles_explorer', role=job.title) }}" class="btn btn-sm btn-outline-primary" target="_blank" title="Explore role overview and career roadmap">
+          <i class="bi bi-map me-1"></i> View Role Guide
+        </a>
+      </div>
+
+      <!-- Job Description -->
+      <div class="mb-4">
+        <label class="form-label fw-bold small text-muted text-uppercase mb-2" style="letter-spacing: 0.05em;">
+          <i class="bi bi-file-text me-1 text-primary"></i> Job Description
+        </label>
+        <div class="p-3 bg-light rounded-3 text-secondary lh-base small">
+          {{ job.description }}
+        </div>
+      </div>
+
+      <!-- Required Skills -->
+      <div class="mb-3">
+        <label class="form-label fw-bold small text-muted text-uppercase mb-2" style="letter-spacing: 0.05em;">
+          <i class="bi bi-check2-circle me-1 text-success"></i> Required Skills ({{ job.required_skills|length }})
+        </label>
+        <div class="d-flex flex-wrap gap-1">
+          {% for sk in job.required_skills %}
+            <span class="badge-matched">{{ sk }}</span>
+          {% endfor %}
+        </div>
+      </div>
+
+      <!-- Preferred Skills -->
+      {% if job.preferred_skills %}
+      <div class="mb-0">
+        <label class="form-label fw-bold small text-muted text-uppercase mb-2" style="letter-spacing: 0.05em;">
+          <i class="bi bi-stars me-1 text-primary"></i> Preferred / Nice-to-Have Skills
+        </label>
+        <div class="d-flex flex-wrap gap-1">
+          {% for sk in job.preferred_skills %}
+            <span class="badge-skill">{{ sk }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+    </div>
+
+    <!-- Resume Upload Card -->
+    <div class="card card-elevated p-4 p-md-5 mb-4 border-0" style="background: linear-gradient(180deg, #ffffff 0%, #fbfcfe 100%);">
+      <div class="text-center mb-4">
+        <div class="hero-badge mb-2">
+          <i class="bi bi-bullseye text-primary"></i> Feature 2 &middot; Job-Specific Benchmark Comparison
+        </div>
+        <h3 class="h4 fw-bold text-dark mb-1">
+          Upload Your Resume to Compare Against This Job
+        </h3>
+        <p class="text-muted small mx-auto mb-0" style="max-width: 580px;">
+          Your resume will be evaluated strictly against <strong>{{ job.title }}</strong> ({{ job.job_id }}).
+          We will identify your exact matched skills, missing skills, and tailored learning resources.
+        </p>
+      </div>
+
+      <form action="{{ url_for('compare_job', job_id=job.job_id) }}" method="POST" enctype="multipart/form-data" id="compareForm">
+
+        <!-- File Upload Area -->
+        <div class="mb-4">
+          <div class="dropzone-box" id="dropzoneBox" onclick="document.getElementById('resumeFile').click();">
+            <div class="dropzone-icon-circle">
+              <i class="bi bi-cloud-arrow-up-fill"></i>
+            </div>
+            <span class="fw-bold text-dark fs-5 d-block mb-1" id="file-label">
+              Click to select PDF resume or drag and drop
+            </span>
+            <span class="text-muted small d-block">
+              Upload PDF format (max 5 MB). Readable text layer required.
+            </span>
+            <input type="file" class="d-none" id="resumeFile" name="resume" accept=".pdf" required
+              onchange="handleFileChange(this)">
+          </div>
+          <div class="form-text text-muted small mt-2 d-flex align-items-center gap-1">
+            <i class="bi bi-info-circle text-primary"></i>
+            <span>This comparison does not recommend other jobs. It evaluates your current preparation for this specific role.</span>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="d-grid pt-1">
+          <button type="submit" class="btn btn-primary btn-lg fw-semibold shadow-sm" id="submitBtn">
+            <i class="bi bi-bullseye me-2"></i> Compare Resume Against This Job
+          </button>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  function handleFileChange(input) {
+    const label = document.getElementById('file-label');
+    if (input.files && input.files[0]) {
+      const file = input.files[0];
+      label.innerHTML = `<i class="bi bi-file-earmark-pdf-fill text-danger me-2"></i> ${file.name} <span class="badge bg-secondary-subtle text-secondary ms-2">${(file.size / 1024).toFixed(1)} KB</span>`;
+    }
+  }
+
+  const dropzone = document.getElementById('dropzoneBox');
+  const fileInput = document.getElementById('resumeFile');
+
+  ['dragenter', 'dragover'].forEach(eventName => {
+    dropzone.addEventListener(eventName, (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      dropzone.classList.add('dragover');
+    }, false);
+  });
+
+  ['dragleave', 'drop'].forEach(eventName => {
+    dropzone.addEventListener(eventName, (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      dropzone.classList.remove('dragover');
+    }, false);
+  });
+
+  dropzone.addEventListener('drop', (e) => {
+    const dt = e.dataTransfer;
+    const files = dt.files;
+    if (files && files.length > 0) {
+      fileInput.files = files;
+      handleFileChange(fileInput);
+    }
+  }, false);
+
+  document.getElementById('compareForm').addEventListener('submit', function () {
+    const btn = document.getElementById('submitBtn');
+    btn.disabled = true;
+    btn.innerHTML = `<span class="spinner-border spinner-border-sm me-2" role="status"></span> Extracting Skills &amp; Comparing Against Job Requirements...`;
+  });
+</script>
+{% endblock %}
+

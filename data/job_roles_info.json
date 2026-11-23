@@ -1,0 +1,2892 @@
+{
+  "Python Developer": {
+    "title": "Python Developer",
+    "slug": "python-developer",
+    "category": "Software Engineering",
+    "beginner_summary": "A Python Developer uses the Python programming language to build web backends, APIs, data automation scripts, and server applications cleanly and quickly.",
+    "overview": "Python Developers power server-side web apps, REST APIs, and workflow automation using Python's clean syntax and mature web frameworks like Django, Flask, and FastAPI.",
+    "what_they_do": "Think of a web app or mobile app: whenever you log in, save a form, or request data, a Python Developer wrote the backend code running on the server that processes that request, talks to the database, and returns the response.",
+    "day_to_day_responsibilities": [
+      "Build and maintain server-side applications and business logic.",
+      "Design and manage databases (SQL or NoSQL).",
+      "Create and maintain scalable APIs for the frontend to consume.",
+      "Manage application security and data protection.",
+      "Write clean, readable Python code for APIs, backend features, and automation scripts.",
+      "Build and maintain web services using frameworks like Django, Flask, or FastAPI."
+    ],
+    "technical_skills": {
+      "core_skills": [
+        "Python",
+        "Django",
+        "Flask",
+        "Git",
+        "MySQL",
+        "REST API",
+        "PostgreSQL",
+        "Pytest",
+        "CSS3",
+        "Docker"
+      ],
+      "languages_frameworks_tools": {
+        "languages": [
+          "Python",
+          "SQL",
+          "HTML5",
+          "CSS3",
+          "Bash"
+        ],
+        "frameworks_libraries": [
+          "Django",
+          "Flask",
+          "FastAPI",
+          "Pytest",
+          "Celery"
+        ],
+        "databases_data": [
+          "PostgreSQL",
+          "MySQL",
+          "SQLite",
+          "Redis"
+        ],
+        "tools_platforms": [
+          "Git",
+          "Docker",
+          "REST API",
+          "Linux",
+          "AWS"
+        ]
+      }
+    },
+    "soft_skills": [
+      "Problem Solving",
+      "Analytical Thinking",
+      "Communication",
+      "Collaboration",
+      "Attention to Detail"
+    ],
+    "qualifications": {
+      "education": "Bachelor's in Computer Science",
+      "typical_experience": "0–2 years for entry/junior; varies by seniority",
+      "salary_benchmark": "$65-120K (US benchmark from Kaggle job_roles.csv)",
+      "expectations": [
+        "BS in CS.",
+        "Expertise in backend languages (e.g., Java, Python, Node.js, Go) and database design."
+      ],
+      "helpful_certifications": [
+        "freeCodeCamp Scientific Computing with Python",
+        "PCAP Certified Associate in Python Programming",
+        "AWS Certified Cloud Practitioner"
+      ]
+    },
+    "career_growth": [
+      "Junior Python Developer (0–2 yrs): Focus on Python fundamentals, Django/Flask APIs, SQL, and Git workflows.",
+      "Mid-Level Python / Backend Engineer (2–5 yrs): Own full services, caching (Redis), async queues, Docker, and cloud deployment.",
+      "Senior Python / Staff Engineer (5+ yrs): Design distributed microservices, mentor developers, and set architecture standards.",
+      "Adjacent Paths: Backend Developer, Full Stack Developer, Data Engineer, or ML Engineer."
+    ],
+    "learning_roadmap": [
+      {
+        "stage": 1,
+        "title": "Python Core & Version Control",
+        "duration": "4–6 weeks",
+        "description": "Master Python syntax, data structures, OOP, virtual environments, and Git collaboration.",
+        "skills": [
+          "Python",
+          "Git"
+        ]
+      },
+      {
+        "stage": 2,
+        "title": "Databases & Web Fundamentals",
+        "duration": "3–4 weeks",
+        "description": "Learn relational database design, SQL querying, HTTP fundamentals, and REST APIs.",
+        "skills": [
+          "SQL",
+          "PostgreSQL",
+          "REST API"
+        ]
+      },
+      {
+        "stage": 3,
+        "title": "Python Web Frameworks",
+        "duration": "4–6 weeks",
+        "description": "Build full backend APIs with Django and high-speed services with FastAPI or Flask.",
+        "skills": [
+          "Django",
+          "FastAPI",
+          "Flask"
+        ]
+      },
+      {
+        "stage": 4,
+        "title": "Testing, Containers & Deployment",
+        "duration": "3–4 weeks",
+        "description": "Automate testing with Pytest, containerize with Docker, and deploy on Linux/AWS.",
+        "skills": [
+          "Pytest",
+          "Docker",
+          "Linux",
+          "AWS"
+        ]
+      }
+    ],
+    "data_sources": [
+      "Kaggle job_description.csv",
+      "Kaggle job_roles.csv",
+      "Kaggle job_roles.csv + job_title_des.csv",
+      "Kaggle job_title_des.csv",
+      "Kaggle job_title_des.csv + job_roles.csv"
+    ]
+  },
+  "Java Developer": {
+    "title": "Java Developer",
+    "slug": "java-developer",
+    "category": "Software Engineering",
+    "beginner_summary": "A Java Developer builds reliable, large-scale enterprise software, banking backends, and cloud microservices using Java and the Spring Boot ecosystem.",
+    "overview": "Java remains one of the world's most trusted languages for mission-critical backends, e-commerce platforms, and financial systems thanks to strong typing, performance, and Spring Boot.",
+    "what_they_do": "Java Developers turn business requirements into structured object-oriented backend services that handle thousands of concurrent users reliably—connecting APIs, enterprise databases, and message queues.",
+    "day_to_day_responsibilities": [
+      "Build and maintain server-side applications and business logic.",
+      "Design and manage databases (SQL or NoSQL).",
+      "Create and maintain scalable APIs for the frontend to consume.",
+      "Manage application security and data protection.",
+      "Build RESTful APIs and microservices using Java and Spring Boot.",
+      "Map Java objects to relational databases with Hibernate/JPA and optimize SQL queries."
+    ],
+    "technical_skills": {
+      "core_skills": [
+        "Java",
+        "Spring Boot",
+        "SQL",
+        "Spring Framework",
+        "Hibernate",
+        "REST API",
+        "Git",
+        "Maven",
+        "Microservices",
+        "Apache Kafka"
+      ],
+      "languages_frameworks_tools": {
+        "languages": [
+          "Java",
+          "SQL"
+        ],
+        "frameworks_libraries": [
+          "Spring Boot",
+          "Spring Framework",
+          "Hibernate",
+          "JUnit"
+        ],
+        "databases_data": [
+          "PostgreSQL",
+          "MySQL",
+          "Oracle Database",
+          "Redis"
+        ],
+        "tools_platforms": [
+          "Maven",
+          "Gradle",
+          "Docker",
+          "Git",
+          "Kafka",
+          "REST API"
+        ]
+      }
+    },
+    "soft_skills": [
+      "Problem Solving",
+      "Attention to Detail",
+      "Teamwork",
+      "Communication",
+      "Analytical Thinking"
+    ],
+    "qualifications": {
+      "education": "Bachelor's in Computer Science",
+      "typical_experience": "0–2 years for entry/junior; varies by seniority",
+      "salary_benchmark": "$75-135K (US benchmark from Kaggle job_roles.csv)",
+      "expectations": [
+        "BS in CS.",
+        "Expertise in backend languages (e.g., Java, Python, Node.js, Go) and database design."
+      ],
+      "helpful_certifications": [
+        "Oracle Certified Professional: Java SE Developer",
+        "VMware Spring Certified Professional",
+        "AWS Certified Developer"
+      ]
+    },
+    "career_growth": [
+      "Junior Java Developer (0–2 yrs): Build Spring Boot CRUD APIs, SQL integrations, and JUnit tests.",
+      "Java Backend / Microservices Engineer (2–5 yrs): Work with Kafka event streaming, Docker/Kubernetes, and distributed caching.",
+      "Senior Java Engineer / Solutions Architect (5+ yrs): Lead enterprise architecture and high-throughput system design.",
+      "Adjacent Paths: Backend Developer, Software Engineer, Cloud Architect, Android Kotlin Developer."
+    ],
+    "learning_roadmap": [
+      {
+        "stage": 1,
+        "title": "Core Java & OOP Foundations",
+        "duration": "5–7 weeks",
+        "description": "Master Java syntax, OOP design, collections, streams, exception handling, and Git.",
+        "skills": [
+          "Java",
+          "Git"
+        ]
+      },
+      {
+        "stage": 2,
+        "title": "SQL & Build Tooling",
+        "duration": "3–4 weeks",
+        "description": "Learn relational database modeling, SQL queries, and dependency builds with Maven.",
+        "skills": [
+          "SQL",
+          "PostgreSQL",
+          "Maven"
+        ]
+      },
+      {
+        "stage": 3,
+        "title": "Spring Boot & APIs",
+        "duration": "5–6 weeks",
+        "description": "Build production REST APIs, authentication, and database access using Spring Boot and Hibernate.",
+        "skills": [
+          "Spring Boot",
+          "Hibernate",
+          "REST API"
+        ]
+      },
+      {
+        "stage": 4,
+        "title": "Testing, Microservices & Containers",
+        "duration": "4 weeks",
+        "description": "Verify reliability with JUnit and scale distributed services using Docker and Microservices.",
+        "skills": [
+          "JUnit",
+          "Docker",
+          "Microservices"
+        ]
+      }
+    ],
+    "data_sources": [
+      "Kaggle job_description.csv",
+      "Kaggle job_roles.csv",
+      "Kaggle job_roles.csv (Java Backend Developer)",
+      "Kaggle job_roles.csv + job_title_des.csv",
+      "Kaggle job_title_des.csv",
+      "Kaggle job_title_des.csv + job_roles.csv"
+    ]
+  },
+  "Full Stack Developer": {
+    "title": "Full Stack Developer",
+    "slug": "full-stack-developer",
+    "category": "Web Development",
+    "beginner_summary": "A Full Stack Developer builds both the visible frontend website users click on and the behind-the-scenes backend server and database.",
+    "overview": "Full Stack Developers bridge user experience and server architecture—capable of taking an entire web product from UI layout all the way to API logic, database storage, and cloud hosting.",
+    "what_they_do": "In a single feature—like adding a shopping cart or user dashboard—a Full Stack Developer creates the interactive React UI in the browser, builds the Node.js or Python API endpoints, stores the items in PostgreSQL/MongoDB, and deploys everything online.",
+    "day_to_day_responsibilities": [
+      "Design and build complete web applications from end to end.",
+      "Manage database, server, API, and client-side UI.",
+      "Work across the entire software stack to solve problems.",
+      "Build interactive frontend components with React or TypeScript plus responsive HTML5/CSS3.",
+      "Create RESTful backend endpoints using Node.js/Express or Python/Django.",
+      "Design and query relational (PostgreSQL/MySQL) or NoSQL (MongoDB) databases."
+    ],
+    "technical_skills": {
+      "core_skills": [
+        "React",
+        "JavaScript",
+        "Node.js",
+        "HTML5",
+        "Angular",
+        "CSS3",
+        "Django",
+        "MongoDB",
+        "Python",
+        "REST API"
+      ],
+      "languages_frameworks_tools": {
+        "languages": [
+          "JavaScript",
+          "TypeScript",
+          "Python",
+          "HTML5",
+          "CSS3",
+          "SQL"
+        ],
+        "frameworks_libraries": [
+          "React",
+          "Next.js",
+          "Node.js",
+          "Express.js",
+          "Django",
+          "Tailwind CSS"
+        ],
+        "databases_data": [
+          "PostgreSQL",
+          "MongoDB",
+          "MySQL",
+          "Redis"
+        ],
+        "tools_platforms": [
+          "Git",
+          "REST API",
+          "Docker",
+          "AWS",
+          "CI/CD"
+        ]
+      }
+    },
+    "soft_skills": [
+      "Problem Solving",
+      "Adaptability",
+      "Communication",
+      "Collaboration",
+      "Time Management"
+    ],
+    "qualifications": {
+      "education": "Diploma in IT or Bachelor's in Computer Science",
+      "typical_experience": "0–2 years for entry/junior; varies by seniority",
+      "salary_benchmark": "$75-140K (US benchmark from Kaggle job_roles.csv)",
+      "expectations": [
+        "BS in CS.",
+        "Proficiency in both frontend (JS framework) and backend (e.g., Node.js, Python) technologies."
+      ],
+      "helpful_certifications": [
+        "Meta Front-End / Back-End Developer Certificate",
+        "freeCodeCamp Full Stack Curriculum",
+        "AWS Cloud Practitioner"
+      ]
+    },
+    "career_growth": [
+      "Junior Full Stack Developer (0–2 yrs): Ship web features across HTML/CSS/React and Node.js or Python APIs.",
+      "Mid-Level Full Stack Engineer (2–5 yrs): Own product modules end-to-end including database tuning, auth, TypeScript, and Docker.",
+      "Lead Engineer / Technical Architect (5+ yrs): Guide product architecture, performance, and cross-functional teams.",
+      "Adjacent Paths: Frontend Developer, Backend Developer, Software Engineer, Tech Lead."
+    ],
+    "learning_roadmap": [
+      {
+        "stage": 1,
+        "title": "Web Basics & JavaScript",
+        "duration": "4–6 weeks",
+        "description": "Learn semantic HTML5, modern CSS3 layouts, core JavaScript, and Git.",
+        "skills": [
+          "HTML5",
+          "CSS3",
+          "JavaScript",
+          "Git"
+        ]
+      },
+      {
+        "stage": 2,
+        "title": "Modern Frontend Framework",
+        "duration": "5–6 weeks",
+        "description": "Build dynamic interactive interfaces with React and strong typing with TypeScript.",
+        "skills": [
+          "React",
+          "TypeScript"
+        ]
+      },
+      {
+        "stage": 3,
+        "title": "Backend APIs & Databases",
+        "duration": "5–6 weeks",
+        "description": "Build REST APIs with Node.js/Express or Python/Django backed by PostgreSQL or MongoDB.",
+        "skills": [
+          "Node.js",
+          "Express.js",
+          "SQL",
+          "PostgreSQL",
+          "REST API"
+        ]
+      },
+      {
+        "stage": 4,
+        "title": "Containers & Cloud Deployment",
+        "duration": "3–4 weeks",
+        "description": "Deploy full-stack apps reliably using Docker, CI/CD, and cloud hosting.",
+        "skills": [
+          "Docker",
+          "AWS",
+          "CI/CD"
+        ]
+      }
+    ],
+    "data_sources": [
+      "Kaggle job_description.csv",
+      "Kaggle job_description.csv + job_roles.csv",
+      "Kaggle job_roles.csv",
+      "Kaggle job_title_des.csv",
+      "Kaggle resume_data.csv",
+      "Kaggle resume_data.csv + job_roles.csv"
+    ]
+  },
+  "Frontend Developer": {
+    "title": "Frontend Developer",
+    "slug": "frontend-developer",
+    "category": "Web Development",
+    "beginner_summary": "A Frontend Developer crafts everything users see and interact with in a web browser—layouts, buttons, animations, forms, and fast responsive pages.",
+    "overview": "Frontend Developers bring designs to life in browsers on laptops and phones. They combine visual polish with JavaScript engineering so websites feel snappy, intuitive, and accessible.",
+    "what_they_do": "Working closely with UI/UX designers and backend teams, Frontend Developers turn Figma mockups into responsive HTML/CSS/React code and connect UI state to live backend APIs.",
+    "day_to_day_responsibilities": [
+      "Translate UI/UX designs into functional, responsive web pages using HTML, CSS, and JavaScript.",
+      "Build and maintain user interfaces using frameworks like React, Angular, or Vue.",
+      "Optimize applications for speed and cross-browser compatibility.",
+      "Translate UI/UX wireframes into responsive, accessible HTML5 and CSS3 components.",
+      "Build interactive single-page applications in React, TypeScript, Angular, or Next.js.",
+      "Connect frontend views to backend REST or GraphQL APIs and manage application state."
+    ],
+    "technical_skills": {
+      "core_skills": [
+        "CSS3",
+        "HTML5",
+        "JavaScript",
+        "Angular",
+        "React",
+        "TypeScript",
+        "Git",
+        "Redux",
+        "Responsive Design",
+        "Vue.js"
+      ],
+      "languages_frameworks_tools": {
+        "languages": [
+          "JavaScript",
+          "TypeScript",
+          "HTML5",
+          "CSS3"
+        ],
+        "frameworks_libraries": [
+          "React",
+          "Next.js",
+          "Angular",
+          "Vue.js",
+          "Tailwind CSS",
+          "Redux"
+        ],
+        "databases_data": [
+          "REST API",
+          "GraphQL",
+          "JSON"
+        ],
+        "tools_platforms": [
+          "Git",
+          "Figma",
+          "Jest",
+          "Responsive Design"
+        ]
+      }
+    },
+    "soft_skills": [
+      "Attention to Detail",
+      "Communication",
+      "Collaboration",
+      "Problem Solving",
+      "Adaptability"
+    ],
+    "qualifications": {
+      "education": "Diploma in IT or Bachelor's in Computer Science",
+      "typical_experience": "0–2 years for entry/junior; varies by seniority",
+      "salary_benchmark": "$70-130K (US benchmark from Kaggle job_roles.csv)",
+      "expectations": [
+        "BS in CS.",
+        "Expertise in JavaScript, HTML5, CSS3, and modern JS frameworks."
+      ],
+      "helpful_certifications": [
+        "Meta Front-End Developer Professional Certificate",
+        "freeCodeCamp Front End Development Libraries"
+      ]
+    },
+    "career_growth": [
+      "Junior Frontend Developer (0–2 yrs): Master HTML/CSS, JavaScript, Responsive Design, and React components.",
+      "Mid-Level Frontend Engineer (2–5 yrs): Lead TypeScript architecture, Next.js SSR, state management, and web performance.",
+      "Senior / Staff Frontend Architect (5+ yrs): Build company design systems and micro-frontends.",
+      "Adjacent Paths: Full Stack Developer, UI/UX Designer, Mobile Developer (React Native)."
+    ],
+    "learning_roadmap": [
+      {
+        "stage": 1,
+        "title": "HTML, CSS & Responsive Web",
+        "duration": "3–4 weeks",
+        "description": "Master Flexbox, Grid, accessibility, Responsive Design, and Tailwind CSS.",
+        "skills": [
+          "HTML5",
+          "CSS3",
+          "Responsive Design",
+          "Tailwind CSS"
+        ]
+      },
+      {
+        "stage": 2,
+        "title": "Core JavaScript & Git",
+        "duration": "4–5 weeks",
+        "description": "Understand DOM manipulation, async/await, Fetch APIs, ES6+, and Git workflows.",
+        "skills": [
+          "JavaScript",
+          "Git"
+        ]
+      },
+      {
+        "stage": 3,
+        "title": "React & TypeScript",
+        "duration": "5–6 weeks",
+        "description": "Build reusable components, state/hooks, and type-safe web apps with React and TypeScript.",
+        "skills": [
+          "React",
+          "TypeScript",
+          "REST API"
+        ]
+      },
+      {
+        "stage": 4,
+        "title": "Production Next.js & Testing",
+        "duration": "3–4 weeks",
+        "description": "Add SSR/routing with Next.js, component testing with Jest, and UI collaboration via Figma.",
+        "skills": [
+          "Next.js",
+          "Jest",
+          "Figma"
+        ]
+      }
+    ],
+    "data_sources": [
+      "Kaggle job_description.csv",
+      "Kaggle job_description.csv + job_roles.csv",
+      "Kaggle job_roles.csv",
+      "Kaggle job_roles.csv (React Developer)",
+      "Kaggle job_title_des.csv",
+      "Kaggle job_title_des.csv + job_roles.csv"
+    ]
+  },
+  "Backend Developer": {
+    "title": "Backend Developer",
+    "slug": "backend-developer",
+    "category": "Software Engineering",
+    "beginner_summary": "A Backend Developer builds the invisible engine behind websites and apps—servers, APIs, business rules, authentication, and databases.",
+    "overview": "While users only see the frontend UI, Backend Developers design the secure server logic, data pipelines, and APIs that store records safely and keep apps fast under heavy traffic.",
+    "what_they_do": "Backend Developers architect databases, implement authentication/permissions, expose documented REST or GraphQL APIs, optimize slow SQL queries, and ensure servers handle traffic spikes cleanly.",
+    "day_to_day_responsibilities": [
+      "Build and maintain server-side applications and business logic.",
+      "Design and manage databases (SQL or NoSQL).",
+      "Create and maintain scalable APIs for the frontend to consume.",
+      "Manage application security and data protection.",
+      "Design server architectures and build RESTful or GraphQL APIs using Node.js, Python, Java, or Go.",
+      "Model relational (PostgreSQL, MySQL) and NoSQL (MongoDB, Redis) data stores."
+    ],
+    "technical_skills": {
+      "core_skills": [
+        "REST API",
+        "Node.js",
+        "Python",
+        "AWS",
+        "Express.js",
+        "Go",
+        "Java",
+        "Django",
+        "Docker",
+        "Git"
+      ],
+      "languages_frameworks_tools": {
+        "languages": [
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "SQL"
+        ],
+        "frameworks_libraries": [
+          "Node.js",
+          "Express.js",
+          "Django",
+          "FastAPI",
+          "Spring Boot"
+        ],
+        "databases_data": [
+          "PostgreSQL",
+          "MongoDB",
+          "MySQL",
+          "Redis",
+          "NoSQL"
+        ],
+        "tools_platforms": [
+          "REST API",
+          "GraphQL",
+          "Docker",
+          "Microservices",
+          "Git",
+          "AWS"
+        ]
+      }
+    },
+    "soft_skills": [
+      "Analytical Thinking",
+      "Problem Solving",
+      "Communication",
+      "Troubleshooting",
+      "Teamwork"
+    ],
+    "qualifications": {
+      "education": "Bachelor's in Computer Science",
+      "typical_experience": "0–2 years for entry/junior; varies by seniority",
+      "salary_benchmark": "$75-135K (US benchmark from Kaggle job_roles.csv)",
+      "expectations": [
+        "BS in CS.",
+        "Expertise in backend languages (e.g., Java, Python, Node.js, Go) and database design."
+      ],
+      "helpful_certifications": [
+        "Meta Back-End Developer Certificate",
+        "freeCodeCamp Back End Development and APIs"
+      ]
+    },
+    "career_growth": [
+      "Junior Backend Developer (0–2 yrs): Write API routes, database queries, and authentication flows.",
+      "Mid-Level Backend Engineer (2–5 yrs): Own caching, message queues, microservices, and SQL performance optimization.",
+      "Senior / Principal Backend Engineer (5+ yrs): Architect high-availability distributed systems serving millions.",
+      "Adjacent Paths: Full Stack Developer, Python/Java Developer, Cloud Engineer, Data Engineer."
+    ],
+    "learning_roadmap": [
+      {
+        "stage": 1,
+        "title": "Server Language & Git",
+        "duration": "4–5 weeks",
+        "description": "Choose Node.js (JavaScript) or Python and master core programming and Git.",
+        "skills": [
+          "Node.js",
+          "Python",
+          "Git"
+        ]
+      },
+      {
+        "stage": 2,
+        "title": "Databases & Modeling",
+        "duration": "4 weeks",
+        "description": "Learn relational schemas with PostgreSQL/SQL alongside document caching with MongoDB or Redis.",
+        "skills": [
+          "SQL",
+          "PostgreSQL",
+          "MongoDB",
+          "Redis"
+        ]
+      },
+      {
+        "stage": 3,
+        "title": "APIs, Auth & Frameworks",
+        "duration": "5 weeks",
+        "description": "Build RESTful and GraphQL services using Express.js or FastAPI with secure authentication.",
+        "skills": [
+          "Express.js",
+          "FastAPI",
+          "REST API"
+        ]
+      },
+      {
+        "stage": 4,
+        "title": "Scaling, Docker & Microservices",
+        "duration": "4 weeks",
+        "description": "Containerize services with Docker and learn distributed Microservices and System Design.",
+        "skills": [
+          "Docker",
+          "Microservices",
+          "System Design"
+        ]
+      }
+    ],
+    "data_sources": [
+      "Kaggle job_description.csv",
+      "Kaggle job_description.csv + job_roles.csv",
+      "Kaggle job_roles.csv",
+      "Kaggle job_roles.csv + job_title_des.csv",
+      "Kaggle job_title_des.csv",
+      "Kaggle job_title_des.csv (Node js developer)"
+    ]
+  },
+  "Data Analyst": {
+    "title": "Data Analyst",
+    "slug": "data-analyst",
+    "category": "Data & Analytics",
+    "beginner_summary": "A Data Analyst turns messy spreadsheets and database records into clear charts, KPI dashboards, and business answers that help companies make smart decisions.",
+    "overview": "Data Analysts act as detectives for a company's numbers—cleaning raw sales, product, or customer datasets, spotting trends, and presenting findings visually to non-technical teams.",
+    "what_they_do": "Instead of building heavy AI models, a Data Analyst writes SQL queries to pull facts out of databases, cleans anomalies in Python/Excel, calculates key business metrics, and builds interactive Tableau or Power BI dashboards.",
+    "day_to_day_responsibilities": [
+      "Interview business stakeholders to define Key Performance Indicators (KPIs).",
+      "Build and maintain data models and BI dashboards (in Tableau, Power BI, Looker).",
+      "Write complex SQL queries to extract and transform data.",
+      "Train end-users on how to use BI tools for self-service analytics.",
+      "Query company databases with SQL to extract accurate business datasets.",
+      "Clean missing or duplicate values using Excel, SQL, or Python Pandas."
+    ],
+    "technical_skills": {
+      "core_skills": [
+        "SQL",
+        "Data Analysis",
+        "Power BI",
+        "Python",
+        "Tableau",
+        "Microsoft Excel",
+        "Pandas",
+        "Data Modeling",
+        "Matplotlib",
+        "NumPy"
+      ],
+      "languages_frameworks_tools": {
+        "languages": [
+          "SQL",
+          "Python",
+          "R"
+        ],
+        "frameworks_libraries": [
+          "Pandas",
+          "NumPy",
+          "Matplotlib",
+          "Seaborn"
+        ],
+        "databases_data": [
+          "PostgreSQL",
+          "MySQL",
+          "Google BigQuery",
+          "Snowflake",
+          "Microsoft Excel"
+        ],
+        "tools_platforms": [
+          "Tableau",
+          "Power BI",
+          "Data Analysis",
+          "Statistics",
+          "Data Visualization"
+        ]
+      }
+    },
+    "soft_skills": [
+      "Analytical Thinking",
+      "Presentation",
+      "Communication",
+      "Attention to Detail",
+      "Problem Solving"
+    ],
+    "qualifications": {
+      "education": "Bachelor's in Mathematics or Bachelor's in Statistics",
+      "typical_experience": "0–2 years for entry/junior; varies by seniority",
+      "salary_benchmark": "$60-110K (US benchmark from Kaggle job_roles.csv)",
+      "expectations": [
+        "Skills: Tableau/Power BI (expert-level), SQL, data warehousing, communication, data storytelling.",
+        "Qualifications: Degree in analytics, business, or CS. Strong portfolio of dashboards."
+      ],
+      "helpful_certifications": [
+        "Google Data Analytics Professional Certificate",
+        "Microsoft Power BI Data Analyst (PL-300)",
+        "Tableau Desktop Specialist"
+      ]
+    },
+    "career_growth": [
+      "Junior Data Analyst (0–2 yrs): Master Excel, SQL queries, basic statistics, and dashboard creation.",
+      "Senior Data / BI Analyst (2–4 yrs): Automate Python/dbt transformations, own stakeholder metrics, and guide product decisions.",
+      "Analytics Manager / Lead (4+ yrs): Lead BI strategy across departments.",
+      "Adjacent Paths: Business Analyst, Data Scientist, Data Engineer."
+    ],
+    "learning_roadmap": [
+      {
+        "stage": 1,
+        "title": "Spreadsheets & Data Thinking",
+        "duration": "2–3 weeks",
+        "description": "Learn pivot tables, lookups, KPI thinking, and structured data analysis in Excel.",
+        "skills": [
+          "Microsoft Excel",
+          "Data Analysis"
+        ]
+      },
+      {
+        "stage": 2,
+        "title": "SQL Query Mastery",
+        "duration": "4 weeks",
+        "description": "Write joins, aggregations, window functions, and CTEs to extract data directly from databases.",
+        "skills": [
+          "SQL",
+          "PostgreSQL"
+        ]
+      },
+      {
+        "stage": 3,
+        "title": "BI Dashboards & Storytelling",
+        "duration": "4 weeks",
+        "description": "Turn numbers into clear interactive dashboards using Tableau and Power BI.",
+        "skills": [
+          "Tableau",
+          "Power BI",
+          "Data Visualization"
+        ]
+      },
+      {
+        "stage": 4,
+        "title": "Python & Statistical Analysis",
+        "duration": "4–5 weeks",
+        "description": "Automate larger analyses with Python Pandas and apply statistics for A/B testing.",
+        "skills": [
+          "Python",
+          "Pandas",
+          "Statistics"
+        ]
+      }
+    ],
+    "data_sources": [
+      "Kaggle data.csv",
+      "Kaggle data.csv + job_roles.csv",
+      "Kaggle data.csv + resume_data.csv",
+      "Kaggle job_description.csv",
+      "Kaggle job_description.csv + data.csv",
+      "Kaggle job_roles.csv"
+    ]
+  },
+  "Data Scientist": {
+    "title": "Data Scientist",
+    "slug": "data-scientist",
+    "category": "Data Science & AI",
+    "beginner_summary": "A Data Scientist combines statistics, programming, and machine learning to uncover hidden patterns and predict future outcomes—like forecasting customer churn or demand.",
+    "overview": "Going deeper than traditional reporting, Data Scientists run experiments, build predictive statistical and ML models in Python, and translate complex mathematical findings into business strategy.",
+    "what_they_do": "A Data Scientist formulates measurable hypotheses, queries large SQL data warehouses, explores feature relationships in Jupyter notebooks, trains Scikit-learn predictive models, validates accuracy, and shares recommendations.",
+    "day_to_day_responsibilities": [
+      "Extract and clean large datasets using SQL, Python Pandas, and NumPy.",
+      "Conduct statistical analysis and design A/B experiments to test product changes.",
+      "Build predictive regression, classification, and clustering models with Scikit-learn.",
+      "Visualize correlations, model errors, and business impact via Matplotlib/Seaborn.",
+      "Present findings and model recommendations clearly to stakeholders."
+    ],
+    "technical_skills": {
+      "core_skills": [
+        "Machine Learning",
+        "Python",
+        "SQL",
+        "Statistics",
+        "Scikit-Learn",
+        "Pandas",
+        "R",
+        "Data Analysis",
+        "Matplotlib",
+        "NumPy"
+      ],
+      "languages_frameworks_tools": {
+        "languages": [
+          "Python",
+          "SQL",
+          "R"
+        ],
+        "frameworks_libraries": [
+          "Pandas",
+          "NumPy",
+          "Scikit-Learn",
+          "TensorFlow",
+          "Matplotlib",
+          "Seaborn"
+        ],
+        "databases_data": [
+          "PostgreSQL",
+          "Google BigQuery",
+          "Snowflake"
+        ],
+        "tools_platforms": [
+          "Jupyter",
+          "Machine Learning",
+          "Statistics",
+          "Data Analysis",
+          "Git"
+        ]
+      }
+    },
+    "soft_skills": [
+      "Analytical Thinking",
+      "Critical Thinking",
+      "Presentation",
+      "Communication",
+      "Problem Solving"
+    ],
+    "qualifications": {
+      "education": "Master's in Data Science or Bachelor's in Mathematics",
+      "typical_experience": "0–2 years for entry/junior; varies by seniority",
+      "salary_benchmark": "$90-160K (US benchmark from Kaggle job_roles.csv)",
+      "expectations": [
+        "Solid grasp of core stack (Machine Learning, Python, SQL, Statistics)",
+        "Portfolio of practical projects or GitHub repositories",
+        "Comfort collaborating with Git and writing clean code/docs"
+      ],
+      "helpful_certifications": [
+        "IBM Data Science Professional Certificate",
+        "DeepLearning.AI Machine Learning Specialization"
+      ]
+    },
+    "career_growth": [
+      "Junior Data Scientist (0–2 yrs): Focus on SQL, Python Pandas, statistics, and Scikit-Learn modeling.",
+      "Senior Data Scientist (2–5 yrs): Lead A/B experimentation, causal inference, and high-value predictive systems.",
+      "Principal Data Scientist / Head of Data Science (5+ yrs): Shape company-wide AI and data strategy.",
+      "Adjacent Paths: ML Engineer, Data Analyst, Quantitative Analyst."
+    ],
+    "learning_roadmap": [
+      {
+        "stage": 1,
+        "title": "Python & Data Wrangling",
+        "duration": "4 weeks",
+        "description": "Master Python, Jupyter notebooks, NumPy arrays, and Pandas dataframes.",
+        "skills": [
+          "Python",
+          "Pandas",
+          "NumPy",
+          "Jupyter"
+        ]
+      },
+      {
+        "stage": 2,
+        "title": "SQL, Statistics & Visualization",
+        "duration": "4–5 weeks",
+        "description": "Query analytical warehouses with SQL and learn probability, distributions, and plotting.",
+        "skills": [
+          "SQL",
+          "Statistics",
+          "Data Visualization"
+        ]
+      },
+      {
+        "stage": 3,
+        "title": "Core Machine Learning",
+        "duration": "6 weeks",
+        "description": "Build supervised and unsupervised predictive models and validate them using Scikit-Learn.",
+        "skills": [
+          "Machine Learning",
+          "Scikit-Learn"
+        ]
+      },
+      {
+        "stage": 4,
+        "title": "Deep Learning & Applied AI",
+        "duration": "5 weeks",
+        "description": "Expand into neural networks, NLP, or big data workflows with TensorFlow and Git.",
+        "skills": [
+          "TensorFlow",
+          "Natural Language Processing",
+          "Git"
+        ]
+      }
+    ],
+    "data_sources": [
+      "Kaggle job_roles.csv",
+      "Kaggle job_roles.csv (Data Scientist)",
+      "Kaggle job_roles.csv + job_title_des.csv",
+      "Kaggle job_roles.csv + resume_data.csv",
+      "Kaggle job_title_des.csv",
+      "Kaggle resume_data.csv (Data Science Engineer)"
+    ]
+  },
+  "ML Engineer": {
+    "title": "ML Engineer",
+    "slug": "ml-engineer",
+    "category": "Data Science & AI",
+    "beginner_summary": "A Machine Learning Engineer takes AI and machine learning models out of notebooks and engineers them into reliable, fast software running in real apps.",
+    "overview": "Sitting at the intersection of Software Engineering and AI research, ML Engineers build training pipelines, optimize deep neural networks, and deploy scalable inference APIs used by millions.",
+    "what_they_do": "While Data Scientists often explore datasets and prototype models, ML Engineers write production Python code in PyTorch or TensorFlow, track experiments with MLflow, wrap models inside FastAPI/Docker services, and monitor accuracy in production.",
+    "day_to_day_responsibilities": [
+      "Build end-to-end ML training, evaluation, and feature pipelines in Python.",
+      "Train deep learning models for NLP, recommendations, or computer vision in PyTorch/TensorFlow.",
+      "Package models behind low-latency REST APIs using FastAPI and Docker.",
+      "Track experiments, model versions, and drift using MLflow.",
+      "Scale training and deployment pipelines on cloud GPUs (AWS/GCP) and Kubernetes."
+    ],
+    "technical_skills": {
+      "core_skills": [
+        "Deep Learning",
+        "PyTorch",
+        "Python",
+        "TensorFlow",
+        "Machine Learning",
+        "Computer Vision",
+        "Docker",
+        "AWS",
+        "FastAPI",
+        "Scikit-Learn"
+      ],
+      "languages_frameworks_tools": {
+        "languages": [
+          "Python",
+          "SQL",
+          "C++"
+        ],
+        "frameworks_libraries": [
+          "PyTorch",
+          "TensorFlow",
+          "Scikit-Learn",
+          "Hugging Face",
+          "FastAPI"
+        ],
+        "databases_data": [
+          "PostgreSQL",
+          "Pandas",
+          "NumPy"
+        ],
+        "tools_platforms": [
+          "Machine Learning",
+          "Deep Learning",
+          "Docker",
+          "MLflow",
+          "Kubernetes",
+          "AWS"
+        ]
+      }
+    },
+    "soft_skills": [
+      "Problem Solving",
+      "Analytical Thinking",
+      "Collaboration",
+      "Adaptability",
+      "Communication"
+    ],
+    "qualifications": {
+      "education": "Master's in Computer Science or Master's in AI",
+      "typical_experience": "0–3 years for entry/junior; varies by seniority",
+      "salary_benchmark": "$100-180K (US benchmark from Kaggle job_roles.csv)",
+      "expectations": [
+        "Solid grasp of core stack (Deep Learning, PyTorch, Python, TensorFlow)",
+        "Portfolio of practical projects or GitHub repositories",
+        "Comfort collaborating with Git and writing clean code/docs"
+      ],
+      "helpful_certifications": [
+        "DeepLearning.AI Machine Learning Specialization",
+        "Deep Learning Specialization",
+        "AWS Certified Machine Learning Specialty"
+      ]
+    },
+    "career_growth": [
+      "Junior ML Engineer (0–2 yrs): Build Python ML pipelines, Scikit-Learn/PyTorch models, and Docker inference APIs.",
+      "Senior ML / MLOps Engineer (2–5 yrs): Optimize LLM/deep learning training, vector search, and scalable serving.",
+      "Staff AI Architect (5+ yrs): Lead generative AI and enterprise ML platform architecture.",
+      "Adjacent Paths: Data Scientist, AI Engineer, Backend Software Engineer."
+    ],
+    "learning_roadmap": [
+      {
+        "stage": 1,
+        "title": "Python Engineering & Math Base",
+        "duration": "4–5 weeks",
+        "description": "Write clean production Python, NumPy linear algebra, Pandas data prep, and Git.",
+        "skills": [
+          "Python",
+          "NumPy",
+          "Pandas",
+          "Git"
+        ]
+      },
+      {
+        "stage": 2,
+        "title": "Classical Machine Learning",
+        "duration": "5 weeks",
+        "description": "Learn feature engineering, tree ensembles, and validation metrics in Scikit-Learn.",
+        "skills": [
+          "Machine Learning",
+          "Scikit-Learn"
+        ]
+      },
+      {
+        "stage": 3,
+        "title": "Deep Learning Frameworks",
+        "duration": "6–8 weeks",
+        "description": "Train neural networks, NLP, and vision models with PyTorch and TensorFlow.",
+        "skills": [
+          "Deep Learning",
+          "PyTorch",
+          "TensorFlow"
+        ]
+      },
+      {
+        "stage": 4,
+        "title": "MLOps, APIs & Cloud Serving",
+        "duration": "4–5 weeks",
+        "description": "Serve models via FastAPI and Docker and track experiments cleanly with MLflow.",
+        "skills": [
+          "FastAPI",
+          "Docker",
+          "MLflow",
+          "AWS"
+        ]
+      }
+    ],
+    "data_sources": [
+      "Kaggle job_roles.csv",
+      "Kaggle job_roles.csv + resume_data.csv",
+      "Kaggle job_title_des.csv",
+      "Kaggle resume_data.csv",
+      "Kaggle resume_data.csv (ML & AI Engineer)",
+      "Kaggle resume_data.csv + job_roles.csv"
+    ]
+  },
+  "DevOps Engineer": {
+    "title": "DevOps Engineer",
+    "slug": "devops-engineer",
+    "category": "Cloud & DevOps",
+    "beginner_summary": "A DevOps Engineer automates how code goes from a developer's laptop onto live servers—making software releases fast, repeatable, and reliable.",
+    "overview": "DevOps bridges software development (Dev) and IT operations (Ops). Instead of manually copying files onto servers, DevOps Engineers build automated CI/CD pipelines, containers, and Infrastructure as Code.",
+    "what_they_do": "Whenever an engineer pushes new code to GitHub, pipelines built by the DevOps Engineer automatically run tests, build a Docker image, deploy it cleanly into Kubernetes on AWS, and alert the team if latency spikes.",
+    "day_to_day_responsibilities": [
+      "Build and manage CI/CD (Continuous Integration/Continuous Deployment) pipelines.",
+      "Manage cloud infrastructure as code (IaC) using tools like Terraform.",
+      "Implement application monitoring and alerting systems.",
+      "Build and maintain automated CI/CD pipelines using GitHub Actions or Jenkins.",
+      "Containerize services with Docker and orchestrate workloads on Kubernetes.",
+      "Define cloud servers, networks, and permissions cleanly as code using Terraform or Ansible."
+    ],
+    "technical_skills": {
+      "core_skills": [
+        "CI/CD",
+        "Docker",
+        "Kubernetes",
+        "AWS",
+        "Jenkins",
+        "Linux",
+        "Terraform",
+        "Ansible",
+        "Bash",
+        "Git"
+      ],
+      "languages_frameworks_tools": {
+        "languages": [
+          "Bash",
+          "Python",
+          "SQL"
+        ],
+        "frameworks_libraries": [
+          "Terraform",
+          "Ansible"
+        ],
+        "databases_data": [
+          "Linux",
+          "Prometheus",
+          "Grafana"
+        ],
+        "tools_platforms": [
+          "Docker",
+          "Kubernetes",
+          "CI/CD",
+          "AWS",
+          "Jenkins",
+          "GitHub Actions",
+          "Git"
+        ]
+      }
+    },
+    "soft_skills": [
+      "Troubleshooting",
+      "Collaboration",
+      "Communication",
+      "Problem Solving",
+      "Adaptability"
+    ],
+    "qualifications": {
+      "education": "Bachelor's in Computer Science or IT Certification",
+      "typical_experience": "0–3 years for entry/junior; varies by seniority",
+      "salary_benchmark": "$85-150K (US benchmark from Kaggle job_roles.csv)",
+      "expectations": [
+        "BS in CS or IT.",
+        "Skills in scripting (Bash, Python), cloud platforms (AWS, Azure), and CI/CD tools (Jenkins, GitLab)."
+      ],
+      "helpful_certifications": [
+        "AWS Certified DevOps Engineer",
+        "Certified Kubernetes Administrator (CKA)",
+        "HashiCorp Certified: Terraform Associate"
+      ]
+    },
+    "career_growth": [
+      "Junior DevOps Engineer (0–2 yrs): Automate builds with Linux, Git, Docker, and CI/CD tools.",
+      "Mid-Level DevOps / SRE Engineer (2–5 yrs): Manage Kubernetes production clusters, Terraform IaC, and observability.",
+      "Principal Platform Architect (5+ yrs): Design internal developer platforms for whole organizations.",
+      "Adjacent Paths: Cloud Engineer, Site Reliability Engineer (SRE), Platform Engineer."
+    ],
+    "learning_roadmap": [
+      {
+        "stage": 1,
+        "title": "Linux, Networking & Scripting",
+        "duration": "4 weeks",
+        "description": "Become comfortable in the Linux terminal, Bash scripting, Python automation, and Git.",
+        "skills": [
+          "Linux",
+          "Bash",
+          "Python",
+          "Git"
+        ]
+      },
+      {
+        "stage": 2,
+        "title": "Containers & Orchestration",
+        "duration": "5 weeks",
+        "description": "Package apps reliably with Docker containers and scale clusters using Kubernetes.",
+        "skills": [
+          "Docker",
+          "Kubernetes"
+        ]
+      },
+      {
+        "stage": 3,
+        "title": "CI/CD Pipelines",
+        "duration": "3–4 weeks",
+        "description": "Automate testing and zero-downtime deployments with GitHub Actions or Jenkins.",
+        "skills": [
+          "CI/CD",
+          "GitHub Actions",
+          "Jenkins"
+        ]
+      },
+      {
+        "stage": 4,
+        "title": "Cloud, IaC & Monitoring",
+        "duration": "4–5 weeks",
+        "description": "Provision AWS infrastructure with Terraform and observe health with Prometheus and Grafana.",
+        "skills": [
+          "AWS",
+          "Terraform",
+          "Prometheus",
+          "Grafana"
+        ]
+      }
+    ],
+    "data_sources": [
+      "Kaggle job_description.csv",
+      "Kaggle job_description.csv + job_roles.csv",
+      "Kaggle job_roles.csv",
+      "Kaggle job_title_des.csv",
+      "Kaggle job_title_des.csv + resume_data.csv",
+      "Kaggle resume_data.csv",
+      "Kaggle resume_data.csv + job_roles.csv"
+    ]
+  },
+  "Cloud Engineer": {
+    "title": "Cloud Engineer",
+    "slug": "cloud-engineer",
+    "category": "Cloud & DevOps",
+    "beginner_summary": "A Cloud Engineer designs, secures, and runs an organization's servers, databases, and apps on cloud platforms like AWS, Microsoft Azure, or Google Cloud.",
+    "overview": "Modern companies rent elastic computing power from cloud providers instead of maintaining physical server rooms. Cloud Engineers build scalable, cost-efficient, and secure cloud environments.",
+    "what_they_do": "A Cloud Engineer sets up virtual private networks, storage buckets, serverless APIs, identity permissions (IAM), managed databases, and automated backups so apps stay online globally.",
+    "day_to_day_responsibilities": [
+      "Design scalable and secure cloud infrastructure.",
+      "Migrate on-premise applications to the cloud.",
+      "Manage cloud services (VMs, databases, storage).",
+      "Monitor cloud spending and optimize costs.",
+      "Configure virtual networks, compute instances, load balancers, and managed databases on AWS, Azure, or GCP.",
+      "Automate cloud infrastructure provisioning with Terraform and Python/Bash scripts."
+    ],
+    "technical_skills": {
+      "core_skills": [
+        "AWS",
+        "Linux",
+        "Docker",
+        "Kubernetes",
+        "Microsoft Azure",
+        "Terraform",
+        "Git",
+        "Google Cloud Platform",
+        "System Design",
+        "CI/CD"
+      ],
+      "languages_frameworks_tools": {
+        "languages": [
+          "Python",
+          "Bash",
+          "SQL"
+        ],
+        "frameworks_libraries": [
+          "Terraform",
+          "Docker",
+          "Kubernetes"
+        ],
+        "databases_data": [
+          "PostgreSQL",
+          "Linux"
+        ],
+        "tools_platforms": [
+          "AWS",
+          "Microsoft Azure",
+          "Google Cloud Platform",
+          "Networking",
+          "Network Security",
+          "CI/CD"
+        ]
+      }
+    },
+    "soft_skills": [
+      "Problem Solving",
+      "Communication",
+      "Troubleshooting",
+      "Analytical Thinking",
+      "Collaboration"
+    ],
+    "qualifications": {
+      "education": "Bachelor's in Computer Science or Cloud Certification",
+      "typical_experience": "0–5 years for entry/junior; varies by seniority",
+      "salary_benchmark": "$120-200K (US benchmark from Kaggle job_roles.csv)",
+      "expectations": [
+        "BS in CS or IT.",
+        "Cloud certifications (e.g., AWS Certified Solutions Architect) are critical."
+      ],
+      "helpful_certifications": [
+        "AWS Certified Solutions Architect – Associate",
+        "Microsoft Certified: Azure Administrator",
+        "Google Associate Cloud Engineer"
+      ]
+    },
+    "career_growth": [
+      "Cloud Support / Junior Cloud Engineer (0–2 yrs): Manage VMs, storage, IAM, and Linux networking on AWS/Azure.",
+      "Cloud Engineer (2–5 yrs): Design Infrastructure as Code (Terraform), Kubernetes clusters, and security hardening.",
+      "Cloud Solutions Architect (5+ yrs): Design multi-cloud enterprise architectures.",
+      "Adjacent Paths: DevOps Engineer, Cybersecurity Engineer, Solutions Architect."
+    ],
+    "learning_roadmap": [
+      {
+        "stage": 1,
+        "title": "Linux, Networking & Git",
+        "duration": "4 weeks",
+        "description": "Understand Linux administration, TCP/IP routing, DNS, firewalls, and Git.",
+        "skills": [
+          "Linux",
+          "TCP/IP",
+          "Networking",
+          "Git"
+        ]
+      },
+      {
+        "stage": 2,
+        "title": "Core Cloud Platform (AWS/Azure)",
+        "duration": "5–6 weeks",
+        "description": "Master cloud compute, IAM security, VPC networking, and managed storage/databases.",
+        "skills": [
+          "AWS",
+          "Microsoft Azure",
+          "Network Security"
+        ]
+      },
+      {
+        "stage": 3,
+        "title": "Containers & Cloud Automation",
+        "duration": "4–5 weeks",
+        "description": "Automate deployments with Docker, Python scripting, and CI/CD workflows.",
+        "skills": [
+          "Docker",
+          "Python",
+          "CI/CD"
+        ]
+      },
+      {
+        "stage": 4,
+        "title": "Infrastructure as Code & Scaling",
+        "duration": "4 weeks",
+        "description": "Manage repeatable cloud infrastructure via Terraform and Kubernetes.",
+        "skills": [
+          "Terraform",
+          "Kubernetes"
+        ]
+      }
+    ],
+    "data_sources": [
+      "Kaggle job_description.csv",
+      "Kaggle job_description.csv (Cloud Engineer)",
+      "Kaggle job_description.csv (Cloud Implementation)",
+      "Kaggle job_description.csv + job_roles.csv",
+      "Kaggle job_roles.csv",
+      "Kaggle job_roles.csv (Cloud Architect)",
+      "Kaggle job_roles.csv + job_description.csv"
+    ]
+  },
+  "Embedded Systems Engineer": {
+    "title": "Embedded Systems Engineer",
+    "slug": "embedded-systems-engineer",
+    "category": "Embedded & Hardware",
+    "beginner_summary": "An Embedded Systems Engineer writes fast, compact software that controls real physical hardware—like smartwatches, medical monitors, drones, cars, and IoT sensors.",
+    "overview": "Unlike web developers building apps on high-RAM laptops, Embedded Engineers program tiny microcontrollers directly in C/C++, managing every byte of memory and communicating directly with electronics.",
+    "what_they_do": "Embedded Engineers read chip datasheets, write hardware drivers in Embedded C/C++ over protocols like I2C, SPI, and UART, run real-time operating systems (RTOS) or Embedded Linux, and debug boards with logic analyzers.",
+    "day_to_day_responsibilities": [
+      "Write and debug code in C or C++ for microcontrollers.",
+      "Work directly with hardware, reading datasheets and schematics.",
+      "Optimize code for speed, memory, and power constraints.",
+      "Also known as \"Firmware Engineer.\"",
+      "Write low-level firmware in C, Embedded C, and C++ for STM32, ARM, or ESP32 microcontrollers.",
+      "Read hardware schematics and sensor datasheets to implement SPI, I2C, UART, or CAN Bus drivers."
+    ],
+    "technical_skills": {
+      "core_skills": [
+        "C",
+        "C++",
+        "Embedded Linux",
+        "Microcontrollers",
+        "RTOS",
+        "Embedded C",
+        "ARM Architecture",
+        "Arduino",
+        "ESP32",
+        "Git"
+      ],
+      "languages_frameworks_tools": {
+        "languages": [
+          "C",
+          "C++",
+          "Embedded C",
+          "Python"
+        ],
+        "frameworks_libraries": [
+          "RTOS",
+          "Embedded Linux",
+          "Arduino"
+        ],
+        "databases_data": [
+          "UART",
+          "SPI",
+          "I2C",
+          "CAN Bus",
+          "MQTT"
+        ],
+        "tools_platforms": [
+          "Microcontrollers",
+          "STM32",
+          "ESP32",
+          "ARM",
+          "Raspberry Pi",
+          "Git"
+        ]
+      }
+    },
+    "soft_skills": [
+      "Analytical Thinking",
+      "Problem Solving",
+      "Attention to Detail",
+      "Troubleshooting",
+      "Collaboration"
+    ],
+    "qualifications": {
+      "education": "Bachelor's in Electronics Engineering or Bachelor's in Computer Engineering",
+      "typical_experience": "0–2 years for entry/junior; varies by seniority",
+      "salary_benchmark": "$70-130K (US benchmark from Kaggle job_roles.csv)",
+      "expectations": [
+        "BS in Computer Engineering, EE, or CS.",
+        "Strong C/C++ skills and understanding of computer architecture."
+      ],
+      "helpful_certifications": [
+        "ARM Accredited Engineer",
+        "Embedded Linux Foundation Certifications"
+      ]
+    },
+    "career_growth": [
+      "Junior Firmware / Embedded Engineer (0–2 yrs): Write C/Embedded C drivers for MCUs (STM32/ESP32) and serial buses.",
+      "Embedded Systems Engineer (2–5 yrs): Architect RTOS scheduling, Embedded Linux BSPs, and IoT/automotive systems.",
+      "Principal Firmware Architect (5+ yrs): Lead hardware/software co-design across product families.",
+      "Adjacent Paths: Firmware Engineer, Robotics Engineer, IoT Systems Architect."
+    ],
+    "learning_roadmap": [
+      {
+        "stage": 1,
+        "title": "C, C++ & Computer Architecture",
+        "duration": "5–6 weeks",
+        "description": "Master pointers, bitwise registers, memory layout, and modular Embedded C/C++.",
+        "skills": [
+          "C",
+          "C++",
+          "Embedded C",
+          "Git"
+        ]
+      },
+      {
+        "stage": 2,
+        "title": "Microcontrollers & Hardware Buses",
+        "duration": "4–5 weeks",
+        "description": "Program GPIO, interrupts, timers, and UART/SPI/I2C sensors on STM32 or ESP32.",
+        "skills": [
+          "Microcontrollers",
+          "STM32",
+          "UART",
+          "SPI",
+          "I2C"
+        ]
+      },
+      {
+        "stage": 3,
+        "title": "Real-Time Operating Systems",
+        "duration": "4–5 weeks",
+        "description": "Design deterministic multitasking firmware with tasks, queues, and semaphores using RTOS.",
+        "skills": [
+          "RTOS",
+          "ARM Architecture"
+        ]
+      },
+      {
+        "stage": 4,
+        "title": "Embedded Linux & Connectivity",
+        "duration": "4–5 weeks",
+        "description": "Build Embedded Linux services and IoT protocols like MQTT or automotive CAN Bus.",
+        "skills": [
+          "Embedded Linux",
+          "MQTT",
+          "Python"
+        ]
+      }
+    ],
+    "data_sources": [
+      "Kaggle job_description.csv",
+      "Kaggle job_description.csv (Embedded Software Engineer)",
+      "Kaggle job_description.csv (Firmware Engineer)",
+      "Kaggle job_description.csv (Hardware/Firmware)",
+      "Kaggle job_description.csv + job_roles.csv",
+      "Kaggle job_roles.csv",
+      "Kaggle job_roles.csv (Embedded Systems Engineer)",
+      "Kaggle job_roles.csv + job_description.csv"
+    ]
+  },
+  "QA/Test Engineer": {
+    "title": "QA/Test Engineer",
+    "slug": "qa-test-engineer",
+    "category": "Quality Assurance",
+    "beginner_summary": "A QA/Test Engineer protects users from broken software by systematically hunting down bugs, testing edge cases, and writing code that tests applications automatically.",
+    "overview": "Quality Assurance Engineers make sure software behaves reliably before customers ever see it. Modern QA blends thoughtful manual exploration with automated test scripts running on every code commit.",
+    "what_they_do": "Before a product launches, QA Engineers write test plans, test APIs and SQL database state, reproduce bugs cleanly for developers, and code end-to-end automated suites using Selenium, Playwright, or Cypress.",
+    "day_to_day_responsibilities": [
+      "Write automated test scripts using frameworks (e.g., Selenium, Cypress, Playwright).",
+      "Integrate automated tests into the CI/CD pipeline.",
+      "Identify, log, and track software bugs.",
+      "Develop and maintain the test automation framework.",
+      "Review product features to write clear test plans and edge-case test scenarios.",
+      "Develop automated browser tests in Selenium, Playwright, or Cypress using Python or JavaScript."
+    ],
+    "technical_skills": {
+      "core_skills": [
+        "Test Automation",
+        "REST API",
+        "Manual Testing",
+        "Playwright",
+        "SQL",
+        "Selenium",
+        "CI/CD",
+        "Cypress",
+        "Git",
+        "Postman"
+      ],
+      "languages_frameworks_tools": {
+        "languages": [
+          "Python",
+          "JavaScript",
+          "Java",
+          "SQL"
+        ],
+        "frameworks_libraries": [
+          "Selenium",
+          "Playwright",
+          "Cypress",
+          "Pytest",
+          "JUnit",
+          "Jest"
+        ],
+        "databases_data": [
+          "REST API",
+          "PostgreSQL",
+          "MySQL"
+        ],
+        "tools_platforms": [
+          "Test Automation",
+          "Manual Testing",
+          "Unit Testing",
+          "Jira",
+          "CI/CD",
+          "Git"
+        ]
+      }
+    },
+    "soft_skills": [
+      "Attention to Detail",
+      "Critical Thinking",
+      "Communication",
+      "Problem Solving",
+      "Collaboration"
+    ],
+    "qualifications": {
+      "education": "Bachelor's in Computer Science",
+      "typical_experience": "0–2 years for entry/junior; varies by seniority",
+      "salary_benchmark": "$55-105K (US benchmark from Kaggle job_roles.csv)",
+      "expectations": [
+        "BS in CS or related.",
+        "Strong programming/scripting skills (Python, JavaScript).",
+        "Detail-oriented and analytical mindset."
+      ],
+      "helpful_certifications": [
+        "ISTQB Certified Tester Foundation Level (CTFL)",
+        "freeCodeCamp Quality Assurance Certification"
+      ]
+    },
+    "career_growth": [
+      "Junior QA Analyst (0–2 yrs): Learn structured test design, manual testing, bug reporting, SQL, and basic automation.",
+      "QA Automation Engineer / SDET (2–5 yrs): Architect Playwright/Selenium frameworks, API testing, and CI/CD test gates.",
+      "QA Lead / Quality Engineering Manager (5+ yrs): Define org-wide release quality strategy.",
+      "Adjacent Paths: Software Engineer, DevOps Engineer, Business Analyst."
+    ],
+    "learning_roadmap": [
+      {
+        "stage": 1,
+        "title": "Testing Foundations & Bug Tracking",
+        "duration": "2–3 weeks",
+        "description": "Learn SDLC testing types, test case design, defect lifecycles, Jira, and Git.",
+        "skills": [
+          "Manual Testing",
+          "Jira",
+          "Git"
+        ]
+      },
+      {
+        "stage": 2,
+        "title": "Programming & SQL Basics",
+        "duration": "4 weeks",
+        "description": "Learn Python or JavaScript scripting plus SQL queries to validate backend data.",
+        "skills": [
+          "Python",
+          "JavaScript",
+          "SQL"
+        ]
+      },
+      {
+        "stage": 3,
+        "title": "UI & API Test Automation",
+        "duration": "5 weeks",
+        "description": "Build automated browser tests with Playwright or Selenium and verify REST APIs.",
+        "skills": [
+          "Test Automation",
+          "Selenium",
+          "Playwright",
+          "REST API"
+        ]
+      },
+      {
+        "stage": 4,
+        "title": "Test Frameworks & CI/CD",
+        "duration": "3 weeks",
+        "description": "Run Pytest or Cypress suites automatically inside CI/CD pipelines on every push.",
+        "skills": [
+          "Pytest",
+          "Cypress",
+          "CI/CD"
+        ]
+      }
+    ],
+    "data_sources": [
+      "Kaggle job_description.csv",
+      "Kaggle job_description.csv (QA Automation Engineer)",
+      "Kaggle job_description.csv + job_roles.csv",
+      "Kaggle job_roles.csv",
+      "Kaggle job_roles.csv (QA Engineer)",
+      "Kaggle job_roles.csv (Software Test Engineer)",
+      "Kaggle job_roles.csv + job_description.csv"
+    ]
+  },
+  "Software Engineer": {
+    "title": "Software Engineer",
+    "slug": "software-engineer",
+    "category": "Software Engineering",
+    "beginner_summary": "A Software Engineer applies computer science principles to design, build, test, and maintain all kinds of software—from desktop utilities to large cloud platforms.",
+    "overview": "Software Engineering is the broad, foundational discipline of building reliable software systems. Engineers write maintainable code, solve algorithmic problems, test thoroughly, and collaborate on team codebases.",
+    "what_they_do": "A Software Engineer takes complex user needs, breaks them into clean software components, chooses appropriate data structures and languages (Python, Java, C++, TypeScript), writes unit tests, reviews peers' code, and maintains live systems.",
+    "day_to_day_responsibilities": [
+      "Write clean, maintainable, and efficient code.",
+      "Collaborate with teams (PMs, designers) to define and build features.",
+      "Debug and resolve bugs in existing codebases.",
+      "Write unit tests and participate in code reviews.",
+      "Design modular application components and write clean, maintainable code.",
+      "Debug complex defects across application code, APIs, and databases."
+    ],
+    "technical_skills": {
+      "core_skills": [
+        "Git",
+        "Java",
+        "Python",
+        "C++",
+        "SQL",
+        "Unit Testing",
+        "Docker",
+        "REST API",
+        "System Design"
+      ],
+      "languages_frameworks_tools": {
+        "languages": [
+          "Python",
+          "Java",
+          "C++",
+          "JavaScript",
+          "SQL"
+        ],
+        "frameworks_libraries": [
+          "Spring Boot",
+          "Django",
+          "React",
+          "Node.js",
+          "System Design"
+        ],
+        "databases_data": [
+          "PostgreSQL",
+          "MySQL",
+          "Redis"
+        ],
+        "tools_platforms": [
+          "Git",
+          "REST API",
+          "Docker",
+          "Unit Testing",
+          "Linux",
+          "Agile"
+        ]
+      }
+    },
+    "soft_skills": [
+      "Problem Solving",
+      "Communication",
+      "Teamwork",
+      "Analytical Thinking",
+      "Adaptability"
+    ],
+    "qualifications": {
+      "education": "Bachelor's in Computer Science or Bachelor's in Engineering",
+      "typical_experience": "0–2 years for entry/junior; varies by seniority",
+      "salary_benchmark": "$80-150K (US benchmark from Kaggle job_roles.csv)",
+      "expectations": [
+        "BS in Computer Science (CS) or related field.",
+        "Proficiency in at least one language (e.g., Java, Python, C++, C#)."
+      ],
+      "helpful_certifications": [
+        "Harvard CS50x Computer Science",
+        "AWS Certified Developer – Associate"
+      ]
+    },
+    "career_growth": [
+      "Associate Software Engineer (0–2 yrs): Deliver scoped features cleanly, learn Git code review and unit testing.",
+      "Senior Software Engineer (3–6 yrs): Own system design, performance tuning, and mentoring junior engineers.",
+      "Staff / Principal Engineer (6+ yrs): Architect multi-team systems and set technical direction.",
+      "Adjacent Paths: Backend Developer, Full Stack Developer, DevOps Engineer, Engineering Manager."
+    ],
+    "learning_roadmap": [
+      {
+        "stage": 1,
+        "title": "Programming & Problem Solving",
+        "duration": "5–6 weeks",
+        "description": "Master one core language cleanly (Python or Java) along with data structures and Git.",
+        "skills": [
+          "Python",
+          "Java",
+          "Git"
+        ]
+      },
+      {
+        "stage": 2,
+        "title": "Databases, APIs & Testing",
+        "duration": "4–5 weeks",
+        "description": "Build SQL persistence, REST APIs, and automated unit tests.",
+        "skills": [
+          "SQL",
+          "REST API",
+          "Unit Testing"
+        ]
+      },
+      {
+        "stage": 3,
+        "title": "Architecture & System Design",
+        "duration": "4–5 weeks",
+        "description": "Understand caching, modular System Design, and Linux environments.",
+        "skills": [
+          "System Design",
+          "Linux"
+        ]
+      },
+      {
+        "stage": 4,
+        "title": "Containers & Agile Delivery",
+        "duration": "3–4 weeks",
+        "description": "Ship software continuously using Docker, CI/CD, and Agile practices.",
+        "skills": [
+          "Docker",
+          "CI/CD",
+          "Agile"
+        ]
+      }
+    ],
+    "data_sources": [
+      "Kaggle job_description.csv",
+      "Kaggle job_description.csv + job_roles.csv",
+      "Kaggle job_roles.csv",
+      "Kaggle job_roles.csv (Software Engineer)",
+      "Kaggle job_title_des.csv + job_description.csv"
+    ]
+  },
+  "Data Engineer": {
+    "title": "Data Engineer",
+    "slug": "data-engineer",
+    "category": "Data & Analytics",
+    "beginner_summary": "A Data Engineer builds the automated plumbing that moves, cleans, and stores massive amounts of raw data so analysts and AI models always have trustworthy information.",
+    "overview": "Before Data Analysts can build dashboards or ML Engineers can train models, raw logs and app databases must be collected, cleaned, and organized. Data Engineers build those scalable ETL pipelines and cloud data warehouses.",
+    "what_they_do": "A Data Engineer extracts data from production databases, APIs, and event streams (Kafka), transforms messy formats into structured analytical tables via SQL, Python, dbt, and Apache Spark, and monitors pipeline health daily.",
+    "day_to_day_responsibilities": [
+      "Interview business stakeholders to define Key Performance Indicators (KPIs).",
+      "Build and maintain data models and BI dashboards (in Tableau, Power BI, Looker).",
+      "Write complex SQL queries to extract and transform data.",
+      "Train end-users on how to use BI tools for self-service analytics.",
+      "Design and maintain scalable ETL/ELT pipelines in Python, SQL, and Apache Spark.",
+      "Model clean star-schema and analytical tables inside Snowflake, BigQuery, or PostgreSQL."
+    ],
+    "technical_skills": {
+      "core_skills": [
+        "Python",
+        "SQL",
+        "ETL",
+        "Apache Spark",
+        "Data Warehousing",
+        "Data Modeling",
+        "dbt",
+        "Apache Kafka",
+        "Hadoop",
+        "Microsoft Azure"
+      ],
+      "languages_frameworks_tools": {
+        "languages": [
+          "Python",
+          "SQL"
+        ],
+        "frameworks_libraries": [
+          "Apache Spark",
+          "Pandas",
+          "Hadoop",
+          "Kafka",
+          "dbt"
+        ],
+        "databases_data": [
+          "Snowflake",
+          "Google BigQuery",
+          "PostgreSQL",
+          "Data Warehousing",
+          "Data Modeling"
+        ],
+        "tools_platforms": [
+          "ETL",
+          "Docker",
+          "AWS",
+          "Microsoft Azure",
+          "Git"
+        ]
+      }
+    },
+    "soft_skills": [
+      "Analytical Thinking",
+      "Problem Solving",
+      "Communication",
+      "Attention to Detail",
+      "Troubleshooting"
+    ],
+    "qualifications": {
+      "education": "Bachelor's in Computer Science",
+      "typical_experience": "0–2 years for entry/junior; varies by seniority",
+      "salary_benchmark": "$85-155K (US benchmark from Kaggle job_roles.csv)",
+      "expectations": [
+        "Skills: Tableau/Power BI (expert-level), SQL, data warehousing, communication, data storytelling.",
+        "Qualifications: Degree in analytics, business, or CS. Strong portfolio of dashboards."
+      ],
+      "helpful_certifications": [
+        "Google Cloud Professional Data Engineer",
+        "AWS Certified Data Engineer – Associate",
+        "Databricks Data Engineer Associate"
+      ]
+    },
+    "career_growth": [
+      "Junior Data Engineer (0–2 yrs): Write SQL/Python ETL scripts, learn data modeling and cloud warehouses.",
+      "Senior Data Engineer (2–5 yrs): Architect distributed Spark/Kafka streaming pipelines and lakehouses.",
+      "Staff Data Architect (5+ yrs): Own enterprise data governance and multi-petabyte platforms.",
+      "Adjacent Paths: Data Scientist, ML Engineer, Analytics Engineer, Database Administrator."
+    ],
+    "learning_roadmap": [
+      {
+        "stage": 1,
+        "title": "Advanced SQL & Python Scripting",
+        "duration": "4–5 weeks",
+        "description": "Master complex SQL joins/window functions, Python file processing, Pandas, and Git.",
+        "skills": [
+          "SQL",
+          "Python",
+          "Pandas",
+          "Git"
+        ]
+      },
+      {
+        "stage": 2,
+        "title": "Data Modeling & Warehousing",
+        "duration": "4 weeks",
+        "description": "Learn dimensional Data Modeling, ETL patterns, and cloud Data Warehousing.",
+        "skills": [
+          "Data Modeling",
+          "Data Warehousing",
+          "ETL"
+        ]
+      },
+      {
+        "stage": 3,
+        "title": "Big Data & Modern ELT Stack",
+        "duration": "5–6 weeks",
+        "description": "Process large datasets with Apache Spark and manage transformations cleanly with dbt and Snowflake.",
+        "skills": [
+          "Apache Spark",
+          "dbt",
+          "Snowflake"
+        ]
+      },
+      {
+        "stage": 4,
+        "title": "Streaming, Containers & Cloud",
+        "duration": "4 weeks",
+        "description": "Build event pipelines with Apache Kafka, package jobs in Docker, and run on AWS/Azure.",
+        "skills": [
+          "Apache Kafka",
+          "Docker",
+          "AWS"
+        ]
+      }
+    ],
+    "data_sources": [
+      "Kaggle job_description.csv",
+      "Kaggle job_roles.csv",
+      "Kaggle job_roles.csv (Data Engineer)",
+      "Kaggle job_roles.csv (Data Warehouse Architect)",
+      "Kaggle job_roles.csv + resume_data.csv",
+      "Kaggle resume_data.csv",
+      "Kaggle resume_data.csv (Data Engineer)",
+      "Kaggle resume_data.csv + job_roles.csv"
+    ]
+  },
+  "Database Administrator": {
+    "title": "Database Administrator",
+    "slug": "database-administrator",
+    "category": "Databases & Infrastructure",
+    "beginner_summary": "A Database Administrator (DBA) is the guardian of a company's databases—making sure critical customer and business records stay fast, backed up, and safe from loss or breaches.",
+    "overview": "Databases hold the crown jewels of every software company. DBAs specialize in installing, tuning, backing up, securing, and scaling relational and NoSQL databases so applications never lose data or stall.",
+    "what_they_do": "DBAs monitor database CPU and disk health, analyze slow SQL queries and add proper indexes, test disaster-recovery backups, manage primary-replica failover clusters, and control user access permissions.",
+    "day_to_day_responsibilities": [
+      "Build and maintain server-side applications and business logic.",
+      "Design and manage databases (SQL or NoSQL).",
+      "Create and maintain scalable APIs for the frontend to consume.",
+      "Manage application security and data protection.",
+      "Tune slow SQL queries, rebuild indexes, and optimize schemas for high traffic.",
+      "Manage high-availability replication, clustering, and automated backup/restore tests."
+    ],
+    "technical_skills": {
+      "core_skills": [
+        "Linux",
+        "SQL",
+        "PostgreSQL",
+        "Microsoft SQL Server",
+        "MongoDB",
+        "MySQL",
+        "AWS",
+        "Oracle Database",
+        "Redis"
+      ],
+      "languages_frameworks_tools": {
+        "languages": [
+          "SQL",
+          "Bash",
+          "Python"
+        ],
+        "frameworks_libraries": [
+          "Data Modeling",
+          "ETL"
+        ],
+        "databases_data": [
+          "PostgreSQL",
+          "MySQL",
+          "Microsoft SQL Server",
+          "Oracle Database",
+          "MongoDB",
+          "Redis",
+          "NoSQL"
+        ],
+        "tools_platforms": [
+          "Linux",
+          "AWS",
+          "Data Warehousing",
+          "Git"
+        ]
+      }
+    },
+    "soft_skills": [
+      "Attention to Detail",
+      "Troubleshooting",
+      "Analytical Thinking",
+      "Communication",
+      "Critical Thinking"
+    ],
+    "qualifications": {
+      "education": "Bachelor's in IT or IT Certification",
+      "typical_experience": "0–2 years for entry/junior; varies by seniority",
+      "salary_benchmark": "$70-130K (US benchmark from Kaggle job_roles.csv)",
+      "expectations": [
+        "BS in CS.",
+        "Expertise in backend languages (e.g., Java, Python, Node.js, Go) and database design."
+      ],
+      "helpful_certifications": [
+        "Microsoft Certified: Azure Database Administrator Associate",
+        "Oracle Database Administration Certified Professional",
+        "AWS Certified Database"
+      ]
+    },
+    "career_growth": [
+      "Junior DBA (0–2 yrs): Manage backups, SQL tuning, user permissions, and PostgreSQL/MySQL operations.",
+      "Senior DBA / Database Reliability Engineer (2–5 yrs): Lead zero-downtime sharding, multi-region failover, and cloud migrations.",
+      "Data Infrastructure Architect (5+ yrs): Design enterprise-wide data persistence strategy.",
+      "Adjacent Paths: Data Engineer, Backend Developer, Cloud Engineer, Site Reliability Engineer."
+    ],
+    "learning_roadmap": [
+      {
+        "stage": 1,
+        "title": "SQL Mastery & Relational Design",
+        "duration": "4 weeks",
+        "description": "Learn normalization, Data Modeling, joins, transactions, and ACID guarantees.",
+        "skills": [
+          "SQL",
+          "Data Modeling"
+        ]
+      },
+      {
+        "stage": 2,
+        "title": "Core RDBMS Administration",
+        "duration": "5 weeks",
+        "description": "Administer PostgreSQL, MySQL, and Microsoft SQL Server including backups and indexing.",
+        "skills": [
+          "PostgreSQL",
+          "MySQL",
+          "Microsoft SQL Server"
+        ]
+      },
+      {
+        "stage": 3,
+        "title": "NoSQL & Caching Systems",
+        "duration": "3–4 weeks",
+        "description": "Add document and in-memory database skills with MongoDB and Redis.",
+        "skills": [
+          "MongoDB",
+          "Redis",
+          "NoSQL"
+        ]
+      },
+      {
+        "stage": 4,
+        "title": "Linux, High Availability & Cloud",
+        "duration": "4 weeks",
+        "description": "Automate maintenance on Linux servers and manage scalable RDS clusters on AWS.",
+        "skills": [
+          "Linux",
+          "Bash",
+          "AWS"
+        ]
+      }
+    ],
+    "data_sources": [
+      "Kaggle job_description.csv",
+      "Kaggle job_roles.csv",
+      "Kaggle job_roles.csv + resume_data.csv",
+      "Kaggle job_title_des.csv + job_roles.csv",
+      "Kaggle resume_data.csv",
+      "Kaggle resume_data.csv (DBA)"
+    ]
+  },
+  "Cybersecurity Analyst": {
+    "title": "Cybersecurity Analyst",
+    "slug": "cybersecurity-analyst",
+    "category": "Security & Networking",
+    "beginner_summary": "A Cybersecurity Analyst acts as a digital defender—monitoring systems for threats, spotting security weaknesses before hackers do, and protecting data and networks.",
+    "overview": "Cybersecurity Analysts defend companies against data breaches, ransomware, and unauthorized access. They combine networking fundamentals with security tools to detect intrusions, assess vulnerabilities, and harden software.",
+    "what_they_do": "In a Security Operations Center (SOC) or product security team, analysts inspect alerts in SIEM dashboards, scan apps and servers for known vulnerabilities, run ethical penetration tests, and respond rapidly to incidents.",
+    "day_to_day_responsibilities": [
+      "Design secure network architectures (firewalls, VPNs, zero-trust).",
+      "Implement identity and access management (IAM) solutions.",
+      "Write and review code for security vulnerabilities (secure coding).",
+      "Build systems for encryption, intrusion detection, and data protection.",
+      "Monitor network logs and security alerts using SIEM platforms to spot suspicious activity.",
+      "Run vulnerability scans and risk assessments across servers, networks, and cloud accounts."
+    ],
+    "technical_skills": {
+      "core_skills": [
+        "Cybersecurity",
+        "Network Security",
+        "Encryption",
+        "Linux",
+        "Penetration Testing",
+        "Risk Assessment",
+        "SIEM",
+        "Vulnerability Assessment",
+        "Firewalls",
+        "AWS"
+      ],
+      "languages_frameworks_tools": {
+        "languages": [
+          "Python",
+          "Bash",
+          "SQL"
+        ],
+        "frameworks_libraries": [
+          "Cybersecurity",
+          "Network Security",
+          "Penetration Testing"
+        ],
+        "databases_data": [
+          "SIEM",
+          "Vulnerability Assessment",
+          "Risk Assessment"
+        ],
+        "tools_platforms": [
+          "Linux",
+          "TCP/IP",
+          "Networking",
+          "Firewalls",
+          "Encryption",
+          "AWS"
+        ]
+      }
+    },
+    "soft_skills": [
+      "Critical Thinking",
+      "Attention to Detail",
+      "Troubleshooting",
+      "Communication",
+      "Analytical Thinking"
+    ],
+    "qualifications": {
+      "education": "Bachelor's in Cybersecurity or Security+ Certification",
+      "typical_experience": "0–2 years for entry/junior; varies by seniority",
+      "salary_benchmark": "$70-130K (US benchmark from Kaggle job_roles.csv)",
+      "expectations": [
+        "BS in CS or Cybersecurity.",
+        "Deep knowledge of networks, protocols, and encryption.",
+        "Security certs (CISSP, CEH) common."
+      ],
+      "helpful_certifications": [
+        "Google Cybersecurity Professional Certificate",
+        "CompTIA Security+",
+        "Certified Ethical Hacker (CEH)"
+      ]
+    },
+    "career_growth": [
+      "SOC / Junior Cybersecurity Analyst (0–2 yrs): Triage security alerts, scan vulnerabilities, and monitor SIEM logs.",
+      "Cybersecurity Engineer / Penetration Tester (2–5 yrs): Lead ethical hacking, cloud security architecture, and threat hunting.",
+      "Principal Security Architect / CISO (5+ yrs): Direct enterprise risk and defense strategy.",
+      "Adjacent Paths: Network Engineer, Cloud Security Engineer, DevSecOps Engineer."
+    ],
+    "learning_roadmap": [
+      {
+        "stage": 1,
+        "title": "Networking & Linux Fundamentals",
+        "duration": "4–5 weeks",
+        "description": "Understand TCP/IP packets, DNS, HTTP, firewalls, and Linux command-line administration.",
+        "skills": [
+          "Networking",
+          "TCP/IP",
+          "Linux"
+        ]
+      },
+      {
+        "stage": 2,
+        "title": "Core Security & Defense",
+        "duration": "4–5 weeks",
+        "description": "Learn cryptography basics, encryption, firewall hardening, and core cybersecurity threats.",
+        "skills": [
+          "Cybersecurity",
+          "Network Security",
+          "Encryption",
+          "Firewalls"
+        ]
+      },
+      {
+        "stage": 3,
+        "title": "SOC Operations, SIEM & Scanning",
+        "duration": "4–5 weeks",
+        "description": "Detect intrusions in SIEM logs and run Vulnerability & Risk Assessments.",
+        "skills": [
+          "SIEM",
+          "Vulnerability Assessment",
+          "Risk Assessment"
+        ]
+      },
+      {
+        "stage": 4,
+        "title": "Penetration Testing & Scripting",
+        "duration": "5 weeks",
+        "description": "Automate log checks in Python/Bash and practice ethical penetration testing.",
+        "skills": [
+          "Penetration Testing",
+          "Python",
+          "AWS"
+        ]
+      }
+    ],
+    "data_sources": [
+      "Kaggle job_description.csv",
+      "Kaggle job_description.csv (Cybersecurity Risk)",
+      "Kaggle job_description.csv + job_roles.csv",
+      "Kaggle job_roles.csv",
+      "Kaggle job_roles.csv (Cybersecurity Specialist)",
+      "Kaggle job_roles.csv (Cybersecurity/SOC Analyst)",
+      "Kaggle job_roles.csv (SOC Analyst)",
+      "Kaggle job_roles.csv + job_description.csv"
+    ]
+  },
+  "Mobile Developer": {
+    "title": "Mobile Developer",
+    "slug": "mobile-developer",
+    "category": "Mobile Development",
+    "beginner_summary": "A Mobile Developer builds iPhone and Android apps—creating smooth touch interfaces, offline storage, camera/GPS features, and fast mobile experiences.",
+    "overview": "Mobile Developers create apps that live in billions of pockets. Teams either build natively using Swift (iOS) and Kotlin (Android), or cross-platform apps targeting both from a single codebase with Flutter or React Native.",
+    "what_they_do": "A Mobile Developer implements clean phone screens, hooks up REST APIs and push notifications, handles local offline data storage, optimizes battery/memory usage, and publishes updates to the Apple App Store and Google Play.",
+    "day_to_day_responsibilities": [
+      "Develop native applications for either iOS (using Swift/Objective-C) or Android (using Kotlin/Java).",
+      "Integrate with mobile-specific features (camera, GPS, notifications).",
+      "Optimize apps for mobile performance and battery life.",
+      "Design responsive mobile UI screens using Flutter, SwiftUI, Jetpack Compose, or React Native.",
+      "Connect mobile apps to backend REST APIs, authentication, and Firebase cloud services.",
+      "Integrate device hardware features such as camera, GPS, biometrics, and notifications."
+    ],
+    "technical_skills": {
+      "core_skills": [
+        "Android",
+        "Dart",
+        "Flutter",
+        "Swift",
+        "iOS",
+        "Kotlin",
+        "REST API",
+        "Android SDK",
+        "Git",
+        "Java"
+      ],
+      "languages_frameworks_tools": {
+        "languages": [
+          "Dart",
+          "Swift",
+          "Kotlin",
+          "Java",
+          "JavaScript",
+          "Objective-C"
+        ],
+        "frameworks_libraries": [
+          "Flutter",
+          "SwiftUI",
+          "React Native",
+          "Android",
+          "iOS"
+        ],
+        "databases_data": [
+          "Firebase Firestore",
+          "SQLite",
+          "REST API"
+        ],
+        "tools_platforms": [
+          "Android SDK",
+          "Xcode",
+          "Git",
+          "CI/CD",
+          "Unit Testing"
+        ]
+      }
+    },
+    "soft_skills": [
+      "Attention to Detail",
+      "Problem Solving",
+      "Collaboration",
+      "Communication",
+      "Adaptability"
+    ],
+    "qualifications": {
+      "education": "Bachelor's in Computer Science",
+      "typical_experience": "0–2 years for entry/junior; varies by seniority",
+      "salary_benchmark": "$70-130K (US benchmark from Kaggle job_roles.csv)",
+      "expectations": [
+        "BS in CS.",
+        "Expertise in the specific mobile platform's SDK and development tools (Xcode, Android Studio)."
+      ],
+      "helpful_certifications": [
+        "Meta Android / iOS Developer Professional Certificate",
+        "Google Associate Android Developer"
+      ]
+    },
+    "career_growth": [
+      "Junior Mobile Developer (0–2 yrs): Build UI screens, navigation, and REST API connections in Flutter, Kotlin, or Swift.",
+      "Senior Mobile Engineer (2–5 yrs): Architect offline sync, animations, native modules, and CI/CD store automation.",
+      "Staff Mobile Architect (5+ yrs): Lead mobile platform standards across iOS and Android teams.",
+      "Adjacent Paths: Frontend Developer, Full Stack Developer, UI/UX Designer."
+    ],
+    "learning_roadmap": [
+      {
+        "stage": 1,
+        "title": "Core Language & Git",
+        "duration": "4 weeks",
+        "description": "Master Dart (for cross-platform Flutter) or Swift/Kotlin alongside Git workflows.",
+        "skills": [
+          "Dart",
+          "Swift",
+          "Kotlin",
+          "Git"
+        ]
+      },
+      {
+        "stage": 2,
+        "title": "Mobile UI & App Navigation",
+        "duration": "5 weeks",
+        "description": "Build multi-screen layouts and state management with Flutter, iOS SwiftUI, or Android SDK.",
+        "skills": [
+          "Flutter",
+          "iOS",
+          "Android",
+          "Android SDK"
+        ]
+      },
+      {
+        "stage": 3,
+        "title": "APIs & Cloud Persistence",
+        "duration": "4 weeks",
+        "description": "Fetch remote data via REST APIs and sync real-time state with Firebase Firestore.",
+        "skills": [
+          "REST API",
+          "Firebase Firestore"
+        ]
+      },
+      {
+        "stage": 4,
+        "title": "Testing, Tooling & Release",
+        "duration": "3 weeks",
+        "description": "Debug profiles in Xcode or Android Studio and automate builds with CI/CD.",
+        "skills": [
+          "Xcode",
+          "Unit Testing",
+          "CI/CD"
+        ]
+      }
+    ],
+    "data_sources": [
+      "Kaggle job_description.csv",
+      "Kaggle job_description.csv + job_roles.csv",
+      "Kaggle job_roles.csv",
+      "Kaggle job_roles.csv (Mobile Developer Android)",
+      "Kaggle job_title_des.csv",
+      "Kaggle resume_data.csv",
+      "Kaggle resume_data.csv (Senior iOS Engineer)"
+    ]
+  },
+  "UI/UX Designer": {
+    "title": "UI/UX Designer",
+    "slug": "ui-ux-designer",
+    "category": "Design & Product",
+    "beginner_summary": "A UI/UX Designer shapes how websites and apps look and feel—researching real users, sketching easy-to-follow screens in Figma, and making technology enjoyable to use.",
+    "overview": "UI/UX Design blends psychology, product thinking, and visual craft. UX (User Experience) ensures a product is logical and easy to use, while UI (User Interface) makes every screen visually clear, cohesive, and appealing.",
+    "what_they_do": "Before developers write code, UI/UX Designers interview users, sketch user flows and wireframes, assemble reusable Figma component libraries, test interactive prototypes with real people, and hand off clean specifications to engineers.",
+    "day_to_day_responsibilities": [
+      "Conduct user research and create user personas.",
+      "Create user flow diagrams, journey maps, and wireframes.",
+      "Build low-fidelity prototypes for usability testing.",
+      "Analyze user feedback to identify and fix pain points.",
+      "Conduct user interviews, usability tests, and competitor research to spot user friction.",
+      "Map user journeys, information architecture, and low-fidelity wireframes."
+    ],
+    "technical_skills": {
+      "core_skills": [
+        "Figma",
+        "UI/UX Design",
+        "Design Systems",
+        "Prototyping",
+        "User Research",
+        "Wireframing",
+        "Responsive Design",
+        "Agile",
+        "CSS3",
+        "HTML5"
+      ],
+      "languages_frameworks_tools": {
+        "languages": [
+          "HTML5",
+          "CSS3"
+        ],
+        "frameworks_libraries": [
+          "Responsive Design",
+          "Tailwind CSS"
+        ],
+        "databases_data": [],
+        "tools_platforms": [
+          "Figma",
+          "UI/UX Design",
+          "Wireframing",
+          "Prototyping",
+          "User Research",
+          "Design Systems",
+          "Agile"
+        ]
+      }
+    },
+    "soft_skills": [
+      "Communication",
+      "Collaboration",
+      "Critical Thinking",
+      "Attention to Detail",
+      "Problem Solving"
+    ],
+    "qualifications": {
+      "education": "Bachelor's in Design or UX Certification",
+      "typical_experience": "0–2 years for entry/junior; varies by seniority",
+      "salary_benchmark": "$70-130K (US benchmark from Kaggle job_roles.csv)",
+      "expectations": [
+        "Wireframing (Figma, Sketch), prototyping.",
+        "User research methods.",
+        "Empathy and analytical thinking.",
+        "Portfolio of UX case studies."
+      ],
+      "helpful_certifications": [
+        "Google UX Design Professional Certificate",
+        "Interaction Design Foundation (IxDF) Certificates"
+      ]
+    },
+    "career_growth": [
+      "Junior UI/UX Designer (0–2 yrs): Practice wireframing, Figma visual craft, usability testing, and portfolio case studies.",
+      "Product Designer (2–5 yrs): Own end-to-end UX research, metrics-driven flows, and company Design Systems.",
+      "Lead / Principal Product Designer (5+ yrs): Shape multi-product design strategy.",
+      "Adjacent Paths: Frontend Developer, UX Researcher, Product Manager."
+    ],
+    "learning_roadmap": [
+      {
+        "stage": 1,
+        "title": "UX Thinking & User Research",
+        "duration": "3–4 weeks",
+        "description": "Understand human-centered design, user personas, accessibility, and usability testing.",
+        "skills": [
+          "UI/UX Design",
+          "User Research"
+        ]
+      },
+      {
+        "stage": 2,
+        "title": "Wireframing & Information Architecture",
+        "duration": "3 weeks",
+        "description": "Turn user needs into clear screen flows and low-fidelity wireframes.",
+        "skills": [
+          "Wireframing",
+          "Responsive Design"
+        ]
+      },
+      {
+        "stage": 3,
+        "title": "Figma UI Craft & Prototyping",
+        "duration": "5 weeks",
+        "description": "Design pixel-accurate visual screens, interactive flows, and component libraries in Figma.",
+        "skills": [
+          "Figma",
+          "Prototyping",
+          "Design Systems"
+        ]
+      },
+      {
+        "stage": 4,
+        "title": "Developer Handoff & Web Basics",
+        "duration": "3 weeks",
+        "description": "Understand HTML5/CSS3 constraints and Agile sprints so designs build accurately.",
+        "skills": [
+          "HTML5",
+          "CSS3",
+          "Agile"
+        ]
+      }
+    ],
+    "data_sources": [
+      "Kaggle job_description.csv",
+      "Kaggle job_description.csv (Product Designer)",
+      "Kaggle job_description.csv (UI Designer)",
+      "Kaggle job_description.csv + job_roles.csv",
+      "Kaggle job_roles.csv",
+      "Kaggle job_roles.csv (UI Designer)",
+      "Kaggle job_roles.csv (UX Designer)",
+      "Kaggle job_roles.csv + job_description.csv"
+    ]
+  },
+  "Business Analyst": {
+    "title": "Business Analyst",
+    "slug": "business-analyst",
+    "category": "Data & Analytics",
+    "beginner_summary": "A Business Analyst translates between business teams and tech teams—analyzing processes, querying data, writing clear requirements, and tracking project KPIs.",
+    "overview": "Software projects fail when engineers build the wrong thing. Business Analysts investigate company workflows, interview stakeholders, examine SQL/Excel data, and define clear specifications that bridge business goals and software delivery.",
+    "what_they_do": "On a typical project, a Business Analyst meets business leads to understand problems, checks revenue/funnel data using SQL and Power BI, writes structured user stories in Jira, and validates delivered features before launch.",
+    "day_to_day_responsibilities": [
+      "Interview business stakeholders to define Key Performance Indicators (KPIs).",
+      "Build and maintain data models and BI dashboards (in Tableau, Power BI, Looker).",
+      "Write complex SQL queries to extract and transform data.",
+      "Train end-users on how to use BI tools for self-service analytics.",
+      "Interview stakeholders to clarify business goals, bottlenecks, and functional requirements.",
+      "Document clear user stories, acceptance criteria, and workflow diagrams in Jira/Confluence."
+    ],
+    "technical_skills": {
+      "core_skills": [
+        "SQL",
+        "Data Analysis",
+        "Microsoft Excel",
+        "Power BI",
+        "Agile",
+        "Tableau",
+        "Data Modeling",
+        "Jira",
+        "Scrum",
+        "Statistics"
+      ],
+      "languages_frameworks_tools": {
+        "languages": [
+          "SQL",
+          "Python"
+        ],
+        "frameworks_libraries": [
+          "Agile",
+          "Scrum"
+        ],
+        "databases_data": [
+          "Microsoft Excel",
+          "PostgreSQL",
+          "Data Modeling"
+        ],
+        "tools_platforms": [
+          "Power BI",
+          "Tableau",
+          "Data Analysis",
+          "Jira",
+          "Confluence"
+        ]
+      }
+    },
+    "soft_skills": [
+      "Communication",
+      "Analytical Thinking",
+      "Presentation",
+      "Problem Solving",
+      "Collaboration"
+    ],
+    "qualifications": {
+      "education": "Bachelor's in Business or Bachelor's in Computer Science",
+      "typical_experience": "0–2 years for entry/junior; varies by seniority",
+      "salary_benchmark": "$65-120K (US benchmark from Kaggle job_roles.csv)",
+      "expectations": [
+        "Skills: Tableau/Power BI (expert-level), SQL, data warehousing, communication, data storytelling.",
+        "Qualifications: Degree in analytics, business, or CS. Strong portfolio of dashboards."
+      ],
+      "helpful_certifications": [
+        "IIBA Entry Certificate in Business Analysis (ECBA)",
+        "Google Data Analytics Certificate",
+        "Certified Scrum Product Owner (CSPO)"
+      ]
+    },
+    "career_growth": [
+      "Junior Business Analyst (0–2 yrs): Document user stories, map processes, analyze Excel/SQL data, and join Agile rituals.",
+      "Senior Business Systems Analyst (2–5 yrs): Lead complex domain modeling, BI KPI design, and cross-team roadmaps.",
+      "Product Manager / Lead Consultant (5+ yrs): Own product vision and business outcomes.",
+      "Adjacent Paths: Data Analyst, Product Manager, Scrum Master, Technology Consultant."
+    ],
+    "learning_roadmap": [
+      {
+        "stage": 1,
+        "title": "Excel & Analytical Problem Solving",
+        "duration": "3 weeks",
+        "description": "Master business KPI modeling, pivot analysis, and structured process mapping.",
+        "skills": [
+          "Microsoft Excel",
+          "Data Analysis"
+        ]
+      },
+      {
+        "stage": 2,
+        "title": "SQL & Data Modeling",
+        "duration": "4 weeks",
+        "description": "Pull data independently with SQL and understand relational Data Modeling.",
+        "skills": [
+          "SQL",
+          "Data Modeling"
+        ]
+      },
+      {
+        "stage": 3,
+        "title": "Agile Requirements & Jira",
+        "duration": "3 weeks",
+        "description": "Write crisp Agile user stories, manage backlogs in Jira, and document in Confluence.",
+        "skills": [
+          "Agile",
+          "Scrum",
+          "Jira",
+          "Confluence"
+        ]
+      },
+      {
+        "stage": 4,
+        "title": "BI Reporting & Dashboards",
+        "duration": "4 weeks",
+        "description": "Communicate insights to leadership cleanly with Power BI and Tableau.",
+        "skills": [
+          "Power BI",
+          "Tableau"
+        ]
+      }
+    ],
+    "data_sources": [
+      "Kaggle data.csv",
+      "Kaggle data.csv + job_description.csv",
+      "Kaggle data.csv + job_roles.csv",
+      "Kaggle job_description.csv",
+      "Kaggle job_roles.csv",
+      "Kaggle job_roles.csv + data.csv"
+    ]
+  },
+  "Network Engineer": {
+    "title": "Network Engineer",
+    "slug": "network-engineer",
+    "category": "Security & Networking",
+    "beginner_summary": "A Network Engineer designs and keeps computer networks running—routers, switches, Wi-Fi, VPNs, and cloud connections that let every computer talk securely.",
+    "overview": "Without reliable networking, no website, cloud server, or office can function. Network Engineers architect physical and cloud networks, configure routers and firewalls, and quickly diagnose connectivity bottlenecks.",
+    "what_they_do": "A Network Engineer plans IP addressing and subnets, configures Cisco switches and routing protocols, enforces firewall and VPN security policies, monitors packet loss, and automates repetitive network updates with Python.",
+    "day_to_day_responsibilities": [
+      "Design logical and physical network layouts.",
+      "Configure and install routers, switches, and firewalls.",
+      "Monitor network performance and troubleshoot connectivity issues.",
+      "Implement network security policies.",
+      "Configure routers, switches, VLANs, VPN gateways, and wireless infrastructure.",
+      "Monitor bandwidth, latency, and packet health and resolve outage alerts quickly."
+    ],
+    "technical_skills": {
+      "core_skills": [
+        "Cisco",
+        "Networking",
+        "TCP/IP",
+        "Network Security",
+        "Firewalls",
+        "Linux",
+        "Python",
+        "AWS",
+        "Ansible"
+      ],
+      "languages_frameworks_tools": {
+        "languages": [
+          "Python",
+          "Bash"
+        ],
+        "frameworks_libraries": [
+          "Ansible"
+        ],
+        "databases_data": [],
+        "tools_platforms": [
+          "Networking",
+          "TCP/IP",
+          "Cisco",
+          "Firewalls",
+          "Network Security",
+          "Linux",
+          "AWS"
+        ]
+      }
+    },
+    "soft_skills": [
+      "Troubleshooting",
+      "Analytical Thinking",
+      "Communication",
+      "Attention to Detail",
+      "Teamwork"
+    ],
+    "qualifications": {
+      "education": "Bachelor's in IT or Networking Certification",
+      "typical_experience": "0–2 years for entry/junior; varies by seniority",
+      "salary_benchmark": "$70-130K (US benchmark from Kaggle job_roles.csv)",
+      "expectations": [
+        "BS in IT or CompE.",
+        "Cisco certifications (CCNA, CCNP) are standard."
+      ],
+      "helpful_certifications": [
+        "Cisco Certified Network Associate (CCNA)",
+        "CompTIA Network+",
+        "AWS Certified Advanced Networking"
+      ]
+    },
+    "career_growth": [
+      "Network Support / NOC Technician (0–2 yrs): Troubleshoot connectivity, subnetting, switch ports, and basic Cisco/Linux configs.",
+      "Network Engineer (2–5 yrs): Design enterprise routing, firewall policies, and cloud VPC architectures.",
+      "Network Architect / Cloud Networking Lead (5+ yrs): Lead automated global network engineering.",
+      "Adjacent Paths: Cybersecurity Analyst, Cloud Engineer, Systems Administrator."
+    ],
+    "learning_roadmap": [
+      {
+        "stage": 1,
+        "title": "TCP/IP & Networking Foundations",
+        "duration": "4 weeks",
+        "description": "Master the OSI model, IPv4/IPv6 subnetting, DNS, DHCP, and packet troubleshooting.",
+        "skills": [
+          "Networking",
+          "TCP/IP"
+        ]
+      },
+      {
+        "stage": 2,
+        "title": "Routing, Switching & Linux",
+        "duration": "5 weeks",
+        "description": "Configure VLANs, OSPF/BGP concepts, Cisco IOS CLI, and Linux network diagnostics.",
+        "skills": [
+          "Cisco",
+          "Linux"
+        ]
+      },
+      {
+        "stage": 3,
+        "title": "Network Security & Firewalls",
+        "duration": "4 weeks",
+        "description": "Implement firewalls, VPN tunnels, ACLs, and perimeter Network Security controls.",
+        "skills": [
+          "Firewalls",
+          "Network Security"
+        ]
+      },
+      {
+        "stage": 4,
+        "title": "Automation & Cloud Networking",
+        "duration": "4 weeks",
+        "description": "Automate network tasks with Python/Ansible and connect on-prem networks to AWS VPCs.",
+        "skills": [
+          "Python",
+          "Ansible",
+          "AWS"
+        ]
+      }
+    ],
+    "data_sources": [
+      "Kaggle job_description.csv",
+      "Kaggle job_description.csv + job_roles.csv",
+      "Kaggle job_roles.csv",
+      "Kaggle job_roles.csv (Network Engineer)",
+      "Kaggle job_roles.csv + job_description.csv",
+      "Kaggle job_roles.csv + job_title_des.csv",
+      "Kaggle resume_data.csv",
+      "Kaggle resume_data.csv (Network Support Engineer)",
+      "Kaggle resume_data.csv + job_roles.csv"
+    ]
+  },
+  "PHP Developer": {
+    "title": "PHP Developer",
+    "slug": "php-developer",
+    "category": "Web Development",
+    "beginner_summary": "A PHP Developer builds dynamic websites, e-commerce stores, and content-driven web backends using PHP, Laravel, WordPress, and MySQL.",
+    "overview": "PHP powers a huge share of the web—including WordPress sites and thousands of modern SaaS applications built with Laravel and Symfony. PHP Developers ship practical database-driven web products rapidly.",
+    "what_they_do": "A PHP Developer writes server-side PHP logic, builds clean MVC apps with Laravel, creates REST APIs, designs MySQL tables, and styles interactive pages using HTML5, CSS3, and JavaScript.",
+    "day_to_day_responsibilities": [
+      "Develop web applications, plugins, and backend APIs in modern PHP and Laravel/Symfony.",
+      "Design and optimize MySQL databases and Eloquent ORM queries.",
+      "Build responsive frontend views integrating HTML5, CSS3, and JavaScript.",
+      "Customize WordPress themes/plugins or build bespoke Laravel dashboards.",
+      "Write tests, debug server logs, and manage deployments via Git and Docker."
+    ],
+    "technical_skills": {
+      "core_skills": [
+        "MySQL",
+        "PHP",
+        "Laravel",
+        "CSS3",
+        "JavaScript",
+        "HTML5",
+        "Docker",
+        "REST API",
+        "Symfony",
+        "WordPress"
+      ],
+      "languages_frameworks_tools": {
+        "languages": [
+          "PHP",
+          "JavaScript",
+          "HTML5",
+          "CSS3",
+          "SQL"
+        ],
+        "frameworks_libraries": [
+          "Laravel",
+          "Symfony",
+          "jQuery",
+          "WordPress",
+          "Responsive Design"
+        ],
+        "databases_data": [
+          "MySQL",
+          "PostgreSQL",
+          "Redis"
+        ],
+        "tools_platforms": [
+          "Git",
+          "REST API",
+          "Docker",
+          "Linux"
+        ]
+      }
+    },
+    "soft_skills": [
+      "Problem Solving",
+      "Communication",
+      "Attention to Detail",
+      "Time Management",
+      "Collaboration"
+    ],
+    "qualifications": {
+      "education": "Bachelor's in Computer Science",
+      "typical_experience": "0–2 years for entry/junior; varies by seniority",
+      "salary_benchmark": "$55-105K (US benchmark from Kaggle job_roles.csv)",
+      "expectations": [
+        "Solid grasp of core stack (MySQL, PHP, Laravel, CSS3)",
+        "Portfolio of practical projects or GitHub repositories",
+        "Comfort collaborating with Git and writing clean code/docs"
+      ],
+      "helpful_certifications": [
+        "Laravel Certification",
+        "Zend Certified PHP Engineer"
+      ]
+    },
+    "career_growth": [
+      "Junior PHP Developer (0–2 yrs): Build web pages, WordPress sites, and MySQL CRUD features in PHP.",
+      "Laravel / Full-Stack PHP Engineer (2–5 yrs): Architect APIs, queues, caching, and Laravel SaaS backends.",
+      "Senior Web Architect (5+ yrs): Lead high-traffic PHP platforms and full-stack teams.",
+      "Adjacent Paths: Full Stack Developer, Backend Developer, WordPress Architect."
+    ],
+    "learning_roadmap": [
+      {
+        "stage": 1,
+        "title": "Web Frontend Basics & Git",
+        "duration": "3–4 weeks",
+        "description": "Learn HTML5, CSS3, JavaScript fundamentals, and Git version control.",
+        "skills": [
+          "HTML5",
+          "CSS3",
+          "JavaScript",
+          "Git"
+        ]
+      },
+      {
+        "stage": 2,
+        "title": "Core PHP & MySQL",
+        "duration": "4–5 weeks",
+        "description": "Master OOP PHP, forms/sessions, and relational database queries with MySQL.",
+        "skills": [
+          "PHP",
+          "MySQL",
+          "SQL"
+        ]
+      },
+      {
+        "stage": 3,
+        "title": "Laravel & WordPress Development",
+        "duration": "5 weeks",
+        "description": "Build modern MVC backends and REST APIs with Laravel and customize WordPress.",
+        "skills": [
+          "Laravel",
+          "WordPress",
+          "REST API"
+        ]
+      },
+      {
+        "stage": 4,
+        "title": "Deployment & Scaling",
+        "duration": "3 weeks",
+        "description": "Containerize and run PHP apps cleanly with Docker, Linux, and Redis caching.",
+        "skills": [
+          "Docker",
+          "Linux",
+          "Redis"
+        ]
+      }
+    ],
+    "data_sources": [
+      "Kaggle job_roles.csv",
+      "Kaggle job_roles.csv (PHP Developer)",
+      "Kaggle job_roles.csv + job_title_des.csv",
+      "Kaggle job_title_des.csv",
+      "Kaggle job_title_des.csv (Wordpress/PHP Developer)"
+    ]
+  }
+}

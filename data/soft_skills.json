@@ -1,0 +1,150 @@
+{
+  "skills": [
+    {
+      "name": "Communication",
+      "category": "Soft Skills",
+      "aliases": [
+        "communication",
+        "written communication",
+        "verbal communication"
+      ]
+    },
+    {
+      "name": "Problem Solving",
+      "category": "Soft Skills",
+      "aliases": [
+        "problem solving",
+        "problem-solving"
+      ]
+    },
+    {
+      "name": "Teamwork",
+      "category": "Soft Skills",
+      "aliases": [
+        "teamwork",
+        "team player",
+        "team collaboration"
+      ]
+    },
+    {
+      "name": "Collaboration",
+      "category": "Soft Skills",
+      "aliases": [
+        "collaboration",
+        "cross-functional collaboration"
+      ]
+    },
+    {
+      "name": "Analytical Thinking",
+      "category": "Soft Skills",
+      "aliases": [
+        "analytical thinking",
+        "analytical skills",
+        "analytical mindset"
+      ]
+    },
+    {
+      "name": "Attention to Detail",
+      "category": "Soft Skills",
+      "aliases": [
+        "attention to detail",
+        "detail-oriented",
+        "detail oriented"
+      ]
+    },
+    {
+      "name": "Leadership",
+      "category": "Soft Skills",
+      "aliases": [
+        "leadership",
+        "team lead",
+        "technical leadership"
+      ]
+    },
+    {
+      "name": "Time Management",
+      "category": "Soft Skills",
+      "aliases": [
+        "time management",
+        "prioritization"
+      ]
+    },
+    {
+      "name": "Critical Thinking",
+      "category": "Soft Skills",
+      "aliases": [
+        "critical thinking"
+      ]
+    },
+    {
+      "name": "Adaptability",
+      "category": "Soft Skills",
+      "aliases": [
+        "adaptability",
+        "fast learner"
+      ]
+    },
+    {
+      "name": "Project Management",
+      "category": "Soft Skills",
+      "aliases": [
+        "project management",
+        "stakeholder management"
+      ]
+    },
+    {
+      "name": "Presentation",
+      "category": "Soft Skills",
+      "aliases": [
+        "presentation",
+        "data storytelling",
+        "storytelling"
+      ]
+    },
+    {
+      "name": "Troubleshooting",
+      "category": "Soft Skills",
+      "aliases": [
+        "troubleshooting",
+        "root cause analysis"
+      ]
+    },
+    {
+      "name": "Mentoring",
+      "category": "Soft Skills",
+      "aliases": [
+        "mentoring",
+        "coaching",
+        "code reviews"
+      ]
+    },
+    {
+      "name": "Creativity",
+      "category": "Soft Skills",
+      "aliases": [
+        "creativity"
+      ]
+    },
+    {
+      "name": "Negotiation",
+      "category": "Soft Skills",
+      "aliases": [
+        "negotiation"
+      ]
+    },
+    {
+      "name": "Strategic Planning",
+      "category": "Soft Skills",
+      "aliases": [
+        "strategic planning"
+      ]
+    },
+    {
+      "name": "Decision Making",
+      "category": "Soft Skills",
+      "aliases": [
+        "decision making"
+      ]
+    }
+  ]
+}

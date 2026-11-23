@@ -1,0 +1,438 @@
+{% extends "base.html" %}
+
+{% block title %}Job Match Analysis - {{ comparison.title }} ({{ comparison.job_id }}) - AI Resume Analyzer{% endblock %}
+
+{% block content %}
+<div class="row g-4">
+
+  <!-- Top Action & Navigation Bar -->
+  <div class="col-12 d-flex justify-content-between align-items-center flex-wrap gap-3">
+    <div>
+      <div class="d-flex align-items-center gap-2 mb-1">
+        <span class="badge bg-primary-subtle text-primary border border-primary-subtle rounded-pill">
+          <i class="bi bi-bullseye me-1"></i> Job Benchmark Comparison
+        </span>
+        <span class="text-muted small"><i class="bi bi-calendar3 me-1"></i>{{ analysis.created_at }}</span>
+      </div>
+      <h1 class="h3 fw-bold mb-0 text-dark d-flex align-items-center gap-2">
+        <i class="bi bi-file-earmark-pdf-fill text-danger"></i>
+        <span>{{ comparison.filename }}</span>
+        <span class="text-muted fw-normal fs-5">vs</span>
+        <span class="text-primary">{{ comparison.title }}</span>
+      </h1>
+    </div>
+    <div class="d-flex gap-2 no-print flex-wrap">
+      <button type="button" onclick="window.print()" class="btn btn-outline-secondary" title="Print this job comparison report">
+        <i class="bi bi-printer me-1"></i> Print Report
+      </button>
+      <a href="{{ url_for('compare_job', job_id=comparison.job_id) }}" class="btn btn-outline-primary">
+        <i class="bi bi-arrow-repeat me-1"></i> Compare Another Resume
+      </a>
+      <a href="{{ url_for('jobs_catalog') }}" class="btn btn-primary shadow-xs">
+        <i class="bi bi-briefcase me-1"></i> Explore More Jobs
+      </a>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       SECTION A: JOB MATCH ANALYSIS
+       ========================================================================= -->
+  <div class="col-12">
+    <div class="hero-match-card p-4 p-md-5 text-white">
+      <div class="row align-items-center g-4 position-relative" style="z-index: 2;">
+        <div class="col-lg-8">
+          <div class="d-flex align-items-center gap-2 mb-3 flex-wrap">
+            <span class="badge bg-success px-3 py-1 rounded-pill fw-semibold">
+              <i class="bi bi-bullseye me-1"></i> A. Job Match Analysis
+            </span>
+            <span class="badge bg-white bg-opacity-20 text-white border border-white border-opacity-25">{{ comparison.job_id }}</span>
+            <span class="tier-badge {{ 'tier-strong' if comparison.match_pct >= 80 else ('tier-moderate' if comparison.match_pct >= 50 else 'tier-growth') }}">
+              {{ comparison.tier }}
+            </span>
+            <span class="badge bg-white bg-opacity-15 text-white border border-white border-opacity-20">{{ comparison.experience_level }}</span>
+            <span class="badge bg-white bg-opacity-15 text-white border border-white border-opacity-20">{{ comparison.category }}</span>
+            {% if comparison.company %}
+              <span class="badge bg-white bg-opacity-15 text-white border border-white border-opacity-20">
+                <i class="bi bi-building me-1"></i>{{ comparison.company }}
+              </span>
+            {% endif %}
+          </div>
+
+          <h2 class="display-6 fw-bold mb-2 text-white">{{ comparison.title }}</h2>
+          <p class="text-white-50 mb-3 fs-6" style="max-width: 670px;">
+            Targeted comparison against this specific job posting: you currently satisfy
+            <strong class="text-white">{{ comparison.matched_skills|length }}</strong> of
+            <strong class="text-white">{{ comparison.required_skills|length }}</strong> required competencies
+            (<strong class="text-white">{{ "%.1f"|format(comparison.match_pct) }}%</strong> skill match) with
+            <strong class="text-white">{{ comparison.missing_skills|length }}</strong> missing skill{{ '' if comparison.missing_skills|length == 1 else 's' }} to learn.
+          </p>
+
+          <!-- Direct Apply / Search Links for This Specific Job Role -->
+          <div class="d-flex flex-wrap gap-2 no-print pt-2">
+            <a href="https://www.linkedin.com/jobs/search/?keywords={{ comparison.title|urlencode }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-light fw-semibold text-primary">
+              <i class="bi bi-linkedin me-1"></i> Search Openings on LinkedIn
+            </a>
+            <a href="https://www.indeed.com/jobs?q={{ comparison.title|urlencode }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-light fw-semibold text-primary">
+              <i class="bi bi-briefcase me-1"></i> Search on Indeed
+            </a>
+            <a href="{{ url_for('roles_explorer', role=comparison.title) }}" target="_blank" class="btn btn-sm btn-outline-light fw-semibold">
+              <i class="bi bi-map me-1"></i> Explore Career Roadmap
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 text-lg-end">
+          <div class="stat-metric-pill d-inline-block text-center text-lg-end">
+            <div class="text-white-50 small fw-bold text-uppercase mb-1" style="letter-spacing: 0.05em;">
+              Resume-to-Job Match
+            </div>
+            <div class="display-5 fw-bold text-emerald" style="color: #34d399;">
+              {{ "%.1f"|format(comparison.match_pct) }}%
+            </div>
+            <div class="progress mt-2 mb-2 bg-white bg-opacity-25" style="height: 6px;">
+              <div class="progress-bar bg-emerald" role="progressbar" style="width: {{ comparison.match_pct }}%; background-color: #34d399 !important;"></div>
+            </div>
+            <div class="text-white-50 small">
+              <span class="context-score-tag" data-bs-toggle="tooltip" data-bs-placement="top" title="Context similarity is a TF-IDF text-similarity score measuring lexical overlap with this exact job description.">
+                <i class="bi bi-info-circle me-1"></i>Description similarity: {{ "%.1f"|format(comparison.text_score_pct) }}%
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Job Description Card -->
+  <div class="col-12">
+    <div class="card p-4 border-0 card-elevated bg-white">
+      <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap gap-2">
+        <h5 class="fw-bold mb-0 fs-6 text-dark">
+          <i class="bi bi-file-earmark-text text-primary me-2"></i>Selected Job Description ({{ comparison.job_id }})
+        </h5>
+        {% if comparison.company %}
+          <span class="badge bg-light text-secondary border"><i class="bi bi-building me-1"></i>{{ comparison.company }}</span>
+        {% else %}
+          <span class="badge bg-light text-muted border">Industry Benchmark Dataset</span>
+        {% endif %}
+      </div>
+      <div class="p-3 bg-light rounded-3 text-secondary lh-base small">
+        {{ comparison.description }}
+      </div>
+      <div class="mt-3 pt-2 border-top">
+        <div class="small fw-bold text-muted text-uppercase mb-2" style="font-size: 0.73rem; letter-spacing: 0.05em;">
+          Required Skills for This Posting ({{ comparison.required_skills|length }})
+        </div>
+        <div class="d-flex flex-wrap gap-1">
+          {% for sk in comparison.required_skills %}
+            {% if sk in comparison.matched_skills %}
+              <span class="badge-matched" style="font-size: 0.75rem;"><i class="bi bi-check-circle-fill me-1"></i>{{ sk }}</span>
+            {% else %}
+              <span class="badge-missing" style="font-size: 0.75rem;"><i class="bi bi-x-circle me-1"></i>{{ sk }}</span>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       SECTION B & C: SKILLS YOU ALREADY HAVE vs MISSING SKILLS
+       ========================================================================= -->
+  <div class="col-md-6">
+    <div class="card p-4 border-0 card-elevated bg-white h-100">
+      <div class="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom">
+        <div>
+          <span class="badge bg-success-subtle text-success border border-success-subtle mb-1">Section B</span>
+          <h5 class="fw-bold mb-0 fs-6 text-dark">
+            <i class="bi bi-check-circle-fill text-success me-2"></i>Skills You Already Have
+          </h5>
+        </div>
+        <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill fs-6 px-3">
+          {{ comparison.matched_skills|length }} / {{ comparison.required_skills|length }}
+        </span>
+      </div>
+      <p class="text-muted small mb-3">
+        Technical competencies detected in your resume that satisfy the requirements for this specific job posting.
+      </p>
+
+      {% if comparison.matched_skills %}
+        <div class="d-flex flex-wrap gap-2">
+          {% for sk in comparison.matched_skills %}
+            <span class="badge-matched p-2 px-3 fs-6">
+              <i class="bi bi-check-circle-fill text-success me-1"></i> {{ sk }}
+            </span>
+          {% endfor %}
+        </div>
+      {% else %}
+        <div class="p-3 rounded-3 bg-light text-muted small text-center">
+          <i class="bi bi-info-circle me-1"></i> No overlapping skills detected yet for this job posting.
+        </div>
+      {% endif %}
+
+      {% if comparison.preferred_matched %}
+      <div class="mt-4 pt-3 border-top">
+        <div class="small fw-bold text-primary text-uppercase mb-2" style="font-size: 0.73rem;">
+          <i class="bi bi-stars me-1"></i> Bonus / Preferred Skills You Possess
+        </div>
+        <div class="d-flex flex-wrap gap-1">
+          {% for psk in comparison.preferred_matched %}
+            <span class="badge bg-primary-subtle text-primary border border-primary-subtle small">{{ psk }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card p-4 border-0 card-elevated bg-white h-100">
+      <div class="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom">
+        <div>
+          <span class="badge bg-danger-subtle text-danger border border-danger-subtle mb-1">Section C</span>
+          <h5 class="fw-bold mb-0 fs-6 text-dark">
+            <i class="bi bi-exclamation-triangle-fill text-danger me-2"></i>Missing Skills
+          </h5>
+        </div>
+        <span class="badge bg-danger-subtle text-danger border border-danger-subtle rounded-pill fs-6 px-3">
+          {{ comparison.missing_skills|length }}
+        </span>
+      </div>
+      <p class="text-muted small mb-3">
+        Skills required by this job posting that were not detected in your resume. Focus your preparation here.
+      </p>
+
+      {% if comparison.missing_skills %}
+        <div class="d-flex flex-wrap gap-2">
+          {% for miss in comparison.missing_skills %}
+            <span class="badge-missing p-2 px-3 fs-6">
+              <i class="bi bi-exclamation-triangle-fill text-danger me-1"></i> {{ miss }}
+            </span>
+          {% endfor %}
+        </div>
+      {% else %}
+        <div class="p-4 rounded-3 bg-success-subtle text-success text-center">
+          <i class="bi bi-check-circle-fill fs-3 mb-2 d-block"></i>
+          <h6 class="fw-bold mb-1">Zero Skill Gap!</h6>
+          <p class="small mb-0">Your resume demonstrates all required technical competencies for this job.</p>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       SECTION E: IMPROVEMENT SUGGESTIONS
+       ========================================================================= -->
+  <div class="col-12">
+    <div class="card p-4 p-md-5 border-0 card-elevated bg-white">
+      <div class="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom flex-wrap gap-2">
+        <div>
+          <span class="badge bg-primary-subtle text-primary border border-primary-subtle mb-1">Section E</span>
+          <h4 class="fw-bold mb-0 fs-5 text-dark">
+            <i class="bi bi-lightbulb-fill text-warning me-2"></i>Improvement Suggestions &amp; Preparation Advice
+          </h4>
+        </div>
+        <span class="badge bg-light text-secondary border small">Actionable Roadmap</span>
+      </div>
+
+      <!-- Assessment Summary -->
+      <div class="p-3 rounded-3 bg-light border-start border-4 border-primary mb-4">
+        <div class="fw-bold text-dark small mb-1">Current Readiness Assessment:</div>
+        <p class="text-secondary small mb-0">{{ comparison.improvement_suggestions.summary }}</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Priority Action Steps -->
+        <div class="col-lg-6">
+          <h6 class="fw-bold text-dark mb-2">
+            <i class="bi bi-list-ol text-primary me-2"></i>Priority Action Steps to Close Your Gap
+          </h6>
+          <ul class="list-group list-group-flush small">
+            {% for act in comparison.improvement_suggestions.priority_actions %}
+              <li class="list-group-item px-0 py-2 text-secondary bg-transparent d-flex align-items-start gap-2">
+                <i class="bi bi-arrow-right-circle-fill text-primary mt-1"></i>
+                <span>{{ act }}</span>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <!-- Portfolio Project & Interview Focus -->
+        <div class="col-lg-6">
+          <div class="p-3 rounded-3 border bg-light mb-3">
+            <h6 class="fw-bold text-dark mb-1 small text-uppercase" style="letter-spacing: 0.04em;">
+              <i class="bi bi-laptop text-success me-1"></i> Recommended Portfolio Project
+            </h6>
+            <p class="small text-secondary mb-0">{{ comparison.improvement_suggestions.project_recommendation }}</p>
+          </div>
+
+          <div class="p-3 rounded-3 border bg-light">
+            <h6 class="fw-bold text-dark mb-1 small text-uppercase" style="letter-spacing: 0.04em;">
+              <i class="bi bi-chat-left-dots text-primary me-1"></i> Technical Interview Focus
+            </h6>
+            <p class="small text-secondary mb-0">{{ comparison.improvement_suggestions.interview_focus }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       SECTION D: LEARNING RECOMMENDATIONS FOR MISSING SKILLS
+       ========================================================================= -->
+  <div class="col-12" id="learning-recommendations">
+    <div class="card p-4 p-md-5 border-0 card-elevated" style="background: linear-gradient(180deg, #ffffff 0%, #fbfcfe 100%);">
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4 pb-3 border-bottom">
+        <div>
+          <span class="badge bg-emerald-subtle text-emerald-text border border-emerald-border mb-1" style="background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0;">
+            Section D &middot; Curated Learning Resources
+          </span>
+          <h3 class="h4 fw-bold text-dark mb-1">
+            <i class="bi bi-book-half text-primary me-2"></i>Where to Learn Your Missing Skills
+          </h3>
+          <p class="text-muted small mb-0">
+            Every missing skill required by <strong>{{ comparison.title }}</strong> is paired with 2–3 verified, real learning resources (free platforms preferred).
+          </p>
+        </div>
+      </div>
+
+      {% if comparison.learning_recommendations %}
+        <div class="row g-3">
+          {% for item in comparison.learning_recommendations %}
+            <div class="col-md-6">
+              <div class="card p-3 h-100 border bg-white shadow-xs card-hover">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <div>
+                    <h6 class="fw-bold text-dark mb-0 fs-6">{{ item.skill }}</h6>
+                    <span class="badge bg-light text-secondary border small">{{ item.category }}</span>
+                  </div>
+                  <span class="badge bg-secondary-subtle text-secondary small">
+                    <i class="bi bi-clock me-1"></i>{{ item.est_time or '1-2 weeks' }}
+                  </span>
+                </div>
+
+                {% if item.what_it_is or item.why_important %}
+                <div class="p-2 px-3 rounded-3 bg-light border-start border-3 border-primary mb-3" style="font-size: 0.8rem;">
+                  {% if item.what_it_is %}
+                    <div class="mb-1"><strong class="text-dark">What it is:</strong> <span class="text-secondary">{{ item.what_it_is }}</span></div>
+                  {% endif %}
+                  {% if item.why_important %}
+                    <div><strong class="text-primary">Why it matters for this job:</strong> <span class="text-secondary">{{ item.why_important }}</span></div>
+                  {% endif %}
+                </div>
+                {% endif %}
+
+                <!-- Recommended Learning Platforms (2-3 Verified Resources per Missing Skill) -->
+                <div class="mb-2">
+                  <div class="small text-muted fw-bold mb-2">
+                    <i class="bi bi-link-45deg text-primary"></i> Recommended Learning Resources ({{ item.resources|length if item.resources else 1 }}):
+                  </div>
+                  {% if item.resources %}
+                    <div class="d-flex flex-column gap-2">
+                      {% for res in item.resources %}
+                        <a href="{{ res.url }}" target="_blank" rel="noopener noreferrer"
+                           class="d-block p-2 rounded-3 bg-light border text-decoration-none resource-mini-card">
+                          <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="badge bg-primary-subtle text-primary small">{{ res.platform }}</span>
+                            <span class="badge {% if 'Free' in (res.cost or 'Free') %}bg-success-subtle text-success{% else %}bg-white text-secondary border{% endif %} small" style="font-size: 0.7rem;">
+                              {{ res.cost or 'Free' }}
+                            </span>
+                          </div>
+                          <div class="fw-semibold text-primary small lh-sm mb-1">
+                            {{ res.title }} <i class="bi bi-box-arrow-up-right ms-1" style="font-size: 0.72rem;"></i>
+                          </div>
+                          <div class="text-secondary" style="font-size: 0.76rem; line-height: 1.35;">
+                            {{ res.description }}
+                          </div>
+                        </a>
+                      {% endfor %}
+                    </div>
+                  {% else %}
+                    <div class="p-2 rounded bg-light">
+                      <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" class="fw-semibold text-primary text-decoration-none small d-inline-flex align-items-center gap-1">
+                        <span>{{ item.platform }}</span>
+                        <i class="bi bi-box-arrow-up-right small"></i>
+                      </a>
+                    </div>
+                  {% endif %}
+                </div>
+
+                <!-- Core Topics to Master -->
+                <div class="mb-2">
+                  <div class="small text-muted fw-semibold mb-1">Core Topics to Master:</div>
+                  <p class="small text-secondary mb-0 lh-sm">{{ item.topics }}</p>
+                </div>
+
+                <!-- Hands-on Project Idea -->
+                <div class="mt-auto pt-2 border-top">
+                  <div class="small text-success fw-bold mb-1">
+                    <i class="bi bi-laptop me-1"></i> Resume Project Idea:
+                  </div>
+                  <p class="small text-muted mb-0 fst-italic">{{ item.project }}</p>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      {% else %}
+        <div class="p-4 text-center rounded-3 bg-light text-success">
+          <i class="bi bi-trophy-fill fs-3 text-warning mb-2 d-block"></i>
+          <h6 class="fw-bold mb-1">No Skill Gaps Detected for {{ comparison.title }}!</h6>
+          <p class="small text-muted mb-0">Your profile meets 100% of the required competencies for this benchmark posting.</p>
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+
+  <!-- Detected Resume Skills Summary -->
+  <div class="col-12">
+    <div class="card p-4 border-0 card-elevated bg-white">
+      <div class="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom flex-wrap gap-2">
+        <div>
+          <h5 class="fw-bold mb-0 fs-6 text-dark">
+            <i class="bi bi-cpu text-primary me-2"></i>All Skills Detected in Resume ({{ comparison.detected_skills|length }})
+          </h5>
+          <span class="text-muted small">Extracted via NLP entity normalization from {{ comparison.filename }}</span>
+        </div>
+        <span class="badge bg-primary-subtle text-primary border border-primary-subtle rounded-pill">
+          {{ comparison.detected_skills|length }} Skills Found
+        </span>
+      </div>
+
+      {% if comparison.skills_by_category %}
+        <div class="row g-3">
+          {% for cat_name, skill_list in comparison.skills_by_category.items() %}
+            <div class="col-md-4">
+              <div class="p-3 rounded-3 bg-light border h-100">
+                <div class="small fw-bold text-muted text-uppercase mb-2" style="font-size: 0.73rem;">
+                  {{ cat_name }} ({{ skill_list|length }})
+                </div>
+                <div class="d-flex flex-wrap gap-1">
+                  {% for sk in skill_list %}
+                    <span class="badge-skill">
+                      {% if sk in comparison.matched_skills %}
+                        <i class="bi bi-check-circle-fill text-success small me-1"></i>
+                      {% endif %}
+                      {{ sk }}
+                    </span>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+</script>
+{% endblock %}
+

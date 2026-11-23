@@ -1,0 +1,242 @@
+{% extends "base.html" %}
+
+{% block title %}Browse Tech Jobs - AI Resume Analyzer{% endblock %}
+
+{% block content %}
+<div class="row g-4">
+  <!-- Page Header -->
+  <div class="col-12">
+    <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+      <div>
+        <h1 class="h3 fw-bold text-dark mb-1 d-flex align-items-center gap-2">
+          <i class="bi bi-briefcase text-primary"></i>
+          <span>Browse Stored Job Catalog</span>
+        </h1>
+        <p class="text-muted small mb-0">
+          Explore and filter benchmark job descriptions used by the hybrid AI matching engine.
+        </p>
+      </div>
+      <div>
+        <a href="{{ url_for('index') }}" class="btn btn-outline-primary shadow-sm">
+          <i class="bi bi-cloud-arrow-up me-1"></i> Analyze My Resume
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Filter Card -->
+  <div class="col-12">
+    <div class="card p-4 border-0 card-elevated bg-white">
+      <form method="GET" action="{{ url_for('jobs_catalog') }}" class="row g-3 align-items-end">
+        <div class="col-md-4">
+          <label for="title_category" class="form-label fw-bold small text-muted text-uppercase mb-1" style="letter-spacing: 0.05em;">
+            <i class="bi bi-search me-1"></i> Role Title or Category
+          </label>
+          <input type="text" class="form-control" id="title_category" name="title_category"
+                 placeholder="e.g. Backend, Data Scientist, Cloud..." value="{{ filter_title_category }}">
+        </div>
+
+        <div class="col-md-3">
+          <label for="experience" class="form-label fw-bold small text-muted text-uppercase mb-1" style="letter-spacing: 0.05em;">
+            <i class="bi bi-person-badge me-1"></i> Experience Level
+          </label>
+          <select class="form-select" id="experience" name="experience">
+            <option value="All" {% if filter_experience == 'All' or not filter_experience %}selected{% endif %}>All Experience Levels</option>
+            {% for exp in experience_levels %}
+              <option value="{{ exp }}" {% if filter_experience == exp %}selected{% endif %}>{{ exp }}</option>
+            {% endfor %}
+          </select>
+        </div>
+
+        <div class="col-md-3">
+          <label for="skill" class="form-label fw-bold small text-muted text-uppercase mb-1" style="letter-spacing: 0.05em;">
+            <i class="bi bi-cpu me-1"></i> Required Skill Search
+          </label>
+          <input type="text" class="form-control" id="skill" name="skill"
+                 placeholder="e.g. Python, SQL, Docker..." value="{{ filter_skill }}">
+        </div>
+
+        <div class="col-md-2 d-flex gap-2">
+          <button type="submit" class="btn btn-primary w-100 fw-semibold shadow-sm">
+            <i class="bi bi-funnel me-1"></i> Filter
+          </button>
+          {% if filter_title_category or (filter_experience != 'All' and filter_experience) or filter_skill %}
+            <a href="{{ url_for('jobs_catalog') }}" class="btn btn-outline-secondary" title="Reset filters">
+              <i class="bi bi-x-circle"></i>
+            </a>
+          {% endif %}
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Results Count Badge -->
+  <div class="col-12 d-flex justify-content-between align-items-center">
+    <span class="badge bg-white text-secondary border px-3 py-2 fs-6 shadow-xs">
+      Showing <strong class="text-dark">{{ jobs|length }}</strong> of {{ total_jobs }} job postings
+    </span>
+  </div>
+
+  <!-- Job Listings Table / Cards -->
+  <div class="col-12">
+    {% if jobs %}
+      <div class="card border-0 card-elevated overflow-hidden">
+        <div class="table-responsive">
+          <table class="table table-hover align-middle mb-0">
+            <thead>
+              <tr>
+                <th scope="col" class="py-3 px-3" style="width: 100px;">Job ID</th>
+                <th scope="col" class="py-3 px-3">Title &amp; Category</th>
+                <th scope="col" class="py-3 px-3">Experience</th>
+                <th scope="col" class="py-3 px-3">Required Skills</th>
+                <th scope="col" class="py-3 px-3 text-end">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for job in jobs %}
+                <tr>
+                  <td class="py-3 px-3 text-muted small fw-semibold">
+                    <span class="badge bg-secondary-subtle text-secondary border">{{ job.job_id }}</span>
+                  </td>
+                  <td class="py-3 px-3">
+                    <span class="fw-bold text-dark d-block fs-6 mb-1">{{ job.title }}</span>
+                    <div class="d-flex flex-wrap gap-1 align-items-center">
+                      <span class="badge bg-light text-secondary border small">{{ job.category }}</span>
+                      {% if job.source_dataset %}
+                        <span class="badge bg-primary-subtle text-primary small" style="font-size: 0.68rem;">{{ job.source_dataset }}</span>
+                      {% endif %}
+                    </div>
+                  </td>
+                  <td class="py-3 px-3">
+                    <span class="badge bg-light text-dark border">{{ job.experience_level }}</span>
+                  </td>
+                  <td class="py-3 px-3">
+                    <div class="d-flex flex-wrap gap-1" style="max-width: 440px;">
+                      {% for sk in job.required_skills %}
+                        <span class="badge-matched small">{{ sk }}</span>
+                      {% endfor %}
+                    </div>
+                  </td>
+                  <td class="py-3 px-3 text-end">
+                    <div class="d-inline-flex gap-2 flex-wrap justify-content-end">
+                      <a href="{{ url_for('roles_explorer', role=job.title) }}" class="btn btn-sm btn-outline-primary" title="Explore role guide &amp; learning roadmap">
+                        <i class="bi bi-map me-1"></i> Role Guide
+                      </a>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#jobModal{{ job.job_id }}">
+                        <i class="bi bi-eye me-1"></i> View Description
+                      </button>
+                      <a href="{{ url_for('compare_job', job_id=job.job_id) }}" class="btn btn-sm btn-primary" title="Compare your resume against this specific job posting">
+                        <i class="bi bi-bullseye me-1"></i> Compare Resume
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Job Details Modal -->
+                <div class="modal fade" id="jobModal{{ job.job_id }}" tabindex="-1" aria-labelledby="modalLabel{{ job.job_id }}" aria-hidden="true">
+                  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <div>
+                          <div class="d-flex align-items-center gap-2 mb-1">
+                            <span class="badge bg-secondary-subtle text-secondary border">{{ job.job_id }}</span>
+                            <span class="badge bg-primary-subtle text-primary border border-primary-subtle">{{ job.category }}</span>
+                            <span class="badge bg-light text-dark border">{{ job.experience_level }}</span>
+                          </div>
+                          <h5 class="modal-title fw-bold text-dark" id="modalLabel{{ job.job_id }}">{{ job.title }}</h5>
+                        </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+
+                      <div class="modal-body">
+                        <!-- Description -->
+                        <div class="mb-4">
+                          <h6 class="fw-bold text-uppercase small text-muted mb-2">Job Description</h6>
+                          <div class="p-3 bg-light rounded-3 text-secondary lh-base">
+                            {{ job.description }}
+                          </div>
+                        </div>
+
+                        <!-- Required Skills -->
+                        <div class="mb-3">
+                          <h6 class="fw-bold text-uppercase small text-muted mb-2">Required Competencies</h6>
+                          <div class="d-flex flex-wrap gap-1">
+                            {% for sk in job.required_skills %}
+                              <span class="badge-matched">{{ sk }}</span>
+                            {% endfor %}
+                          </div>
+                        </div>
+
+                        <!-- Preferred Skills -->
+                        {% if job.preferred_skills %}
+                        <div class="mb-4">
+                          <h6 class="fw-bold text-uppercase small text-muted mb-2">Preferred Competencies</h6>
+                          <div class="d-flex flex-wrap gap-1">
+                            {% for sk in job.preferred_skills %}
+                              <span class="badge-skill">{{ sk }}</span>
+                            {% endfor %}
+                          </div>
+                        </div>
+                        {% endif %}
+
+                        <!-- External Search Links -->
+                        <div class="search-links-box">
+                          <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-2">
+                            <span class="fw-bold text-dark small">
+                              <i class="bi bi-box-arrow-up-right text-primary me-1"></i> Live External Job Searches
+                            </span>
+                            <span class="text-muted small">Search current openings</span>
+                          </div>
+                          <div class="d-flex flex-wrap gap-2">
+                            <a href="https://www.linkedin.com/jobs/search/?keywords={{ job.title|urlencode }}"
+                               target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
+                              <i class="bi bi-linkedin me-1"></i> Search on LinkedIn
+                            </a>
+                            <a href="https://www.indeed.com/jobs?q={{ job.title|urlencode }}"
+                               target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
+                              <i class="bi bi-briefcase me-1"></i> Search on Indeed
+                            </a>
+                            <a href="https://www.google.com/search?q={{ (job.title ~ ' jobs')|urlencode }}&ibp=htl;jobs"
+                               target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
+                              <i class="bi bi-google me-1"></i> Search on Google Jobs
+                            </a>
+                          </div>
+                          <div class="text-muted small mt-2" style="font-size: 0.78rem;">
+                            <i class="bi bi-info-circle me-1"></i> Queries external search engines for active market listings. These are not pre-verified postings.
+                          </div>
+                        </div>
+
+                      </div>
+
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <a href="{{ url_for('roles_explorer', role=job.title) }}" class="btn btn-outline-primary fw-semibold">
+                          <i class="bi bi-map me-1"></i> Explore Role &amp; Career Roadmap
+                        </a>
+                        <a href="{{ url_for('compare_job', job_id=job.job_id) }}" class="btn btn-primary fw-semibold">
+                          <i class="bi bi-bullseye me-1"></i> Compare Resume
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    {% else %}
+      <div class="card p-5 text-center border-0 card-elevated">
+        <i class="bi bi-search text-muted display-4 d-block mb-3"></i>
+        <h5 class="fw-bold text-dark">No Jobs Match Your Filter Criteria</h5>
+        <p class="text-muted small">Try relaxing your search terms or clearing the filters.</p>
+        <div>
+          <a href="{{ url_for('jobs_catalog') }}" class="btn btn-outline-primary btn-sm">Clear All Filters</a>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+
+</div>
+{% endblock %}

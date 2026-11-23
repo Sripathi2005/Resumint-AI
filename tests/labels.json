@@ -1,0 +1,145 @@
+{
+  "sample_resumes/fresher_python.pdf": {
+    "expected_skills": [
+      "CSS3",
+      "Git",
+      "GitHub",
+      "HTML5",
+      "Python",
+      "SQLite"
+    ],
+    "expected_roles": [
+      "Python Developer",
+      "Backend Developer"
+    ]
+  },
+  "sample_resumes/java_backend.pdf": {
+    "expected_skills": [
+      "Docker",
+      "Java",
+      "Maven",
+      "Microservices",
+      "MySQL",
+      "REST API",
+      "Spring Boot"
+    ],
+    "expected_roles": [
+      "Java Developer",
+      "Backend Developer"
+    ]
+  },
+  "sample_resumes/frontend_developer.pdf": {
+    "expected_skills": [
+      "CSS3",
+      "HTML5",
+      "JavaScript",
+      "React",
+      "Redux",
+      "Tailwind CSS",
+      "TypeScript"
+    ],
+    "expected_roles": [
+      "Frontend Developer",
+      "Full Stack Developer"
+    ]
+  },
+  "sample_resumes/data_scientist.pdf": {
+    "expected_skills": [
+      "Computer Vision",
+      "Deep Learning",
+      "GitHub",
+      "Machine Learning",
+      "NumPy",
+      "Pandas",
+      "PyTorch",
+      "Python",
+      "SQL",
+      "Scikit-Learn"
+    ],
+    "expected_roles": [
+      "Data Scientist",
+      "ML Engineer"
+    ]
+  },
+  "sample_resumes/devops_engineer.pdf": {
+    "expected_skills": [
+      "AWS",
+      "Amazon EC2",
+      "Amazon S3",
+      "Bash",
+      "CI/CD",
+      "Docker",
+      "Kubernetes",
+      "Linux",
+      "Microservices",
+      "Terraform"
+    ],
+    "expected_roles": [
+      "DevOps Engineer",
+      "Cloud Engineer"
+    ]
+  },
+  "sample_resumes/mixed_student_py_java.pdf": {
+    "expected_roles": [
+      "Python Developer",
+      "Java Developer",
+      "Backend Developer"
+    ]
+  },
+  "sample_resumes/vague_fresher.pdf": {
+    "expected_roles": [
+      "Python Developer",
+      "QA/Test Engineer"
+    ]
+  },
+  "sample_resumes/career_switcher_data.pdf": {
+    "expected_roles": [
+      "Data Analyst",
+      "Python Developer"
+    ]
+  },
+  "sample_resumes/qa_transitioning_dev.pdf": {
+    "expected_roles": [
+      "QA/Test Engineer",
+      "Python Developer",
+      "Backend Developer"
+    ]
+  },
+  "sample_resumes/cloud_sysadmin.pdf": {
+    "expected_roles": [
+      "Cloud Engineer",
+      "DevOps Engineer"
+    ]
+  },
+  "sample_resumes/embedded_iot_engineer.pdf": {
+    "expected_roles": [
+      "Embedded Systems Engineer"
+    ]
+  },
+  "sample_resumes/fullstack_django_react.pdf": {
+    "expected_roles": [
+      "Full Stack Developer",
+      "Python Developer",
+      "Backend Developer"
+    ]
+  },
+  "sample_resumes/data_analyst_bi.pdf": {
+    "expected_roles": [
+      "Data Analyst"
+    ]
+  },
+  "sample_resumes/ml_engineer_vision.pdf": {
+    "expected_roles": [
+      "ML Engineer",
+      "Data Scientist"
+    ]
+  },
+  "sample_resumes/my_real_developer_resume.pdf": {
+    "expected_roles": [
+      "Backend Developer",
+      "ML Engineer",
+      "Full Stack Developer",
+      "Python Developer"
+    ]
+  }
+}

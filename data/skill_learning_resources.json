@@ -1,0 +1,3822 @@
+{
+  "skills": {
+    ".NET Core": {
+      "platform": "Microsoft Learn / freeCodeCamp",
+      "url": "https://learn.microsoft.com/en-us/training/",
+      "topics": "ASP.NET Core Web APIs, Entity Framework Core, Dependency Injection",
+      "project": "Build a RESTful catalog API with ASP.NET Core and SQLite/PostgreSQL",
+      "est_time": "3 weeks",
+      "resources": [
+        {
+          "platform": "Microsoft Learn",
+          "title": "ASP.NET Core & .NET Training Paths",
+          "description": "Official Microsoft Learn tutorials for building web APIs and microservices.",
+          "url": "https://learn.microsoft.com/en-us/training/",
+          "cost": "Free"
+        },
+        {
+          "platform": "freeCodeCamp",
+          "title": "Foundational C# with Microsoft",
+          "description": "Core C# foundation feeding directly into .NET Core API development.",
+          "url": "https://www.freecodecamp.org/learn/foundational-c-sharp-with-microsoft/",
+          "cost": "Free"
+        }
+      ]
+    },
+    "ARM Architecture": {
+      "platform": "STMicroelectronics / FreeRTOS Official",
+      "url": "https://www.st.com",
+      "topics": "ARM Cortex-M/A privilege modes, NVIC interrupts, memory maps, registers",
+      "project": "Inspect vector tables, linker scripts, and NVIC priorities cleanly on Cortex-M",
+      "est_time": "3 weeks",
+      "resources": [
+        {
+          "platform": "STMicroelectronics",
+          "title": "STM32 ARM Cortex-M Documentation",
+          "description": "Official technical reference manuals and application notes for Cortex-M MCUs.",
+          "url": "https://www.st.com",
+          "cost": "Free"
+        },
+        {
+          "platform": "FreeRTOS Official",
+          "title": "Cortex-M Task Scheduling Concepts",
+          "description": "Learn how RTOS context switching leverages ARM interrupt primitives.",
+          "url": "https://www.freertos.org/Documentation/00-Overview",
+          "cost": "Free"
+        }
+      ]
+    },
+    "AWS": {
+      "platform": "AWS Official / Coursera (IBM)",
+      "url": "https://explore.skillbuilder.aws",
+      "topics": "IAM, EC2, S3, VPC subnets, RDS, Lambda, CloudWatch monitoring",
+      "project": "Host a static frontend on S3 + containerized API behind a secure VPC",
+      "est_time": "3-4 weeks",
+      "resources": [
+        {
+          "platform": "AWS Official",
+          "title": "AWS Skill Builder Digital Training",
+          "description": "Free official AWS cloud practitioner, developer, and DevOps learning plans.",
+          "url": "https://explore.skillbuilder.aws",
+          "cost": "Free"
+        },
+        {
+          "platform": "Coursera (IBM)",
+          "title": "Introduction to Cloud Computing",
+          "description": "Understand core cloud service models (IaaS/PaaS/SaaS) before exam prep.",
+          "url": "https://www.coursera.org/learn/introduction-to-cloud",
+          "cost": "Free Audit / Paid Cert"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "AWS Cloud Roadmap",
+          "description": "Visual roadmap ranking core AWS services by real job frequency.",
+          "url": "https://roadmap.sh/aws",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Agile": {
+      "platform": "Scrum Guides / Atlassian University",
+      "url": "https://scrumguides.org/",
+      "topics": "Iterative delivery, user stories, sprint planning, retrospectives",
+      "project": "Break down an app idea into prioritized user stories with acceptance criteria",
+      "est_time": "3-5 days",
+      "resources": [
+        {
+          "platform": "Scrum Guides",
+          "title": "The Definitive Scrum Guide",
+          "description": "Concise free reference on empirical Agile roles, sprints, and increments.",
+          "url": "https://scrumguides.org/",
+          "cost": "Free"
+        },
+        {
+          "platform": "Atlassian University",
+          "title": "Agile & Jira Workflows",
+          "description": "Practical free courses on backlog grooming and team collaboration.",
+          "url": "https://university.atlassian.com",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Android": {
+      "platform": "Google Android / Kotlin Official",
+      "url": "https://developer.android.com/courses",
+      "topics": "Kotlin UI, Activity/Fragment lifecycle, Jetpack Compose, Room DB",
+      "project": "Build a multi-screen Android reading list app with Kotlin & Jetpack Compose",
+      "est_time": "4 weeks",
+      "resources": [
+        {
+          "platform": "Google Android",
+          "title": "Android Basics with Compose",
+          "description": "Official free Google Android developer curriculum from setup to Play Store.",
+          "url": "https://developer.android.com/courses",
+          "cost": "Free"
+        },
+        {
+          "platform": "Kotlin Official",
+          "title": "Kotlin Documentation & Coroutines",
+          "description": "Official language guides for clean Android app architecture.",
+          "url": "https://kotlinlang.org/docs/getting-started.html",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "Android Developer Roadmap",
+          "description": "Guided map covering Jetpack libraries, MVVM, and testing.",
+          "url": "https://roadmap.sh/android",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Android SDK": {
+      "platform": "Google Android / Gradle Official",
+      "url": "https://developer.android.com/courses",
+      "topics": "Android Studio profiler, Gradle builds, permissions, Jetpack Compose",
+      "project": "Configure Android SDK permissions, notifications, and API networking in Studio",
+      "est_time": "2-3 weeks",
+      "resources": [
+        {
+          "platform": "Google Android",
+          "title": "Official Android Training Courses",
+          "description": "Codelabs and modules teaching Android Studio, Jetpack libraries, and SDK APIs.",
+          "url": "https://developer.android.com/courses",
+          "cost": "Free"
+        },
+        {
+          "platform": "Gradle Official",
+          "title": "Gradle User Guide for Mobile Builds",
+          "description": "Understand Gradle dependency and APK/AAB build configuration cleanly.",
+          "url": "https://docs.gradle.org/current/userguide/userguide.html",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Angular": {
+      "platform": "Angular Official / TypeScript Docs",
+      "url": "https://angular.dev/tutorials",
+      "topics": "Standalone components, TypeScript services, RxJS observables, routing",
+      "project": "Build an enterprise employee directory SPA with Angular and RxJS",
+      "est_time": "3-4 weeks",
+      "resources": [
+        {
+          "platform": "Angular Official",
+          "title": "Angular Interactive Tutorials",
+          "description": "Official browser tutorials on angular.dev teaching signals, components, and DI.",
+          "url": "https://angular.dev/tutorials",
+          "cost": "Free"
+        },
+        {
+          "platform": "TypeScript Docs",
+          "title": "The TypeScript Handbook",
+          "description": "Master strong typing essentials used across every Angular service and template.",
+          "url": "https://www.typescriptlang.org/docs/",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Ansible": {
+      "platform": "Ansible Official / roadmap.sh",
+      "url": "https://docs.ansible.com/",
+      "topics": "Inventories, YAML playbooks, roles, idempotency, SSH provisioning",
+      "project": "Automate Nginx + firewall setup across Linux VMs via an Ansible playbook",
+      "est_time": "2 weeks",
+      "resources": [
+        {
+          "platform": "Ansible Official",
+          "title": "Ansible Community Documentation",
+          "description": "Official getting-started playbooks, module guides, and best practices.",
+          "url": "https://docs.ansible.com/",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "DevOps Configuration Management Roadmap",
+          "description": "Learn how configuration management complements containers and IaC.",
+          "url": "https://roadmap.sh/devops",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Apache Kafka": {
+      "platform": "Apache Spark Docs / roadmap.sh",
+      "url": "https://spark.apache.org/docs/latest/",
+      "topics": "Topics, partitions, consumer groups, producers, event-driven pipelines",
+      "project": "Stream order events cleanly between a producer and consumer service",
+      "est_time": "2-3 weeks",
+      "resources": [
+        {
+          "platform": "Apache Spark Docs",
+          "title": "Streaming Data Integration Guides",
+          "description": "Explore event streaming architecture integrated with modern data pipelines.",
+          "url": "https://spark.apache.org/docs/latest/",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "Backend Message Brokers & Event Streaming",
+          "description": "Understand event-driven microservice messaging and Kafka trade-offs.",
+          "url": "https://roadmap.sh/backend",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Apache Spark": {
+      "platform": "Apache Spark Docs / roadmap.sh",
+      "url": "https://spark.apache.org/docs/latest/",
+      "topics": "PySpark DataFrames, Spark SQL, lazy evaluation, partitioning, shuffling",
+      "project": "Process a multi-GB clickstream log into daily Parquet aggregates via PySpark",
+      "est_time": "3 weeks",
+      "resources": [
+        {
+          "platform": "Apache Spark Docs",
+          "title": "Spark Python & SQL Quickstart",
+          "description": "Official PySpark DataFrame, SQL, and streaming guides.",
+          "url": "https://spark.apache.org/docs/latest/",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "Data Engineering Roadmap",
+          "description": "See how Spark connects with ETL orchestration and cloud data lakes.",
+          "url": "https://roadmap.sh/data-engineer",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Arduino": {
+      "platform": "Arduino Official / LearnCpp",
+      "url": "https://docs.arduino.cc/learn/",
+      "topics": "Digital/analog I/O, libraries, Serial debugging, sensor wiring",
+      "project": "Build a closed-loop PWM fan or servo controller reading sensor feedback",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "Arduino Official",
+          "title": "Arduino Learn Hub",
+          "description": "Official step-by-step electronics, wiring diagrams, and C/C++ tutorials.",
+          "url": "https://docs.arduino.cc/learn/",
+          "cost": "Free"
+        },
+        {
+          "platform": "LearnCpp",
+          "title": "C++ Fundamentals for Firmware",
+          "description": "Strengthen C++ structuring skills for larger multi-file microcontroller sketches.",
+          "url": "https://www.learncpp.com/",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Bash": {
+      "platform": "freeCodeCamp / Linux Journey",
+      "url": "https://www.freecodecamp.org/learn/relational-database/",
+      "topics": "Shell scripting, pipes/grep/awk, permissions, cron jobs, process control",
+      "project": "Automate log rotation and disk health alerting with a Bash script",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "freeCodeCamp",
+          "title": "Relational Database (Bash Scripting)",
+          "description": "Interactive terminal exercises building shell scripts in Linux environments.",
+          "url": "https://www.freecodecamp.org/learn/relational-database/",
+          "cost": "Free"
+        },
+        {
+          "platform": "Linux Journey",
+          "title": "Text-Fu & Command Line Modules",
+          "description": "Beginner-friendly guides to bash commands, pipes, and shell utilities.",
+          "url": "https://linuxjourney.com/",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Bootstrap": {
+      "platform": "roadmap.sh / MDN Web Docs",
+      "url": "https://roadmap.sh/backend",
+      "topics": "Core principles, practical syntax/configuration, and real-world workflows in Bootstrap",
+      "project": "Build and document a hands-on mini-project applying Bootstrap",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "roadmap.sh",
+          "title": "Framework & Architecture Learning Paths",
+          "description": "Curated step-by-step web and backend framework guides.",
+          "url": "https://roadmap.sh/backend",
+          "cost": "Free"
+        },
+        {
+          "platform": "MDN Web Docs",
+          "title": "Web Framework & Server-Side Concepts",
+          "description": "Mozilla's free conceptual and hands-on guides for modern web stacks.",
+          "url": "https://developer.mozilla.org/en-US/docs/Learn",
+          "cost": "Free"
+        }
+      ]
+    },
+    "C": {
+      "platform": "Harvard CS50 / Arduino Docs",
+      "url": "https://cs50.harvard.edu/x/",
+      "topics": "Pointers, memory management, structs, bitwise operators, headers",
+      "project": "Implement a lightweight memory pool allocator in C",
+      "est_time": "3-4 weeks",
+      "resources": [
+        {
+          "platform": "Harvard CS50",
+          "title": "CS50x: Introduction to Computer Science",
+          "description": "Renowned university course teaching C pointers, memory, and data structures from scratch.",
+          "url": "https://cs50.harvard.edu/x/",
+          "cost": "Free"
+        },
+        {
+          "platform": "Arduino Docs",
+          "title": "Arduino C/C++ Learning Hub",
+          "description": "Hands-on embedded C programming guides running directly on microcontroller hardware.",
+          "url": "https://docs.arduino.cc/learn/",
+          "cost": "Free"
+        }
+      ]
+    },
+    "C#": {
+      "platform": "Microsoft Learn / freeCodeCamp",
+      "url": "https://learn.microsoft.com/en-us/training/paths/get-started-c-sharp-part-1/",
+      "topics": "OOP in C#, LINQ, async/await, generics, .NET CLI",
+      "project": "Create an ASP.NET Core task tracking web API",
+      "est_time": "3-4 weeks",
+      "resources": [
+        {
+          "platform": "Microsoft Learn",
+          "title": "Get Started with C# Learning Path",
+          "description": "Free interactive lessons and Applied Skills labs co-hosted with freeCodeCamp.",
+          "url": "https://learn.microsoft.com/en-us/training/paths/get-started-c-sharp-part-1/",
+          "cost": "Free"
+        },
+        {
+          "platform": "freeCodeCamp",
+          "title": "Foundational C# with Microsoft Certification",
+          "description": "Free self-paced certification track covering C# syntax, debugging, and logic.",
+          "url": "https://www.freecodecamp.org/learn/foundational-c-sharp-with-microsoft/",
+          "cost": "Free"
+        }
+      ]
+    },
+    "C++": {
+      "platform": "LearnCpp / roadmap.sh",
+      "url": "https://www.learncpp.com/",
+      "topics": "Modern C++, STL containers, RAII smart pointers, templates",
+      "project": "Build a thread-safe producer-consumer message queue",
+      "est_time": "4-5 weeks",
+      "resources": [
+        {
+          "platform": "LearnCpp",
+          "title": "Learn C++ Step-by-Step Guide",
+          "description": "Comprehensive free online tutorial series from fundamentals to modern STL and OOP.",
+          "url": "https://www.learncpp.com/",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "C++ Developer Roadmap",
+          "description": "Structured visual progression through C++ tooling, memory, and concurrency.",
+          "url": "https://roadmap.sh/cpp",
+          "cost": "Free"
+        }
+      ]
+    },
+    "CAN Bus": {
+      "platform": "Arduino Official / FreeRTOS Official",
+      "url": "https://docs.arduino.cc/learn/",
+      "topics": "Core principles, practical syntax/configuration, and real-world workflows in CAN Bus",
+      "project": "Build and document a hands-on mini-project applying CAN Bus",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "Arduino Official",
+          "title": "Embedded Hardware & Firmware Guides",
+          "description": "Hands-on tutorials covering protocols, sensors, and C/C++ firmware.",
+          "url": "https://docs.arduino.cc/learn/",
+          "cost": "Free"
+        },
+        {
+          "platform": "FreeRTOS Official",
+          "title": "Real-Time Embedded Systems Documentation",
+          "description": "Official technical reference for RTOS firmware design.",
+          "url": "https://www.freertos.org/Documentation/00-Overview",
+          "cost": "Free"
+        }
+      ]
+    },
+    "CI/CD": {
+      "platform": "GitHub Docs / Jenkins Official",
+      "url": "https://docs.github.com/en/actions",
+      "topics": "Automated test pipelines, build caching, container registries, rollbacks",
+      "project": "Automate unit tests, linting, and Docker builds on every pull request",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "GitHub Docs",
+          "title": "GitHub Actions Documentation",
+          "description": "Official guides to automating test, build, and deployment workflows.",
+          "url": "https://docs.github.com/en/actions",
+          "cost": "Free"
+        },
+        {
+          "platform": "Jenkins Official",
+          "title": "Jenkins Pipeline Tutorials",
+          "description": "Step-by-step tutorials building CI/CD pipelines across Java, Node, and Python.",
+          "url": "https://www.jenkins.io/doc/tutorials/",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "DevOps CI/CD Roadmap",
+          "description": "Understand continuous integration, artifacts, and safe deployment patterns.",
+          "url": "https://roadmap.sh/devops",
+          "cost": "Free"
+        }
+      ]
+    },
+    "CSS3": {
+      "platform": "freeCodeCamp / MDN Web Docs",
+      "url": "https://www.freecodecamp.org/learn/responsive-web-design/",
+      "topics": "Flexbox, CSS Grid, CSS variables, media queries, animations",
+      "project": "Clone a responsive dashboard layout cleanly with CSS Grid & Flexbox",
+      "est_time": "2 weeks",
+      "resources": [
+        {
+          "platform": "freeCodeCamp",
+          "title": "Responsive Web Design (CSS Grid & Flexbox)",
+          "description": "Practice Flexbox, Grid, and responsive typography interactively in the browser.",
+          "url": "https://www.freecodecamp.org/learn/responsive-web-design/",
+          "cost": "Free"
+        },
+        {
+          "platform": "MDN Web Docs",
+          "title": "CSS Styling Basics & Layout",
+          "description": "Deep reference and beginner modules on box model, Flexbox, and Grid.",
+          "url": "https://developer.mozilla.org/en-US/docs/Learn/CSS",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Cisco": {
+      "platform": "Cisco NetAcad / TryHackMe",
+      "url": "https://www.netacad.com",
+      "topics": "IOS CLI, VLANs, trunking, OSPF routing, ACL security, CCNA prep",
+      "project": "Build and test a multi-VLAN switched & routed topology in lab software",
+      "est_time": "4 weeks",
+      "resources": [
+        {
+          "platform": "Cisco NetAcad",
+          "title": "Cisco CCNA & Network Technician Paths",
+          "description": "Official Cisco curriculum covering switching, routing, and Packet Tracer labs.",
+          "url": "https://www.netacad.com",
+          "cost": "Free"
+        },
+        {
+          "platform": "TryHackMe",
+          "title": "Network Security Operations",
+          "description": "Reinforce routing and firewall troubleshooting concepts cleanly.",
+          "url": "https://tryhackme.com/paths",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Computer Vision": {
+      "platform": "TensorFlow Official / PyTorch Official",
+      "url": "https://www.tensorflow.org/tutorials",
+      "topics": "CNNs, image augmentation, object detection, transfer learning",
+      "project": "Build an automated document/object classifier using transfer learning",
+      "est_time": "3-4 weeks",
+      "resources": [
+        {
+          "platform": "TensorFlow Official",
+          "title": "Convolutional Neural Networks Tutorials",
+          "description": "Run image classification and transfer learning notebooks right in Colab.",
+          "url": "https://www.tensorflow.org/tutorials",
+          "cost": "Free"
+        },
+        {
+          "platform": "PyTorch Official",
+          "title": "PyTorch Vision Transfer Learning Tutorials",
+          "description": "Hands-on official guide to image transforms and fine-tuning ResNets.",
+          "url": "https://pytorch.org/tutorials/",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Confluence": {
+      "platform": "Atlassian University / roadmap.sh",
+      "url": "https://university.atlassian.com",
+      "topics": "Technical design docs, runbooks, meeting notes, Jira issue linking",
+      "project": "Author a clean architecture decision record (ADR) linked to Jira tasks",
+      "est_time": "2-3 days",
+      "resources": [
+        {
+          "platform": "Atlassian University",
+          "title": "Confluence Fundamentals (Free)",
+          "description": "Official Atlassian training on organizing team knowledge bases effectively.",
+          "url": "https://university.atlassian.com",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "Engineering Documentation Basics",
+          "description": "Learn how specs and runbooks fit into product engineering.",
+          "url": "https://roadmap.sh/software-architect",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Cybersecurity": {
+      "platform": "TryHackMe / PortSwigger Academy",
+      "url": "https://tryhackme.com/paths",
+      "topics": "CIA Triad, threat modeling, OWASP Top 10, IAM, basic incident response",
+      "project": "Audit a sample web app against OWASP Top 10 flaws cleanly",
+      "est_time": "4 weeks",
+      "resources": [
+        {
+          "platform": "TryHackMe",
+          "title": "Pre-Security & Cyber Defense Learning Paths",
+          "description": "Hands-on browser labs teaching Linux, networking, and real security defense.",
+          "url": "https://tryhackme.com/paths",
+          "cost": "Free"
+        },
+        {
+          "platform": "PortSwigger Academy",
+          "title": "Web Security Academy (Free Labs)",
+          "description": "Free deep interactive labs on SQLi, XSS, CSRF, and auth vulnerabilities.",
+          "url": "https://portswigger.net/web-security",
+          "cost": "Free"
+        },
+        {
+          "platform": "Coursera (Google)",
+          "title": "Google Cybersecurity Professional Certificate",
+          "description": "Beginner-friendly career path covering SIEM, Linux, Python, and Security+ prep.",
+          "url": "https://www.coursera.org/professional-certificates/google-cybersecurity",
+          "cost": "Free Audit / Paid Cert"
+        }
+      ]
+    },
+    "Cypress": {
+      "platform": "Cypress Official / roadmap.sh",
+      "url": "https://docs.cypress.io/",
+      "topics": "Interactive test runner, network cy.intercept, fixtures, custom commands",
+      "project": "Test a React frontend's checkout workflow using stubbed API responses",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "Cypress Official",
+          "title": "Cypress Documentation & Guides",
+          "description": "Official guides covering E2E and component testing best practices.",
+          "url": "https://docs.cypress.io/",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "QA & Frontend Testing Roadmap",
+          "description": "Understand testing pyramids cleanly across unit and E2E layers.",
+          "url": "https://roadmap.sh/qa",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Dart": {
+      "platform": "Dart Official / Flutter Docs",
+      "url": "https://dart.dev/guides",
+      "topics": "Null safety, async/await Streams, OOP, Flutter widget fundamentals",
+      "project": "Write a cross-platform CLI & API state manager in Dart",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "Dart Official",
+          "title": "Dart Language Tour & Guides",
+          "description": "Official guides covering sound null safety, async futures, and collections.",
+          "url": "https://dart.dev/guides",
+          "cost": "Free"
+        },
+        {
+          "platform": "Flutter Docs",
+          "title": "Flutter & Dart Codelab",
+          "description": "Guided hands-on tutorial introducing Dart through an interactive Flutter app.",
+          "url": "https://docs.flutter.dev/get-started/codelab",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Data Analysis": {
+      "platform": "freeCodeCamp / Coursera (Google)",
+      "url": "https://www.freecodecamp.org/learn/data-analysis-with-python/",
+      "topics": "Data cleaning, missing value handling, KPI definition, trend segmentation",
+      "project": "Clean a messy retail CSV dataset and publish an insights notebook",
+      "est_time": "2-3 weeks",
+      "resources": [
+        {
+          "platform": "freeCodeCamp",
+          "title": "Data Analysis with Python Certification",
+          "description": "Free interactive curriculum covering NumPy, Pandas, Matplotlib, and real projects.",
+          "url": "https://www.freecodecamp.org/learn/data-analysis-with-python/",
+          "cost": "Free"
+        },
+        {
+          "platform": "Coursera (Google)",
+          "title": "Google Data Analytics Professional Certificate",
+          "description": "Structured beginner track teaching data cleaning, SQL, and visualization workflows.",
+          "url": "https://www.coursera.org/professional-certificates/google-data-analytics",
+          "cost": "Free Audit / Paid Cert"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "Data Analyst Roadmap",
+          "description": "Step-by-step career progression covering Excel, SQL, BI, and Python.",
+          "url": "https://roadmap.sh/data-analyst",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Data Modeling": {
+      "platform": "freeCodeCamp / dbt Docs",
+      "url": "https://www.freecodecamp.org/learn/relational-database/",
+      "topics": "Normalization (1NF-3NF), ER diagrams, star/snowflake schemas, keys",
+      "project": "Draw an ER diagram and migrate normalized OLTP tables to an OLAP schema",
+      "est_time": "2 weeks",
+      "resources": [
+        {
+          "platform": "freeCodeCamp",
+          "title": "Relational Database Design Curriculum",
+          "description": "Practice primary keys, foreign keys, and normalized table structures hands-on.",
+          "url": "https://www.freecodecamp.org/learn/relational-database/",
+          "cost": "Free"
+        },
+        {
+          "platform": "dbt Docs",
+          "title": "Analytics Data Modeling Best Practices",
+          "description": "Learn staging, intermediate, and mart schema design patterns.",
+          "url": "https://docs.getdbt.com/docs/introduction",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Data Visualization": {
+      "platform": "Kaggle Learn / Tableau Learning",
+      "url": "https://www.kaggle.com/learn/data-visualization",
+      "topics": "Chart selection, storytelling with data, color contrast, KPI layouts",
+      "project": "Create an executive insight deck combining SQL summaries and clear charts",
+      "est_time": "2 weeks",
+      "resources": [
+        {
+          "platform": "Kaggle Learn",
+          "title": "Data Visualization Micro-Course",
+          "description": "Free hands-on Kaggle notebooks building heatmaps, scatter, and line charts.",
+          "url": "https://www.kaggle.com/learn/data-visualization",
+          "cost": "Free"
+        },
+        {
+          "platform": "Tableau Learning",
+          "title": "Tableau Training & Visual Analytics",
+          "description": "Learn visual best practices and interactive dashboard storytelling.",
+          "url": "https://www.tableau.com/learn/training",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Data Warehousing": {
+      "platform": "Snowflake Official / Google Cloud",
+      "url": "https://docs.snowflake.com",
+      "topics": "Fact vs dimension tables, star schemas, OLTP vs OLAP, partitioning",
+      "project": "Model a star schema (facts + dimensions) for orders, customers, and dates",
+      "est_time": "2 weeks",
+      "resources": [
+        {
+          "platform": "Snowflake Official",
+          "title": "Cloud Data Warehousing Guides",
+          "description": "Practical guides on analytical schemas, storage separation, and scaling.",
+          "url": "https://docs.snowflake.com",
+          "cost": "Free"
+        },
+        {
+          "platform": "Google Cloud",
+          "title": "BigQuery Warehouse Architecture Docs",
+          "description": "Official cloud warehouse design best practices.",
+          "url": "https://cloud.google.com/bigquery/docs",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Deep Learning": {
+      "platform": "Kaggle Learn / PyTorch Official",
+      "url": "https://www.kaggle.com/learn/intro-to-deep-learning",
+      "topics": "Backpropagation, CNNs, RNNs/Transformers, dropout, Adam optimizer",
+      "project": "Train an image classifier and visualize validation loss & confusion matrix",
+      "est_time": "4-6 weeks",
+      "resources": [
+        {
+          "platform": "Kaggle Learn",
+          "title": "Intro to Deep Learning",
+          "description": "Free hands-on neural network training labs using Python and TensorFlow/Keras.",
+          "url": "https://www.kaggle.com/learn/intro-to-deep-learning",
+          "cost": "Free"
+        },
+        {
+          "platform": "PyTorch Official",
+          "title": "Deep Learning with PyTorch Tutorials",
+          "description": "Official hands-on deep learning tensor, autograd, and neural net recipes.",
+          "url": "https://pytorch.org/tutorials/",
+          "cost": "Free"
+        },
+        {
+          "platform": "freeCodeCamp",
+          "title": "Machine Learning & Neural Networks in Python",
+          "description": "Build neural net classification projects completely free.",
+          "url": "https://www.freecodecamp.org/learn/machine-learning-with-python/",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Design Systems": {
+      "platform": "Figma Official / roadmap.sh",
+      "url": "https://help.figma.com",
+      "topics": "Color/spacing tokens, typography scales, variant components, documentation",
+      "project": "Build a clean mini UI kit with buttons, inputs, cards, and token documentation",
+      "est_time": "2 weeks",
+      "resources": [
+        {
+          "platform": "Figma Official",
+          "title": "Variables, Components & Libraries in Figma",
+          "description": "Official guides on maintaining scalable cross-team component libraries.",
+          "url": "https://help.figma.com",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "Design Systems & UI Craft",
+          "description": "See how tokens bridge Figma handoff cleanly with React/Tailwind code.",
+          "url": "https://roadmap.sh/design-system",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Django": {
+      "platform": "Django Official / MDN Web Docs",
+      "url": "https://docs.djangoproject.com/en/stable/intro/tutorial01/",
+      "topics": "Models/ORM, views, Django REST Framework, Auth, Migrations, Admin",
+      "project": "Build a full job board REST backend using Django & DRF",
+      "est_time": "3 weeks",
+      "resources": [
+        {
+          "platform": "Django Official",
+          "title": "Writing Your First Django App Tutorial",
+          "description": "The classic multi-part official tutorial covering models, views, admin, and tests.",
+          "url": "https://docs.djangoproject.com/en/stable/intro/tutorial01/",
+          "cost": "Free"
+        },
+        {
+          "platform": "MDN Web Docs",
+          "title": "Django Web Framework (Python) Tutorial",
+          "description": "Mozilla's step-by-step Django Local Library app covering auth and deployment.",
+          "url": "https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Docker": {
+      "platform": "Docker Official / roadmap.sh",
+      "url": "https://docs.docker.com/get-started/",
+      "topics": "Dockerfiles, multi-stage builds, layers, volumes, Docker Compose",
+      "project": "Containerize a Python/Node web backend + Postgres using Docker Compose",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "Docker Official",
+          "title": "Docker Get Started Guide",
+          "description": "Hands-on official tutorials on images, containers, networking, and Compose.",
+          "url": "https://docs.docker.com/get-started/",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "Docker Roadmap",
+          "description": "Structured containerization checklist covering optimization and security.",
+          "url": "https://roadmap.sh/docker",
+          "cost": "Free"
+        }
+      ]
+    },
+    "ESP32": {
+      "platform": "Arduino Docs / FreeRTOS Docs",
+      "url": "https://docs.arduino.cc/learn/",
+      "topics": "Wi-Fi/BLE connectivity, ESP-IDF/Arduino framework, deep sleep, MQTT",
+      "project": "Build an IoT telemetry node publishing sensor readings over Wi-Fi/MQTT",
+      "est_time": "2 weeks",
+      "resources": [
+        {
+          "platform": "Arduino Docs",
+          "title": "Embedded Board Programming Guides",
+          "description": "Rapid hardware prototyping guides applicable directly to ESP32 modules.",
+          "url": "https://docs.arduino.cc/learn/",
+          "cost": "Free"
+        },
+        {
+          "platform": "FreeRTOS Docs",
+          "title": "FreeRTOS Real-Time Kernel Documentation",
+          "description": "Understand tasks and queues running underneath ESP-IDF.",
+          "url": "https://www.freertos.org/Documentation/00-Overview",
+          "cost": "Free"
+        }
+      ]
+    },
+    "ETL": {
+      "platform": "AWS Official / dbt Docs",
+      "url": "https://explore.skillbuilder.aws",
+      "topics": "Extract/Transform/Load patterns, incremental loads, idempotency, retries",
+      "project": "Build an idempotent daily Python + SQL ETL loader writing clean tables",
+      "est_time": "2-3 weeks",
+      "resources": [
+        {
+          "platform": "AWS Official",
+          "title": "Data Engineering Digital Learning Plans",
+          "description": "Free Skill Builder pathways covering batch ETL pipelines and data lakes.",
+          "url": "https://explore.skillbuilder.aws",
+          "cost": "Free"
+        },
+        {
+          "platform": "dbt Docs",
+          "title": "Modern ELT Transformation Principles",
+          "description": "Learn modular SQL testing and dependency-ordered transformation pipelines.",
+          "url": "https://docs.getdbt.com/docs/introduction",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Elasticsearch": {
+      "platform": "Elastic Official / roadmap.sh",
+      "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html",
+      "topics": "Inverted indexes, full-text search DSL, analyzers, aggregations",
+      "project": "Index job descriptions and implement fuzzy autocomplete search",
+      "est_time": "2 weeks",
+      "resources": [
+        {
+          "platform": "Elastic Official",
+          "title": "Elasticsearch Reference & Getting Started",
+          "description": "Official docs covering mappings, full-text queries, and relevance tuning.",
+          "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "Search Engines in Backend Systems",
+          "description": "Understand full-text search engine integration patterns in backend stacks.",
+          "url": "https://roadmap.sh/backend",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Embedded C": {
+      "platform": "Arduino Docs / Harvard CS50",
+      "url": "https://docs.arduino.cc/learn/",
+      "topics": "Bitwise register manipulation, volatile pointers, interrupts, timers",
+      "project": "Write bare-metal interrupt-driven LED & button firmware without blocking delays",
+      "est_time": "3 weeks",
+      "resources": [
+        {
+          "platform": "Arduino Docs",
+          "title": "Arduino Learning & C/C++ Firmware Guides",
+          "description": "Quickly test register/GPIO/interrupt firmware concepts on real boards.",
+          "url": "https://docs.arduino.cc/learn/",
+          "cost": "Free"
+        },
+        {
+          "platform": "Harvard CS50",
+          "title": "CS50 Low-Level C & Memory",
+          "description": "Build bulletproof C pointer and memory-safety intuition first.",
+          "url": "https://cs50.harvard.edu/x/",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Embedded Linux": {
+      "platform": "Linux Journey / LearnCpp",
+      "url": "https://linuxjourney.com/",
+      "topics": "Cross-compilation, device trees, Yocto/Buildroot basics, kernel drivers",
+      "project": "Cross-compile a custom C++ telemetry daemon running on Raspberry Pi Linux",
+      "est_time": "4 weeks",
+      "resources": [
+        {
+          "platform": "Linux Journey",
+          "title": "Linux Internals & Processes Foundations",
+          "description": "Essential user-space, filesystem, and systemd concepts for Embedded Linux.",
+          "url": "https://linuxjourney.com/",
+          "cost": "Free"
+        },
+        {
+          "platform": "LearnCpp",
+          "title": "Systems C++ Development Guide",
+          "description": "Write safe systems daemons cleanly in modern C++.",
+          "url": "https://www.learncpp.com/",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Encryption": {
+      "platform": "Coursera (Google) / roadmap.sh",
+      "url": "https://www.coursera.org/professional-certificates/google-cybersecurity",
+      "topics": "Symmetric AES vs asymmetric RSA/ECC, TLS/HTTPS handshakes, password hashing",
+      "project": "Implement salted Argon2/bcrypt hashing and verify TLS certificates in Python",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "Coursera (Google)",
+          "title": "Google Cybersecurity — Cryptography & Protection",
+          "description": "Intuitive beginner explanations of hashing, PKI, and TLS encryption.",
+          "url": "https://www.coursera.org/professional-certificates/google-cybersecurity",
+          "cost": "Free Audit / Paid Cert"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "Cyber Security Cryptography Concepts",
+          "description": "Visual breakdown of hashing, TLS, certificates, and key management.",
+          "url": "https://roadmap.sh/cyber-security",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Express.js": {
+      "platform": "freeCodeCamp / MDN Web Docs",
+      "url": "https://www.freecodecamp.org/learn/back-end-development-and-apis/",
+      "topics": "Middleware chains, modular routers, error handling, JWT auth",
+      "project": "Build a multi-resource e-commerce backend API with Express middleware",
+      "est_time": "2 weeks",
+      "resources": [
+        {
+          "platform": "freeCodeCamp",
+          "title": "Back End Development and APIs (Express)",
+          "description": "Practical Express.js projects handling routing, middleware, and JSON APIs.",
+          "url": "https://www.freecodecamp.org/learn/back-end-development-and-apis/",
+          "cost": "Free"
+        },
+        {
+          "platform": "MDN Web Docs",
+          "title": "Express Web Framework Tutorial",
+          "description": "Mozilla's complete server-side Node.js + Express Local Library tutorial.",
+          "url": "https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs",
+          "cost": "Free"
+        }
+      ]
+    },
+    "FastAPI": {
+      "platform": "FastAPI Official / FastAPI Learn",
+      "url": "https://fastapi.tiangolo.com/tutorial/",
+      "topics": "Type-hint validation, Pydantic models, Dependency Injection, OpenAPI",
+      "project": "Build an async ML prediction microservice with FastAPI & Pydantic",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "FastAPI Official",
+          "title": "FastAPI Tutorial — User Guide",
+          "description": "Interactive documentation teaching Pydantic schemas, async APIs, and OAuth2.",
+          "url": "https://fastapi.tiangolo.com/tutorial/",
+          "cost": "Free"
+        },
+        {
+          "platform": "FastAPI Learn",
+          "title": "FastAPI Concepts & Best Practices",
+          "description": "Dedicated FastAPI learning track covering concurrency and testing.",
+          "url": "https://fastapi.tiangolo.com/learn/",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Figma": {
+      "platform": "Figma Official / Coursera (Google)",
+      "url": "https://help.figma.com",
+      "topics": "Auto Layout, components/variants, design tokens, interactive prototyping",
+      "project": "Design a responsive 5-screen web & mobile app with reusable Figma components",
+      "est_time": "2-3 weeks",
+      "resources": [
+        {
+          "platform": "Figma Official",
+          "title": "Figma Help Center & Beginner Courses",
+          "description": "Free official tutorials on frames, Auto Layout, components, and Dev Mode.",
+          "url": "https://help.figma.com",
+          "cost": "Free"
+        },
+        {
+          "platform": "Coursera (Google)",
+          "title": "Google UX Design Certificate",
+          "description": "Guided Figma wireframing and high-fidelity prototyping assignments.",
+          "url": "https://www.coursera.org/professional-certificates/google-ux-design",
+          "cost": "Free Audit / Paid Cert"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "UX Design Roadmap",
+          "description": "Visual overview of Figma tools alongside UX research milestones.",
+          "url": "https://roadmap.sh/ux-design",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Firebase Firestore": {
+      "platform": "Flutter Official / Google Android",
+      "url": "https://docs.flutter.dev/get-started/codelab",
+      "topics": "Collections/documents, real-time listeners, security rules, auth integration",
+      "project": "Build a real-time chat or collaborative todo app synced with Firestore",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "Flutter Official",
+          "title": "Flutter & Firebase Quickstart Pathways",
+          "description": "Official guides connecting cross-platform mobile UIs to Firebase backends.",
+          "url": "https://docs.flutter.dev/get-started/codelab",
+          "cost": "Free"
+        },
+        {
+          "platform": "Google Android",
+          "title": "Modern Mobile Cloud Storage Courses",
+          "description": "Practical guidance on client-side NoSQL synchronization and security rules.",
+          "url": "https://developer.android.com/courses",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Firewalls": {
+      "platform": "TryHackMe / Cisco NetAcad",
+      "url": "https://tryhackme.com/paths",
+      "topics": "Stateful packet inspection, WAF rules, ingress/egress ACLs, UFW/iptables",
+      "project": "Configure strict least-privilege firewall rules on a Linux web server",
+      "est_time": "1 week",
+      "resources": [
+        {
+          "platform": "TryHackMe",
+          "title": "Network Security & Firewall Rooms",
+          "description": "Hands-on labs practicing firewall filtering and traffic analysis.",
+          "url": "https://tryhackme.com/paths",
+          "cost": "Free"
+        },
+        {
+          "platform": "Cisco NetAcad",
+          "title": "Network Defense Essentials",
+          "description": "Official Cisco training on ACLs, stateful firewalls, and perimeter defense.",
+          "url": "https://www.netacad.com",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Flask": {
+      "platform": "Pallets / Flask / Python Official Docs",
+      "url": "https://flask.palletsprojects.com",
+      "topics": "Routing, Jinja2 templates, Blueprints, SQLAlchemy, REST endpoints",
+      "project": "Build a modular REST backend API cleanly organized with Flask Blueprints",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "Pallets / Flask",
+          "title": "Official Flask Tutorial & Docs",
+          "description": "Official guide building a full tested Flask web app cleanly from scratch.",
+          "url": "https://flask.palletsprojects.com",
+          "cost": "Free"
+        },
+        {
+          "platform": "Python Official Docs",
+          "title": "Python 3 Tutorial",
+          "description": "Companion Python language reference for decorators, venv, and packaging.",
+          "url": "https://docs.python.org/3/tutorial/",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Flutter": {
+      "platform": "Flutter Official / Dart Official",
+      "url": "https://docs.flutter.dev/get-started/codelab",
+      "topics": "Stateless/Stateful widgets, Navigation, Provider/Riverpod, HTTP APIs",
+      "project": "Build a cross-platform iOS & Android weather or habit tracker app",
+      "est_time": "3-4 weeks",
+      "resources": [
+        {
+          "platform": "Flutter Official",
+          "title": "Write Your First Flutter App Codelab",
+          "description": "Google's guided hands-on tutorial for cross-platform mobile UI in Dart.",
+          "url": "https://docs.flutter.dev/get-started/codelab",
+          "cost": "Free"
+        },
+        {
+          "platform": "Dart Official",
+          "title": "Dart Language & Async Guides",
+          "description": "Learn sound null safety and Futures/Streams cleanly for Flutter state.",
+          "url": "https://dart.dev/guides",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Git": {
+      "platform": "Learn Git Branching / Git Official",
+      "url": "https://learngitbranching.js.org/",
+      "topics": "Commit hygiene, branching, rebase vs merge, pull requests, resolving conflicts",
+      "project": "Practice branching, interactive rebase, and PR reviews in a shared repo",
+      "est_time": "1 week",
+      "resources": [
+        {
+          "platform": "Learn Git Branching",
+          "title": "Interactive Visual Git Sandbox",
+          "description": "Playful browser visualizer teaching branches, merges, cherry-pick, and rebase.",
+          "url": "https://learngitbranching.js.org/",
+          "cost": "Free"
+        },
+        {
+          "platform": "Git Official",
+          "title": "Pro Git Book (Free Online)",
+          "description": "The complete canonical Git book covering daily workflows through internals.",
+          "url": "https://git-scm.com/book/en/v2",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "Git & GitHub Roadmap",
+          "description": "Quick step-by-step developer workflow checklist.",
+          "url": "https://roadmap.sh/git-github",
+          "cost": "Free"
+        }
+      ]
+    },
+    "GitHub": {
+      "platform": "roadmap.sh / Microsoft Learn",
+      "url": "https://roadmap.sh/devops",
+      "topics": "Core principles, practical syntax/configuration, and real-world workflows in GitHub",
+      "project": "Build and document a hands-on mini-project applying GitHub",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "roadmap.sh",
+          "title": "Developer Tooling & DevOps Roadmaps",
+          "description": "Structured guides for testing, CI/CD, security, networking, and Linux tools.",
+          "url": "https://roadmap.sh/devops",
+          "cost": "Free"
+        },
+        {
+          "platform": "Microsoft Learn",
+          "title": "Developer & IT Engineering Training",
+          "description": "Free structured training paths for tooling, automation, and security.",
+          "url": "https://learn.microsoft.com/en-us/training/",
+          "cost": "Free"
+        }
+      ]
+    },
+    "GitHub Actions": {
+      "platform": "GitHub Official / Docker Official",
+      "url": "https://docs.github.com/en/actions",
+      "topics": "YAML workflows, runners, matrix builds, secrets, Docker publish",
+      "project": "Add a CI matrix workflow testing across Python versions on GitHub",
+      "est_time": "1 week",
+      "resources": [
+        {
+          "platform": "GitHub Official",
+          "title": "Understanding GitHub Actions & Quickstarts",
+          "description": "Free official tutorials creating CI test workflows inside any repository.",
+          "url": "https://docs.github.com/en/actions",
+          "cost": "Free"
+        },
+        {
+          "platform": "Docker Official",
+          "title": "Build & Push Containers in CI",
+          "description": "Official Docker guide integrating automated image builds into pipelines.",
+          "url": "https://docs.docker.com/get-started/",
+          "cost": "Free"
+        }
+      ]
+    },
+    "GitLab": {
+      "platform": "roadmap.sh / Microsoft Learn",
+      "url": "https://roadmap.sh/devops",
+      "topics": "Core principles, practical syntax/configuration, and real-world workflows in GitLab",
+      "project": "Build and document a hands-on mini-project applying GitLab",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "roadmap.sh",
+          "title": "Developer Tooling & DevOps Roadmaps",
+          "description": "Structured guides for testing, CI/CD, security, networking, and Linux tools.",
+          "url": "https://roadmap.sh/devops",
+          "cost": "Free"
+        },
+        {
+          "platform": "Microsoft Learn",
+          "title": "Developer & IT Engineering Training",
+          "description": "Free structured training paths for tooling, automation, and security.",
+          "url": "https://learn.microsoft.com/en-us/training/",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Go": {
+      "platform": "Go Official / roadmap.sh",
+      "url": "https://go.dev/tour/",
+      "topics": "Goroutines, channels, interfaces, HTTP net package, concurrency",
+      "project": "Build a concurrent health-check CLI and microservice API",
+      "est_time": "2-3 weeks",
+      "resources": [
+        {
+          "platform": "Go Official",
+          "title": "A Tour of Go",
+          "description": "Interactive browser-based tour of Go syntax, structs, interfaces, and goroutines.",
+          "url": "https://go.dev/tour/",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "Go Developer Roadmap",
+          "description": "Curated backend Go roadmap covering CLI tooling, web frameworks, and testing.",
+          "url": "https://roadmap.sh/golang",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Google BigQuery": {
+      "platform": "Kaggle Learn / Google Cloud",
+      "url": "https://www.kaggle.com/learn/intro-to-sql",
+      "topics": "Serverless SQL queries, partitioning, clustering, analytical window functions",
+      "project": "Query a public dataset on BigQuery sandbox and build cost-safe aggregations",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "Kaggle Learn",
+          "title": "Intro to SQL & Advanced SQL on BigQuery",
+          "description": "Interactive free notebooks executing real queries directly against BigQuery datasets.",
+          "url": "https://www.kaggle.com/learn/intro-to-sql",
+          "cost": "Free"
+        },
+        {
+          "platform": "Google Cloud",
+          "title": "BigQuery Documentation & Quickstarts",
+          "description": "Official GCP reference on schemas, partitioning, and SQL optimization.",
+          "url": "https://cloud.google.com/bigquery/docs",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Google Cloud Platform": {
+      "platform": "Google Cloud Docs / Coursera (IBM)",
+      "url": "https://cloud.google.com/bigquery/docs",
+      "topics": "Compute Engine, Cloud Run containers, Cloud Storage, BigQuery, IAM",
+      "project": "Deploy a serverless Docker API cleanly to Google Cloud Run",
+      "est_time": "2-3 weeks",
+      "resources": [
+        {
+          "platform": "Google Cloud Docs",
+          "title": "BigQuery & GCP Cloud Guides",
+          "description": "Official Google Cloud architecture documentation and quickstarts.",
+          "url": "https://cloud.google.com/bigquery/docs",
+          "cost": "Free"
+        },
+        {
+          "platform": "Coursera (IBM)",
+          "title": "Cloud Computing Core Foundations",
+          "description": "Vendor-neutral cloud architecture concepts applicable directly to GCP.",
+          "url": "https://www.coursera.org/learn/introduction-to-cloud",
+          "cost": "Free Audit / Paid Cert"
+        }
+      ]
+    },
+    "Gradle": {
+      "platform": "Gradle Official / Google Android",
+      "url": "https://docs.gradle.org/current/userguide/userguide.html",
+      "topics": "build.gradle DSL, incremental build cache, tasks, Android/Java plugins",
+      "project": "Configure custom Gradle test & checkstyle quality tasks on a JVM project",
+      "est_time": "1 week",
+      "resources": [
+        {
+          "platform": "Gradle Official",
+          "title": "Gradle User Manual",
+          "description": "Official reference covering Groovy/Kotlin DSL, caching, and dependency management.",
+          "url": "https://docs.gradle.org/current/userguide/userguide.html",
+          "cost": "Free"
+        },
+        {
+          "platform": "Google Android",
+          "title": "Android Build Tooling Basics",
+          "description": "Understand Gradle flavors and dependencies in mobile projects.",
+          "url": "https://developer.android.com/courses",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Grafana": {
+      "platform": "Grafana Official / Prometheus Official",
+      "url": "https://grafana.com/tutorials/",
+      "topics": "Panels, time-series dashboards, data source queries, alert channels",
+      "project": "Build a CPU, memory, and HTTP 5xx SLA monitoring dashboard in Grafana",
+      "est_time": "1 week",
+      "resources": [
+        {
+          "platform": "Grafana Official",
+          "title": "Grafana Official Tutorials",
+          "description": "Step-by-step interactive labs building dashboards and configuring alert rules.",
+          "url": "https://grafana.com/tutorials/",
+          "cost": "Free"
+        },
+        {
+          "platform": "Prometheus Official",
+          "title": "Metrics Foundations for Dashboards",
+          "description": "Understand counters, gauges, and histograms visualized inside Grafana.",
+          "url": "https://prometheus.io/docs/introduction/overview/",
+          "cost": "Free"
+        }
+      ]
+    },
+    "GraphQL": {
+      "platform": "GraphQL Official / roadmap.sh",
+      "url": "https://graphql.org/learn/",
+      "topics": "Schemas, Queries, Mutations, Resolvers, preventing N+1 queries",
+      "project": "Wrap a multi-table Postgres database cleanly behind a GraphQL schema",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "GraphQL Official",
+          "title": "Introduction to GraphQL",
+          "description": "Official guide walking through schemas, type definitions, queries, and best practices.",
+          "url": "https://graphql.org/learn/",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "GraphQL Developer Roadmap",
+          "description": "Structured map of GraphQL servers, clients, caching, and federation.",
+          "url": "https://roadmap.sh/graphql",
+          "cost": "Free"
+        }
+      ]
+    },
+    "HTML5": {
+      "platform": "freeCodeCamp / MDN Web Docs",
+      "url": "https://www.freecodecamp.org/learn/responsive-web-design/",
+      "topics": "Semantic HTML tags, forms/validation, accessibility (ARIA), SEO basics",
+      "project": "Build a clean accessible portfolio landing page",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "freeCodeCamp",
+          "title": "Responsive Web Design Certification",
+          "description": "Learn semantic HTML5 and modern CSS layouts by building 5 web projects.",
+          "url": "https://www.freecodecamp.org/learn/responsive-web-design/",
+          "cost": "Free"
+        },
+        {
+          "platform": "MDN Web Docs",
+          "title": "Structuring Content with HTML",
+          "description": "Mozilla's thorough HTML fundamentals, forms, and accessibility guides.",
+          "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Hadoop": {
+      "platform": "Apache Spark Docs / roadmap.sh",
+      "url": "https://spark.apache.org/docs/latest/",
+      "topics": "HDFS distributed storage, YARN resource management, Parquet/ORC formats",
+      "project": "Understand HDFS partitioning and batch processing alongside Spark SQL",
+      "est_time": "2 weeks",
+      "resources": [
+        {
+          "platform": "Apache Spark Docs",
+          "title": "Distributed Big Data Processing Guides",
+          "description": "Learn modern distributed storage formats commonly paired with HDFS and S3.",
+          "url": "https://spark.apache.org/docs/latest/",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "Big Data & Data Engineer Track",
+          "description": "Structured context on legacy Hadoop ecosystems vs modern lakehouses.",
+          "url": "https://roadmap.sh/data-engineer",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Hibernate": {
+      "platform": "Hibernate Official / Spring Official",
+      "url": "https://hibernate.org/orm/documentation/",
+      "topics": "JPA entity mapping, relationships, lazy loading, HQL query tuning",
+      "project": "Model a multi-table inventory schema using JPA/Hibernate entities",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "Hibernate Official",
+          "title": "Hibernate ORM Documentation",
+          "description": "Official getting-started and mapping guides for Java persistence.",
+          "url": "https://hibernate.org/orm/documentation/",
+          "cost": "Free"
+        },
+        {
+          "platform": "Spring Official",
+          "title": "Accessing Data with JPA Guide",
+          "description": "Practical walkthrough integrating Hibernate/JPA with Spring Boot.",
+          "url": "https://spring.io/guides",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Hugging Face": {
+      "platform": "Hugging Face Learn / PyTorch Official",
+      "url": "https://huggingface.co/learn",
+      "topics": "Transformers library, tokenizers, Trainer API, model fine-tuning",
+      "project": "Fine-tune a pretrained DistilBERT classifier for resume/job text tagging",
+      "est_time": "2 weeks",
+      "resources": [
+        {
+          "platform": "Hugging Face Learn",
+          "title": "The Hugging Face LLM & NLP Course",
+          "description": "Completely free practical course on transformers, datasets, and fine-tuning.",
+          "url": "https://huggingface.co/learn",
+          "cost": "Free"
+        },
+        {
+          "platform": "PyTorch Official",
+          "title": "PyTorch Fundamentals for Transformers",
+          "description": "Strengthen underlying PyTorch tensor and DataLoader intuition.",
+          "url": "https://pytorch.org/tutorials/",
+          "cost": "Free"
+        }
+      ]
+    },
+    "I2C": {
+      "platform": "Arduino Official / FreeRTOS Official",
+      "url": "https://docs.arduino.cc/learn/",
+      "topics": "Core principles, practical syntax/configuration, and real-world workflows in I2C",
+      "project": "Build and document a hands-on mini-project applying I2C",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "Arduino Official",
+          "title": "Embedded Hardware & Firmware Guides",
+          "description": "Hands-on tutorials covering protocols, sensors, and C/C++ firmware.",
+          "url": "https://docs.arduino.cc/learn/",
+          "cost": "Free"
+        },
+        {
+          "platform": "FreeRTOS Official",
+          "title": "Real-Time Embedded Systems Documentation",
+          "description": "Official technical reference for RTOS firmware design.",
+          "url": "https://www.freertos.org/Documentation/00-Overview",
+          "cost": "Free"
+        }
+      ]
+    },
+    "JUnit": {
+      "platform": "JUnit 5 Official / Spring Official",
+      "url": "https://junit.org/junit5/docs/current/user-guide/",
+      "topics": "JUnit 5 annotations, parameterized tests, assertions, Maven/Gradle integration",
+      "project": "Write JUnit 5 unit & service tests cleanly for a Spring Boot backend",
+      "est_time": "1 week",
+      "resources": [
+        {
+          "platform": "JUnit 5 Official",
+          "title": "JUnit 5 Official User Guide",
+          "description": "Comprehensive documentation on @Test, @ParameterizedTest, and extensions.",
+          "url": "https://junit.org/junit5/docs/current/user-guide/",
+          "cost": "Free"
+        },
+        {
+          "platform": "Spring Official",
+          "title": "Testing the Web Layer in Spring Boot",
+          "description": "Practical official guide pairing JUnit cleanly with Spring MockMvc.",
+          "url": "https://spring.io/guides",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Java": {
+      "platform": "Dev.java / roadmap.sh",
+      "url": "https://dev.java/learn/",
+      "topics": "OOP, Collections, Streams, Generics, Exception Handling",
+      "project": "Build a multi-threaded order inventory REST backend",
+      "est_time": "4-5 weeks",
+      "resources": [
+        {
+          "platform": "Dev.java",
+          "title": "Learn Java — Official Oracle Tutorials",
+          "description": "Structured modern Java tutorials maintained by the Oracle Java team.",
+          "url": "https://dev.java/learn/",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "Java Developer Roadmap",
+          "description": "Step-by-step interactive Java skill path linking curated guides.",
+          "url": "https://roadmap.sh/java",
+          "cost": "Free"
+        },
+        {
+          "platform": "Harvard CS50",
+          "title": "CS50's Introduction to Programming & Computer Science",
+          "description": "Foundational computer science concepts helpful for strongly typed OOP languages.",
+          "url": "https://cs50.harvard.edu/x/",
+          "cost": "Free"
+        }
+      ]
+    },
+    "JavaScript": {
+      "platform": "freeCodeCamp / MDN Web Docs",
+      "url": "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/",
+      "topics": "ES6+, DOM manipulation, Async/Await, Fetch API, Closures",
+      "project": "Build an interactive weather and task planner web app",
+      "est_time": "3-4 weeks",
+      "resources": [
+        {
+          "platform": "freeCodeCamp",
+          "title": "JavaScript Algorithms and Data Structures",
+          "description": "Interactive browser challenges teaching ES6+, OOP, functional programming, and projects.",
+          "url": "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/",
+          "cost": "Free"
+        },
+        {
+          "platform": "MDN Web Docs",
+          "title": "Learn Web Development: JavaScript",
+          "description": "Mozilla's beginner-to-intermediate modules covering DOM, events, and async JS.",
+          "url": "https://developer.mozilla.org/en-US/docs/Learn/JavaScript",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "JavaScript Roadmap",
+          "description": "Topic-by-topic JavaScript learning map with curated articles.",
+          "url": "https://roadmap.sh/javascript",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Jenkins": {
+      "platform": "Jenkins Official / roadmap.sh",
+      "url": "https://www.jenkins.io/doc/tutorials/",
+      "topics": "Declarative Jenkinsfiles, agents, plugins, build triggers, credentials",
+      "project": "Write a declarative multi-stage Jenkinsfile running tests and Docker builds",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "Jenkins Official",
+          "title": "Jenkins Pipeline & App Tutorials",
+          "description": "Official step-by-step tutorials with Dockerized Jenkins setups.",
+          "url": "https://www.jenkins.io/doc/tutorials/",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "DevOps Automation Roadmap",
+          "description": "Explore CI/CD concepts alongside modern pipeline orchestration.",
+          "url": "https://roadmap.sh/devops",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Jest": {
+      "platform": "Jest Official / roadmap.sh",
+      "url": "https://jestjs.io/docs/getting-started",
+      "topics": "Unit test suites, async matchers, module mocks, React Testing Library",
+      "project": "Add unit and component test coverage to a JavaScript/React project",
+      "est_time": "1 week",
+      "resources": [
+        {
+          "platform": "Jest Official",
+          "title": "Jest Getting Started Docs",
+          "description": "Official setup, matchers, async testing, and mocking documentation.",
+          "url": "https://jestjs.io/docs/getting-started",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "Frontend & QA Testing Paths",
+          "description": "Learn how Jest fits alongside Playwright/Cypress end-to-end tests.",
+          "url": "https://roadmap.sh/qa",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Jira": {
+      "platform": "Atlassian University / Scrum Guides",
+      "url": "https://university.atlassian.com",
+      "topics": "Scrum/Kanban boards, epics, user stories, bug triage, workflows",
+      "project": "Set up a realistic sprint backlog with linked epics, stories, and QA bugs",
+      "est_time": "3-5 days",
+      "resources": [
+        {
+          "platform": "Atlassian University",
+          "title": "Free Jira & Agile Team Courses",
+          "description": "Official free on-demand Atlassian courses covering Jira boards and JQL.",
+          "url": "https://university.atlassian.com",
+          "cost": "Free"
+        },
+        {
+          "platform": "Scrum Guides",
+          "title": "The Official Scrum Guide",
+          "description": "Understand the agile sprint roles and artifacts managed inside Jira.",
+          "url": "https://scrumguides.org/",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Jupyter": {
+      "platform": "Kaggle Learn / Coursera (IBM)",
+      "url": "https://www.kaggle.com/learn/python",
+      "topics": "Interactive notebooks, magic commands, reproducible markdown reports",
+      "project": "Document a clean EDA & modeling story end-to-end in Jupyter",
+      "est_time": "3-5 days",
+      "resources": [
+        {
+          "platform": "Kaggle Learn",
+          "title": "Python & Data Science Notebooks",
+          "description": "Practice running interactive Jupyter notebooks directly in your browser.",
+          "url": "https://www.kaggle.com/learn/python",
+          "cost": "Free"
+        },
+        {
+          "platform": "Coursera (IBM)",
+          "title": "IBM Data Science — Open Source Tools",
+          "description": "Hands-on walkthroughs of JupyterLab workflows for reproducible research.",
+          "url": "https://www.coursera.org/professional-certificates/ibm-data-science",
+          "cost": "Free Audit / Paid Cert"
+        }
+      ]
+    },
+    "Keras": {
+      "platform": "TensorFlow Official / Kaggle Learn",
+      "url": "https://www.tensorflow.org/tutorials",
+      "topics": "Model compile/fit, transfer learning, custom callbacks, preprocessing layers",
+      "project": "Fine-tune MobileNet on a custom image dataset using Keras transfer learning",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "TensorFlow Official",
+          "title": "Keras & TensorFlow Beginner Guides",
+          "description": "Official tutorials demonstrating concise model building with tf.keras.",
+          "url": "https://www.tensorflow.org/tutorials",
+          "cost": "Free"
+        },
+        {
+          "platform": "Kaggle Learn",
+          "title": "Intro to Deep Learning (Keras)",
+          "description": "Practical bite-sized exercises tuning Keras layers and early stopping.",
+          "url": "https://www.kaggle.com/learn/intro-to-deep-learning",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Kotlin": {
+      "platform": "Kotlin Official / Google Android",
+      "url": "https://kotlinlang.org/docs/getting-started.html",
+      "topics": "Null safety, coroutines, data classes, Android Jetpack Compose",
+      "project": "Build an offline-first Android notes app in Kotlin",
+      "est_time": "3 weeks",
+      "resources": [
+        {
+          "platform": "Kotlin Official",
+          "title": "Get Started with Kotlin",
+          "description": "JetBrains official tutorials covering syntax, idioms, and coroutines.",
+          "url": "https://kotlinlang.org/docs/getting-started.html",
+          "cost": "Free"
+        },
+        {
+          "platform": "Google Android",
+          "title": "Android Basics with Compose (Kotlin)",
+          "description": "Free Google training course teaching Kotlin while building real Android apps.",
+          "url": "https://developer.android.com/courses",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Kubernetes": {
+      "platform": "Kubernetes Official / roadmap.sh",
+      "url": "https://kubernetes.io/docs/tutorials/kubernetes-basics/",
+      "topics": "Pods, Deployments, Services, Ingress, ConfigMaps, Helm basics",
+      "project": "Deploy and scale a containerized Flask app cleanly on Minikube or Kind",
+      "est_time": "3-4 weeks",
+      "resources": [
+        {
+          "platform": "Kubernetes Official",
+          "title": "Kubernetes Basics Interactive Tutorials",
+          "description": "Official modular tutorials covering Pods, Services, rolling updates, and scaling.",
+          "url": "https://kubernetes.io/docs/tutorials/kubernetes-basics/",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "Kubernetes Roadmap",
+          "description": "Visual progression from container scheduling to cluster observability.",
+          "url": "https://roadmap.sh/kubernetes",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Laravel": {
+      "platform": "Laravel Official / PHP Official Manual",
+      "url": "https://laravel.com/docs",
+      "topics": "Eloquent ORM, Blade templates, migrations, queues, REST API Sanctum",
+      "project": "Build a multi-user task board in Laravel with Eloquent & MySQL",
+      "est_time": "3 weeks",
+      "resources": [
+        {
+          "platform": "Laravel Official",
+          "title": "Laravel Documentation & Bootcamp",
+          "description": "Thorough official documentation covering routing, Eloquent, testing, and queues.",
+          "url": "https://laravel.com/docs",
+          "cost": "Free"
+        },
+        {
+          "platform": "PHP Official Manual",
+          "title": "Getting Started with PHP",
+          "description": "Foundation guide for PHP 8 OOP concepts underlying Laravel.",
+          "url": "https://www.php.net/manual/en/getting-started.php",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Linux": {
+      "platform": "Linux Journey / roadmap.sh",
+      "url": "https://linuxjourney.com/",
+      "topics": "Filesystems, systemd services, permissions, networking CLI, SSH, logs",
+      "project": "Configure a hardened Ubuntu VM running a systemd web service and UFW firewall",
+      "est_time": "2-3 weeks",
+      "resources": [
+        {
+          "platform": "Linux Journey",
+          "title": "Linux Journey Guided Lessons",
+          "description": "Clear bite-sized lessons on shell commands, permissions, processes, and networking.",
+          "url": "https://linuxjourney.com/",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "Linux Learning Roadmap",
+          "description": "Practical checklist covering shells, text tools, system monitoring, and security.",
+          "url": "https://roadmap.sh/linux",
+          "cost": "Free"
+        },
+        {
+          "platform": "Coursera (Google)",
+          "title": "Technical Support Fundamentals",
+          "description": "Foundational OS, hardware, and system administration fundamentals.",
+          "url": "https://www.coursera.org/learn/technical-support-fundamentals",
+          "cost": "Free Audit / Paid Cert"
+        }
+      ]
+    },
+    "MLflow": {
+      "platform": "MLflow Official / roadmap.sh",
+      "url": "https://mlflow.org/docs/latest/getting-started/intro-quickstart/",
+      "topics": "Experiment tracking, parameter logging, artifact store, Model Registry",
+      "project": "Log hyperparameters, F1 metrics, and serialized models across 10 runs",
+      "est_time": "1 week",
+      "resources": [
+        {
+          "platform": "MLflow Official",
+          "title": "MLflow Tracking Quickstart",
+          "description": "Concise official tutorial logging training parameters and registering models.",
+          "url": "https://mlflow.org/docs/latest/getting-started/intro-quickstart/",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "MLOps & Model Serving Roadmap",
+          "description": "Explore how experiment tracking fits into production ML pipelines.",
+          "url": "https://roadmap.sh/mlops",
+          "cost": "Free"
+        }
+      ]
+    },
+    "MQTT": {
+      "platform": "Arduino Official / FreeRTOS Official",
+      "url": "https://docs.arduino.cc/learn/",
+      "topics": "Core principles, practical syntax/configuration, and real-world workflows in MQTT",
+      "project": "Build and document a hands-on mini-project applying MQTT",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "Arduino Official",
+          "title": "Embedded Hardware & Firmware Guides",
+          "description": "Hands-on tutorials covering protocols, sensors, and C/C++ firmware.",
+          "url": "https://docs.arduino.cc/learn/",
+          "cost": "Free"
+        },
+        {
+          "platform": "FreeRTOS Official",
+          "title": "Real-Time Embedded Systems Documentation",
+          "description": "Official technical reference for RTOS firmware design.",
+          "url": "https://www.freertos.org/Documentation/00-Overview",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Machine Learning": {
+      "platform": "Kaggle Learn / Coursera (DeepLearning.AI)",
+      "url": "https://www.kaggle.com/learn/intro-to-machine-learning",
+      "topics": "Train/test split, regression, classification, overfitting, cross-validation",
+      "project": "Train and compare Logistic Regression vs Random Forest on churn data",
+      "est_time": "4-5 weeks",
+      "resources": [
+        {
+          "platform": "Kaggle Learn",
+          "title": "Intro to Machine Learning & Intermediate ML",
+          "description": "Completely free interactive Scikit-Learn & XGBoost hands-on micro-courses.",
+          "url": "https://www.kaggle.com/learn/intro-to-machine-learning",
+          "cost": "Free"
+        },
+        {
+          "platform": "Coursera (DeepLearning.AI)",
+          "title": "Machine Learning Specialization (Andrew Ng)",
+          "description": "World-renowned intuitive introduction to supervised and unsupervised ML.",
+          "url": "https://www.coursera.org/specializations/machine-learning-introduction",
+          "cost": "Free Audit / Paid Cert"
+        },
+        {
+          "platform": "freeCodeCamp",
+          "title": "Machine Learning with Python Certification",
+          "description": "Free curriculum building five complete ML projects with TensorFlow & Python.",
+          "url": "https://www.freecodecamp.org/learn/machine-learning-with-python/",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Manual Testing": {
+      "platform": "roadmap.sh / Atlassian University",
+      "url": "https://roadmap.sh/qa",
+      "topics": "Boundary value analysis, equivalence partitioning, test plans, bug reports",
+      "project": "Write a structured test plan and reproducible defect tickets for a web app",
+      "est_time": "1 week",
+      "resources": [
+        {
+          "platform": "roadmap.sh",
+          "title": "QA Foundations & Manual Testing",
+          "description": "Understand SDLC testing levels, regression, smoke, and exploratory techniques.",
+          "url": "https://roadmap.sh/qa",
+          "cost": "Free"
+        },
+        {
+          "platform": "Atlassian University",
+          "title": "Bug Tracking & Issue Workflows",
+          "description": "Learn clean defect triage and Jira reporting workflows used by real QA teams.",
+          "url": "https://university.atlassian.com",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Matplotlib": {
+      "platform": "Matplotlib Official / Kaggle Learn",
+      "url": "https://matplotlib.org/stable/tutorials/",
+      "topics": "Figure/Axes API, subplots, histograms, custom labels and styling",
+      "project": "Build a multi-panel exploratory chart report saved cleanly as PNG/SVG",
+      "est_time": "1 week",
+      "resources": [
+        {
+          "platform": "Matplotlib Official",
+          "title": "Matplotlib Official Tutorials",
+          "description": "Step-by-step introductory guides from pyplot basics to multi-axis customization.",
+          "url": "https://matplotlib.org/stable/tutorials/",
+          "cost": "Free"
+        },
+        {
+          "platform": "Kaggle Learn",
+          "title": "Data Visualization with Python",
+          "description": "Apply Matplotlib & Seaborn immediately on real Kaggle datasets.",
+          "url": "https://www.kaggle.com/learn/data-visualization",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Maven": {
+      "platform": "Apache Maven / Spring Official",
+      "url": "https://maven.apache.org/guides/getting-started/",
+      "topics": "pom.xml lifecycle, dependencies, multi-module builds, plugins",
+      "project": "Configure a multi-module Java project building and running JUnit tests via Maven",
+      "est_time": "1 week",
+      "resources": [
+        {
+          "platform": "Apache Maven",
+          "title": "Maven Getting Started Guide",
+          "description": "Official tutorial covering coordinates, build lifecycle, and dependency scopes.",
+          "url": "https://maven.apache.org/guides/getting-started/",
+          "cost": "Free"
+        },
+        {
+          "platform": "Spring Official",
+          "title": "Maven with Spring Boot Guides",
+          "description": "Official guides demonstrating Spring Boot Starter dependency management.",
+          "url": "https://spring.io/guides",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Microcontrollers": {
+      "platform": "Arduino Docs / STMicroelectronics",
+      "url": "https://docs.arduino.cc/learn/",
+      "topics": "GPIO, ADC/DAC, PWM, timers, watchdogs, reading hardware datasheets",
+      "project": "Interface a temperature sensor & OLED screen on an MCU reading datasheet timings",
+      "est_time": "3 weeks",
+      "resources": [
+        {
+          "platform": "Arduino Docs",
+          "title": "Microcontroller I/O & Sensor Tutorials",
+          "description": "Beginner-friendly guides covering PWM, analog inputs, and timing.",
+          "url": "https://docs.arduino.cc/learn/",
+          "cost": "Free"
+        },
+        {
+          "platform": "STMicroelectronics",
+          "title": "STM32 Getting Started Ecosystem",
+          "description": "Explore industrial ARM Cortex-M microcontrollers and CubeIDE tooling.",
+          "url": "https://www.st.com",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Microservices": {
+      "platform": "roadmap.sh / Spring Official",
+      "url": "https://roadmap.sh/software-architect",
+      "topics": "Service boundaries, API gateways, async events, retries, health checks",
+      "project": "Split a monolith auth + catalog service cleanly using Docker Compose",
+      "est_time": "3 weeks",
+      "resources": [
+        {
+          "platform": "roadmap.sh",
+          "title": "Software Architect & Microservices Roadmap",
+          "description": "Clear architecture comparisons between monoliths, microservices, and queues.",
+          "url": "https://roadmap.sh/software-architect",
+          "cost": "Free"
+        },
+        {
+          "platform": "Spring Official",
+          "title": "Building Microservices Guides",
+          "description": "Hands-on tutorials covering service discovery, gateways, and resilience.",
+          "url": "https://spring.io/guides",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Microsoft Azure": {
+      "platform": "Microsoft Learn / Coursera (IBM)",
+      "url": "https://learn.microsoft.com/en-us/training/",
+      "topics": "Azure AD/Entra IAM, Virtual Networks, App Service, Azure SQL, Blob Storage",
+      "project": "Deploy a web app and managed SQL database cleanly on Azure App Service",
+      "est_time": "3 weeks",
+      "resources": [
+        {
+          "platform": "Microsoft Learn",
+          "title": "Azure Fundamentals & Admin Paths",
+          "description": "Completely free interactive Azure training modules and sandboxes from Microsoft.",
+          "url": "https://learn.microsoft.com/en-us/training/",
+          "cost": "Free"
+        },
+        {
+          "platform": "Coursera (IBM)",
+          "title": "Cloud Computing Architecture Basics",
+          "description": "Compare multi-cloud IaaS/PaaS fundamentals alongside Azure concepts.",
+          "url": "https://www.coursera.org/learn/introduction-to-cloud",
+          "cost": "Free Audit / Paid Cert"
+        }
+      ]
+    },
+    "Microsoft Excel": {
+      "platform": "Coursera (Google) / roadmap.sh",
+      "url": "https://www.coursera.org/professional-certificates/google-data-analytics",
+      "topics": "PivotTables, XLOOKUP/INDEX-MATCH, Power Query, conditional formatting, charts",
+      "project": "Automate a monthly budget & cohort retention workbook using PivotTables",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "Coursera (Google)",
+          "title": "Google Data Analytics — Spreadsheets & Analysis",
+          "description": "Structured spreadsheet formulas, cleaning, and pivot analysis exercises.",
+          "url": "https://www.coursera.org/professional-certificates/google-data-analytics",
+          "cost": "Free Audit / Paid Cert"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "Data Analyst Foundations",
+          "description": "Explore spreadsheet analytics workflows alongside SQL reporting.",
+          "url": "https://roadmap.sh/data-analyst",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Microsoft SQL Server": {
+      "platform": "Microsoft Learn / Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/training/paths/get-started-querying-with-transact-sql/",
+      "topics": "T-SQL queries, window functions, stored procedures, execution plans",
+      "project": "Write analytical T-SQL reporting procedures on AdventureWorks sample data",
+      "est_time": "2-3 weeks",
+      "resources": [
+        {
+          "platform": "Microsoft Learn",
+          "title": "Query and Modify Data with Transact-SQL",
+          "description": "Official Microsoft T-SQL learning path for SQL Server and Azure SQL.",
+          "url": "https://learn.microsoft.com/en-us/training/paths/get-started-querying-with-transact-sql/",
+          "cost": "Free"
+        },
+        {
+          "platform": "Microsoft Learn",
+          "title": "Azure & SQL Server Database Training",
+          "description": "Free guided labs covering indexing, performance tuning, and backups.",
+          "url": "https://learn.microsoft.com/en-us/training/",
+          "cost": "Free"
+        }
+      ]
+    },
+    "MongoDB": {
+      "platform": "MongoDB Learn / freeCodeCamp",
+      "url": "https://learn.mongodb.com/",
+      "topics": "Document modeling, Aggregation Pipeline, compound indexes, Atlas",
+      "project": "Build an analytics aggregation pipeline on e-commerce order documents",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "MongoDB Learn",
+          "title": "MongoDB Developer Center & University",
+          "description": "Official free interactive courses on document modeling, CRUD, and aggregation.",
+          "url": "https://learn.mongodb.com/",
+          "cost": "Free"
+        },
+        {
+          "platform": "freeCodeCamp",
+          "title": "Back End APIs & Mongoose Track",
+          "description": "Build Express + MongoDB CRUD web applications in hands-on challenges.",
+          "url": "https://www.freecodecamp.org/learn/back-end-development-and-apis/",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "MongoDB Roadmap",
+          "description": "Visual skill sequence for NoSQL indexing and Atlas operations.",
+          "url": "https://roadmap.sh/mongodb",
+          "cost": "Free"
+        }
+      ]
+    },
+    "MySQL": {
+      "platform": "MySQL Official / freeCodeCamp",
+      "url": "https://dev.mysql.com/doc/",
+      "topics": "InnoDB storage, joins, normalization, indexing, stored routines",
+      "project": "Normalize a multi-table e-commerce schema and benchmark slow queries",
+      "est_time": "2 weeks",
+      "resources": [
+        {
+          "platform": "MySQL Official",
+          "title": "MySQL Reference Manual & Tutorial",
+          "description": "Authoritative guide to queries, indexing, backups, and server administration.",
+          "url": "https://dev.mysql.com/doc/",
+          "cost": "Free"
+        },
+        {
+          "platform": "freeCodeCamp",
+          "title": "Relational Database SQL Foundations",
+          "description": "Hands-on relational SQL design skills transferring directly to MySQL.",
+          "url": "https://www.freecodecamp.org/learn/relational-database/",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Natural Language Processing": {
+      "platform": "Hugging Face Learn / Scikit-Learn Official",
+      "url": "https://huggingface.co/learn",
+      "topics": "Tokenization, TF-IDF, word embeddings, Transformers, RAG basics",
+      "project": "Build a semantic document matcher combining TF-IDF and embeddings",
+      "est_time": "3-4 weeks",
+      "resources": [
+        {
+          "platform": "Hugging Face Learn",
+          "title": "NLP Course (Transformers & Tokenizers)",
+          "description": "Free interactive tutorials covering modern NLP pipelines from scratch.",
+          "url": "https://huggingface.co/learn",
+          "cost": "Free"
+        },
+        {
+          "platform": "Scikit-Learn Official",
+          "title": "Working With Text Data Tutorial",
+          "description": "Master classic Bag-of-Words and TF-IDF pipelines clearly.",
+          "url": "https://scikit-learn.org/stable/getting_started.html",
+          "cost": "Free"
+        }
+      ]
+    },
+    "NestJS": {
+      "platform": "roadmap.sh / MDN Web Docs",
+      "url": "https://roadmap.sh/backend",
+      "topics": "Core principles, practical syntax/configuration, and real-world workflows in NestJS",
+      "project": "Build and document a hands-on mini-project applying NestJS",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "roadmap.sh",
+          "title": "Framework & Architecture Learning Paths",
+          "description": "Curated step-by-step web and backend framework guides.",
+          "url": "https://roadmap.sh/backend",
+          "cost": "Free"
+        },
+        {
+          "platform": "MDN Web Docs",
+          "title": "Web Framework & Server-Side Concepts",
+          "description": "Mozilla's free conceptual and hands-on guides for modern web stacks.",
+          "url": "https://developer.mozilla.org/en-US/docs/Learn",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Network Security": {
+      "platform": "Cisco NetAcad / Coursera (Google)",
+      "url": "https://www.netacad.com",
+      "topics": "Defense in depth, VPNs, ACLs, IDS/IPS, zero-trust segmentation",
+      "project": "Design segmented DMZ/internal firewall rules for a mock cloud topology",
+      "est_time": "3 weeks",
+      "resources": [
+        {
+          "platform": "Cisco NetAcad",
+          "title": "Networking & Cybersecurity Free Courses",
+          "description": "Structured Cisco Networking Academy training on secure switching and defense.",
+          "url": "https://www.netacad.com",
+          "cost": "Free"
+        },
+        {
+          "platform": "Coursera (Google)",
+          "title": "Play It Safe: Manage Security Risks",
+          "description": "Covers network hardening, firewalls, and security protocols clearly.",
+          "url": "https://www.coursera.org/professional-certificates/google-cybersecurity",
+          "cost": "Free Audit / Paid Cert"
+        }
+      ]
+    },
+    "Networking": {
+      "platform": "Cisco NetAcad / TryHackMe",
+      "url": "https://www.netacad.com",
+      "topics": "OSI & TCP/IP layers, subnetting, DNS, HTTP/HTTPS, switching & routing",
+      "project": "Map packet hops cleanly using traceroute, dig/nslookup, and packet capture",
+      "est_time": "3 weeks",
+      "resources": [
+        {
+          "platform": "Cisco NetAcad",
+          "title": "Networking Basics (Free Self-Paced)",
+          "description": "Official Cisco course teaching IP addressing, Ethernet, and router essentials.",
+          "url": "https://www.netacad.com",
+          "cost": "Free"
+        },
+        {
+          "platform": "TryHackMe",
+          "title": "Pre-Security Network Fundamentals",
+          "description": "Interactive rooms demystifying packets, OSI layers, and DNS visually.",
+          "url": "https://tryhackme.com/paths",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Next.js": {
+      "platform": "Vercel / Next.js / React Official Docs",
+      "url": "https://nextjs.org/learn",
+      "topics": "App Router, Server Components, SSR/SSG, API route handlers",
+      "project": "Build a full-stack SEO-friendly blog or job portal in Next.js",
+      "est_time": "2-3 weeks",
+      "resources": [
+        {
+          "platform": "Vercel / Next.js",
+          "title": "Next.js Official Learn Course",
+          "description": "Interactive step-by-step course building a full-stack Next.js dashboard app.",
+          "url": "https://nextjs.org/learn",
+          "cost": "Free"
+        },
+        {
+          "platform": "React Official Docs",
+          "title": "React Server & Full-Stack Patterns",
+          "description": "Official React guide explaining modern full-stack React concepts.",
+          "url": "https://react.dev/learn",
+          "cost": "Free"
+        }
+      ]
+    },
+    "NoSQL": {
+      "platform": "MongoDB Learn / Redis Learn",
+      "url": "https://learn.mongodb.com/",
+      "topics": "Document vs key-value vs wide-column stores, eventual consistency",
+      "project": "Compare relational PostgreSQL vs document MongoDB modeling for one app",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "MongoDB Learn",
+          "title": "NoSQL Document Modeling Guides",
+          "description": "Practical official lessons on embedding vs referencing in document stores.",
+          "url": "https://learn.mongodb.com/",
+          "cost": "Free"
+        },
+        {
+          "platform": "Redis Learn",
+          "title": "Key-Value & In-Memory Architecture Guides",
+          "description": "Learn sub-millisecond caching and non-relational data structures.",
+          "url": "https://redis.io/learn/",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Node.js": {
+      "platform": "Node.js Official / freeCodeCamp",
+      "url": "https://nodejs.org/en/learn/getting-started/introduction-to-nodejs",
+      "topics": "Event loop, async filesystem/streams, HTTP servers, npm, Express",
+      "project": "Build an authenticated REST API with rate limiting and SQL/MongoDB",
+      "est_time": "3 weeks",
+      "resources": [
+        {
+          "platform": "Node.js Official",
+          "title": "Node.js Learn — Introduction & Guides",
+          "description": "Official guides covering async I/O, modules, TypeScript, and diagnostics.",
+          "url": "https://nodejs.org/en/learn/getting-started/introduction-to-nodejs",
+          "cost": "Free"
+        },
+        {
+          "platform": "freeCodeCamp",
+          "title": "Back End Development and APIs",
+          "description": "Hands-on Node.js, npm, Express, and MongoDB microservice projects.",
+          "url": "https://www.freecodecamp.org/learn/back-end-development-and-apis/",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "Node.js Developer Roadmap",
+          "description": "Curated step-by-step Node.js backend syllabus.",
+          "url": "https://roadmap.sh/nodejs",
+          "cost": "Free"
+        }
+      ]
+    },
+    "NumPy": {
+      "platform": "NumPy Official / freeCodeCamp",
+      "url": "https://numpy.org/learn/",
+      "topics": "N-dimensional arrays, vectorization, broadcasting, linear algebra",
+      "project": "Benchmark pure-Python loops vs vectorized NumPy matrix operations",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "NumPy Official",
+          "title": "NumPy Learn — Official Quickstart",
+          "description": "Official interactive tutorials covering arrays, broadcasting, and linear algebra.",
+          "url": "https://numpy.org/learn/",
+          "cost": "Free"
+        },
+        {
+          "platform": "freeCodeCamp",
+          "title": "Data Analysis with Python (NumPy)",
+          "description": "Free exercises covering mean-variance-standard-deviation array calculations.",
+          "url": "https://www.freecodecamp.org/learn/data-analysis-with-python/",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Objective-C": {
+      "platform": "Apple Developer / Swift.org",
+      "url": "https://developer.apple.com/tutorials/swiftui",
+      "topics": "Header/implementation files, ARC memory, bridging with Swift",
+      "project": "Read and bridge an Objective-C utility module into Swift",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "Apple Developer",
+          "title": "Apple Developer Swift & iOS Frameworks",
+          "description": "Official Apple documentation on iOS Foundation APIs and Swift interoperability.",
+          "url": "https://developer.apple.com/tutorials/swiftui",
+          "cost": "Free"
+        },
+        {
+          "platform": "Swift.org",
+          "title": "The Swift Programming Language Reference",
+          "description": "Helpful reference for understanding Objective-C interoperability patterns.",
+          "url": "https://docs.swift.org/swift-book/",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Oracle Database": {
+      "platform": "freeCodeCamp / PostgreSQL Docs",
+      "url": "https://www.freecodecamp.org/learn/relational-database/",
+      "topics": "PL/SQL, tablespaces, indexing, RMAN backup/recovery concepts",
+      "project": "Write PL/SQL validation procedures and inspect query execution plans",
+      "est_time": "3 weeks",
+      "resources": [
+        {
+          "platform": "freeCodeCamp",
+          "title": "Relational Database & SQL Core Concepts",
+          "description": "Solid ANSI SQL and relational modeling foundations shared with Oracle DB.",
+          "url": "https://www.freecodecamp.org/learn/relational-database/",
+          "cost": "Free"
+        },
+        {
+          "platform": "PostgreSQL Docs",
+          "title": "Enterprise SQL Concepts & Indexing",
+          "description": "Clear open reference for views, transactions, and query planning.",
+          "url": "https://www.postgresql.org/docs/current/tutorial.html",
+          "cost": "Free"
+        }
+      ]
+    },
+    "PHP": {
+      "platform": "PHP Official Manual / Laracasts / PHP Docs",
+      "url": "https://www.php.net/manual/en/getting-started.php",
+      "topics": "PHP 8 syntax, OOP, Composer, PDO database queries, security",
+      "project": "Build a RESTful blog backend in PHP with PDO and MySQL",
+      "est_time": "3 weeks",
+      "resources": [
+        {
+          "platform": "PHP Official Manual",
+          "title": "Getting Started with PHP",
+          "description": "Official language manual covering syntax, forms, sessions, and database security.",
+          "url": "https://www.php.net/manual/en/getting-started.php",
+          "cost": "Free"
+        },
+        {
+          "platform": "Laracasts / PHP Docs",
+          "title": "Laravel Official Documentation & Bootcamp",
+          "description": "Practical modern PHP patterns via Composer and MVC design.",
+          "url": "https://laravel.com/docs",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Pandas": {
+      "platform": "Kaggle Learn / Pandas Official",
+      "url": "https://www.kaggle.com/learn/pandas",
+      "topics": "DataFrames, groupby aggregations, merge/join, time-series indexing",
+      "project": "Clean and aggregate multi-million-row sales CSV files cleanly in Pandas",
+      "est_time": "2 weeks",
+      "resources": [
+        {
+          "platform": "Kaggle Learn",
+          "title": "Pandas Free Micro-Course",
+          "description": "Fast interactive exercises on indexing, grouping, missing data, and renaming.",
+          "url": "https://www.kaggle.com/learn/pandas",
+          "cost": "Free"
+        },
+        {
+          "platform": "Pandas Official",
+          "title": "Getting Started Intro Tutorials",
+          "description": "Official concise tutorials for reshaping, plotting, and merging tables.",
+          "url": "https://pandas.pydata.org/docs/getting_started/intro_tutorials/",
+          "cost": "Free"
+        },
+        {
+          "platform": "freeCodeCamp",
+          "title": "Data Analysis with Python",
+          "description": "Earn a free certificate building statistical Pandas projects.",
+          "url": "https://www.freecodecamp.org/learn/data-analysis-with-python/",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Penetration Testing": {
+      "platform": "PortSwigger Academy / TryHackMe",
+      "url": "https://portswigger.net/web-security",
+      "topics": "Reconnaissance, enumeration, SQLi/XSS exploitation, reporting fixes",
+      "project": "Complete beginner interactive web & network pentesting labs on PortSwigger",
+      "est_time": "4 weeks",
+      "resources": [
+        {
+          "platform": "PortSwigger Academy",
+          "title": "Web Application Penetration Testing Labs",
+          "description": "100% free world-class hands-on labs created by the Burp Suite team.",
+          "url": "https://portswigger.net/web-security",
+          "cost": "Free"
+        },
+        {
+          "platform": "TryHackMe",
+          "title": "Jr Penetration Tester Interactive Path",
+          "description": "Guided in-browser VMs practicing enumeration, web flaws, and privilege escalation.",
+          "url": "https://tryhackme.com/paths",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Playwright": {
+      "platform": "Playwright Official / roadmap.sh",
+      "url": "https://playwright.dev/docs/intro",
+      "topics": "Auto-waiting locators, API mocking, trace viewer, parallel headless tests",
+      "project": "Write an end-to-end Playwright test suite integrated into GitHub Actions",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "Playwright Official",
+          "title": "Playwright Intro & Test Writing Docs",
+          "description": "Clear official tutorials with trace viewer debugging and CI integration.",
+          "url": "https://playwright.dev/docs/intro",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "QA Engineering Roadmap",
+          "description": "Compare Playwright with Selenium and Cypress in modern test teams.",
+          "url": "https://roadmap.sh/qa",
+          "cost": "Free"
+        }
+      ]
+    },
+    "PostgreSQL": {
+      "platform": "PostgreSQL Docs / freeCodeCamp",
+      "url": "https://www.postgresql.org/docs/current/tutorial.html",
+      "topics": "Indexes, B-Tree/GIN tuning, JSONB, EXPLAIN ANALYZE, ACID transactions",
+      "project": "Design an indexed analytics database schema with constraints and views",
+      "est_time": "2 weeks",
+      "resources": [
+        {
+          "platform": "PostgreSQL Docs",
+          "title": "Official PostgreSQL Tutorial",
+          "description": "Clear walkthrough of SQL tables, joins, aggregates, transactions, and views.",
+          "url": "https://www.postgresql.org/docs/current/tutorial.html",
+          "cost": "Free"
+        },
+        {
+          "platform": "freeCodeCamp",
+          "title": "Relational Database (PostgreSQL Track)",
+          "description": "Build five real PostgreSQL databases interactively from Bash and psql.",
+          "url": "https://www.freecodecamp.org/learn/relational-database/",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "PostgreSQL DBA Roadmap",
+          "description": "Structured progression covering query tuning, backups, and replication.",
+          "url": "https://roadmap.sh/postgresql-dba",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Postman": {
+      "platform": "Postman Official / roadmap.sh",
+      "url": "https://learning.postman.com/docs/getting-started/overview/",
+      "topics": "Collections, environment variables, pre-request/test scripts, Newman CLI",
+      "project": "Build an automated Postman collection verifying REST auth & error states",
+      "est_time": "1 week",
+      "resources": [
+        {
+          "platform": "Postman Official",
+          "title": "Postman Learning Center Overview",
+          "description": "Official tutorials on workspaces, test assertions, and collection runners.",
+          "url": "https://learning.postman.com/docs/getting-started/overview/",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "QA API Testing Concepts",
+          "description": "Understand status verification, contract tests, and CI API execution.",
+          "url": "https://roadmap.sh/qa",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Power BI": {
+      "platform": "Microsoft Learn / roadmap.sh",
+      "url": "https://learn.microsoft.com/en-us/training/",
+      "topics": "Power Query M transformations, star-schema relationships, DAX measures",
+      "project": "Build an interactive financial KPI report with DAX time-intelligence",
+      "est_time": "2-3 weeks",
+      "resources": [
+        {
+          "platform": "Microsoft Learn",
+          "title": "Power BI Data Analyst Training Path (PL-300)",
+          "description": "Free official guided learning modules covering Power Query, DAX, and modeling.",
+          "url": "https://learn.microsoft.com/en-us/training/",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "Data Analyst BI Path",
+          "description": "See how Power BI fits alongside SQL and Excel in analyst workflows.",
+          "url": "https://roadmap.sh/data-analyst",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Prometheus": {
+      "platform": "Prometheus Official / Grafana Docs",
+      "url": "https://prometheus.io/docs/introduction/overview/",
+      "topics": "Metrics scraping, PromQL queries, exporters, alert rules",
+      "project": "Instrument a web service endpoint and scrape latency metrics in Prometheus",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "Prometheus Official",
+          "title": "Prometheus Overview & Guides",
+          "description": "Official introduction to time-series metrics, pull scraping, and PromQL.",
+          "url": "https://prometheus.io/docs/introduction/overview/",
+          "cost": "Free"
+        },
+        {
+          "platform": "Grafana Docs",
+          "title": "Visualizing Prometheus with Grafana",
+          "description": "Pair Prometheus metrics cleanly with alerting dashboards.",
+          "url": "https://grafana.com/tutorials/",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Prototyping": {
+      "platform": "Figma Official / Coursera (Google)",
+      "url": "https://help.figma.com",
+      "topics": "Interactive click-through transitions, micro-interactions, usability flows",
+      "project": "Link a 6-screen onboarding prototype in Figma ready for user testing",
+      "est_time": "1 week",
+      "resources": [
+        {
+          "platform": "Figma Official",
+          "title": "Figma Interactive Prototyping Docs",
+          "description": "Official tutorials on smart animate, overlays, variables, and sharing.",
+          "url": "https://help.figma.com",
+          "cost": "Free"
+        },
+        {
+          "platform": "Coursera (Google)",
+          "title": "Build Dynamic UX Prototypes in Figma",
+          "description": "Guided usability-ready interactive prototype exercises.",
+          "url": "https://www.coursera.org/professional-certificates/google-ux-design",
+          "cost": "Free Audit / Paid Cert"
+        }
+      ]
+    },
+    "PyTorch": {
+      "platform": "PyTorch Official / Hugging Face Learn",
+      "url": "https://pytorch.org/tutorials/",
+      "topics": "Tensors, autograd, nn.Module, DataLoader, GPU training loops",
+      "project": "Train a custom PyTorch image or text classifier cleanly using DataLoader",
+      "est_time": "3-4 weeks",
+      "resources": [
+        {
+          "platform": "PyTorch Official",
+          "title": "Learn the Basics — PyTorch Tutorials",
+          "description": "Official 60-minute blitz and modular nn.Module training guides.",
+          "url": "https://pytorch.org/tutorials/",
+          "cost": "Free"
+        },
+        {
+          "platform": "Hugging Face Learn",
+          "title": "NLP & Deep Learning Course",
+          "description": "Apply PyTorch cleanly to fine-tune modern Transformer models.",
+          "url": "https://huggingface.co/learn",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Pytest": {
+      "platform": "Pytest Official / freeCodeCamp",
+      "url": "https://docs.pytest.org/en/stable/getting-started.html",
+      "topics": "Fixtures, parametrize, monkeypatch mocking, coverage reports",
+      "project": "Write a comprehensive fixture-driven Pytest suite for a Python API",
+      "est_time": "1 week",
+      "resources": [
+        {
+          "platform": "Pytest Official",
+          "title": "Pytest Getting Started Guide",
+          "description": "Official tutorial covering test discovery, assertions, fixtures, and tmp paths.",
+          "url": "https://docs.pytest.org/en/stable/getting-started.html",
+          "cost": "Free"
+        },
+        {
+          "platform": "freeCodeCamp",
+          "title": "Quality Assurance Concepts",
+          "description": "Learn automated test discipline and assertion design patterns.",
+          "url": "https://www.freecodecamp.org/learn/quality-assurance/",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Python": {
+      "platform": "freeCodeCamp / Kaggle Learn",
+      "url": "https://www.freecodecamp.org/learn/scientific-computing-with-python/",
+      "topics": "Data structures, functions, OOP, virtual environments, file I/O",
+      "project": "Build a CLI log parser and automated API data fetcher",
+      "est_time": "3-4 weeks",
+      "resources": [
+        {
+          "platform": "freeCodeCamp",
+          "title": "Scientific Computing with Python",
+          "description": "Free project-based Python track covering fundamentals, OOP, and algorithms.",
+          "url": "https://www.freecodecamp.org/learn/scientific-computing-with-python/",
+          "cost": "Free"
+        },
+        {
+          "platform": "Kaggle Learn",
+          "title": "Python Micro-Course",
+          "description": "Hands-on browser exercises covering Python syntax, lists, loops, and libraries.",
+          "url": "https://www.kaggle.com/learn/python",
+          "cost": "Free"
+        },
+        {
+          "platform": "Python Official Docs",
+          "title": "The Python 3 Tutorial",
+          "description": "Authoritative guide from the Python Software Foundation covering standard library essentials.",
+          "url": "https://docs.python.org/3/tutorial/",
+          "cost": "Free"
+        }
+      ]
+    },
+    "R": {
+      "platform": "Coursera (Google) / R Project Official",
+      "url": "https://www.coursera.org/professional-certificates/google-data-analytics",
+      "topics": "Vectors, data frames, tidyverse, ggplot2, statistical modeling",
+      "project": "Perform statistical exploratory data analysis and plots in R Markdown",
+      "est_time": "3 weeks",
+      "resources": [
+        {
+          "platform": "Coursera (Google)",
+          "title": "Google Data Analytics — Data Analysis with R",
+          "description": "Structured introduction to R programming, tidyverse cleaning, and ggplot2 visuals.",
+          "url": "https://www.coursera.org/professional-certificates/google-data-analytics",
+          "cost": "Free Audit / Paid Cert"
+        },
+        {
+          "platform": "R Project Official",
+          "title": "R Manuals & Contributed Documentation",
+          "description": "Free reference guides on R statistical workflows and visualization.",
+          "url": "https://www.r-project.org/other-docs.html",
+          "cost": "Free"
+        }
+      ]
+    },
+    "REST API": {
+      "platform": "Postman Docs / FastAPI Docs",
+      "url": "https://learning.postman.com/docs/getting-started/overview/",
+      "topics": "HTTP verbs, status codes, JSON design, pagination, JWT/OAuth auth",
+      "project": "Design an OpenAPI-documented REST API and verify endpoints cleanly",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "Postman Docs",
+          "title": "Postman Getting Started & API Testing",
+          "description": "Learn HTTP request design, collections, and automated endpoint tests.",
+          "url": "https://learning.postman.com/docs/getting-started/overview/",
+          "cost": "Free"
+        },
+        {
+          "platform": "FastAPI Docs",
+          "title": "REST API Design Tutorial",
+          "description": "Practical hands-on guide to status codes, schemas, validation, and auth.",
+          "url": "https://fastapi.tiangolo.com/tutorial/",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "API Design & Backend Fundamentals",
+          "description": "Visual guide to RESTful conventions, versioning, and authentication.",
+          "url": "https://roadmap.sh/backend",
+          "cost": "Free"
+        }
+      ]
+    },
+    "RTOS": {
+      "platform": "FreeRTOS Official / STMicroelectronics",
+      "url": "https://www.freertos.org/Documentation/00-Overview",
+      "topics": "Preemptive scheduling, tasks, mutexes, semaphores, priority inversion",
+      "project": "Separate sensor sampling, display, and logging into 3 prioritized FreeRTOS tasks",
+      "est_time": "2-3 weeks",
+      "resources": [
+        {
+          "platform": "FreeRTOS Official",
+          "title": "FreeRTOS Documentation Overview",
+          "description": "Official kernel guides explaining tasks, queues, mutexes, and timers cleanly.",
+          "url": "https://www.freertos.org/Documentation/00-Overview",
+          "cost": "Free"
+        },
+        {
+          "platform": "STMicroelectronics",
+          "title": "Embedded Firmware & RTOS Integration",
+          "description": "Official semiconductor guides pairing RTOS cleanly with MCU hardware.",
+          "url": "https://www.st.com",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Raspberry Pi": {
+      "platform": "Arduino Official / FreeRTOS Official",
+      "url": "https://docs.arduino.cc/learn/",
+      "topics": "Core principles, practical syntax/configuration, and real-world workflows in Raspberry Pi",
+      "project": "Build and document a hands-on mini-project applying Raspberry Pi",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "Arduino Official",
+          "title": "Embedded Hardware & Firmware Guides",
+          "description": "Hands-on tutorials covering protocols, sensors, and C/C++ firmware.",
+          "url": "https://docs.arduino.cc/learn/",
+          "cost": "Free"
+        },
+        {
+          "platform": "FreeRTOS Official",
+          "title": "Real-Time Embedded Systems Documentation",
+          "description": "Official technical reference for RTOS firmware design.",
+          "url": "https://www.freertos.org/Documentation/00-Overview",
+          "cost": "Free"
+        }
+      ]
+    },
+    "React": {
+      "platform": "React Official Docs / freeCodeCamp",
+      "url": "https://react.dev/learn",
+      "topics": "JSX, functional components, props, useState/useEffect hooks, React Router",
+      "project": "Build a searchable job board or expense tracker SPA using public APIs",
+      "est_time": "3-4 weeks",
+      "resources": [
+        {
+          "platform": "React Official Docs",
+          "title": "React Learn (Interactive Tutorial)",
+          "description": "Official documentation with interactive code sandboxes for thinking in React and Hooks.",
+          "url": "https://react.dev/learn",
+          "cost": "Free"
+        },
+        {
+          "platform": "freeCodeCamp",
+          "title": "Front End Development Libraries",
+          "description": "Free project-based track covering React, Redux, and building interactive apps.",
+          "url": "https://www.freecodecamp.org/learn/front-end-development-libraries/",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "React Developer Roadmap",
+          "description": "Structured React skill progression covering routing, state, and testing.",
+          "url": "https://roadmap.sh/react",
+          "cost": "Free"
+        }
+      ]
+    },
+    "React Native": {
+      "platform": "React Official Docs / roadmap.sh",
+      "url": "https://react.dev/learn",
+      "topics": "Core native components, Expo workflow, navigation, AsyncStorage",
+      "project": "Build an Expo React Native mobile companion app fetching live APIs",
+      "est_time": "3 weeks",
+      "resources": [
+        {
+          "platform": "React Official Docs",
+          "title": "React Fundamentals for Mobile",
+          "description": "Official React concepts (JSX, Hooks, state) that apply directly in React Native.",
+          "url": "https://react.dev/learn",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "React Native Developer Roadmap",
+          "description": "Structured visual pathway from JavaScript/React to native mobile shipping.",
+          "url": "https://roadmap.sh/react-native",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Redis": {
+      "platform": "Redis Official / roadmap.sh",
+      "url": "https://redis.io/learn/",
+      "topics": "Strings/Hashes/Sorted Sets, cache invalidation, TTL, pub/sub",
+      "project": "Add Redis response caching and sliding-window rate limiting to an API",
+      "est_time": "1 week",
+      "resources": [
+        {
+          "platform": "Redis Official",
+          "title": "Redis Learn & Free University",
+          "description": "Interactive guides on Redis data structures, caching patterns, and streams.",
+          "url": "https://redis.io/learn/",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "Backend Caching & Redis Concepts",
+          "description": "See where Redis caching fits inside modern scalable backend architectures.",
+          "url": "https://roadmap.sh/backend",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Redux": {
+      "platform": "freeCodeCamp / React Official Docs",
+      "url": "https://www.freecodecamp.org/learn/front-end-development-libraries/",
+      "topics": "Redux Toolkit slices, store setup, RTK Query, predictable state updates",
+      "project": "Add shopping cart state management with Redux Toolkit to a React app",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "freeCodeCamp",
+          "title": "Front End Development Libraries (React & Redux)",
+          "description": "Interactive lessons pairing Redux state stores cleanly with React components.",
+          "url": "https://www.freecodecamp.org/learn/front-end-development-libraries/",
+          "cost": "Free"
+        },
+        {
+          "platform": "React Official Docs",
+          "title": "Managing State in React",
+          "description": "Essential official concepts on reducers and state architecture.",
+          "url": "https://react.dev/learn/managing-state",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Responsive Design": {
+      "platform": "freeCodeCamp / MDN Web Docs",
+      "url": "https://www.freecodecamp.org/learn/responsive-web-design/",
+      "topics": "Mobile-first media queries, fluid grids, viewport units, accessibility",
+      "project": "Convert a desktop wireframe into mobile, tablet, and desktop layouts",
+      "est_time": "1 week",
+      "resources": [
+        {
+          "platform": "freeCodeCamp",
+          "title": "Responsive Web Design Curriculum",
+          "description": "Hands-on projects built around mobile-first breakpoints and fluid grids.",
+          "url": "https://www.freecodecamp.org/learn/responsive-web-design/",
+          "cost": "Free"
+        },
+        {
+          "platform": "MDN Web Docs",
+          "title": "CSS Layout & Responsive Design",
+          "description": "Official Mozilla tutorial covering responsive media queries and flexible layouts.",
+          "url": "https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Risk Assessment": {
+      "platform": "Coursera (Google) / roadmap.sh",
+      "url": "https://www.coursera.org/professional-certificates/google-cybersecurity",
+      "topics": "Threat likelihood vs impact, NIST frameworks, risk register, mitigation",
+      "project": "Write a concise security risk matrix for a small e-commerce application",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "Coursera (Google)",
+          "title": "Foundations of Cybersecurity & Risk Management",
+          "description": "Introduces NIST RMF, CIA triad, and practical risk scoring.",
+          "url": "https://www.coursera.org/professional-certificates/google-cybersecurity",
+          "cost": "Free Audit / Paid Cert"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "Cyber Security Governance & Risk",
+          "description": "Connects technical controls to business risk prioritization.",
+          "url": "https://roadmap.sh/cyber-security",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Ruby": {
+      "platform": "freeCodeCamp / roadmap.sh",
+      "url": "https://www.freecodecamp.org/learn",
+      "topics": "Core principles, practical syntax/configuration, and real-world workflows in Ruby",
+      "project": "Build and document a hands-on mini-project applying Ruby",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "freeCodeCamp",
+          "title": "Programming Foundations & Coding Curriculum",
+          "description": "Free interactive exercises strengthening programming logic and syntax.",
+          "url": "https://www.freecodecamp.org/learn",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "Programming & Software Engineering Roadmaps",
+          "description": "Community-curated step-by-step developer paths and reference links.",
+          "url": "https://roadmap.sh/",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Ruby on Rails": {
+      "platform": "roadmap.sh / MDN Web Docs",
+      "url": "https://roadmap.sh/backend",
+      "topics": "Core principles, practical syntax/configuration, and real-world workflows in Ruby on Rails",
+      "project": "Build and document a hands-on mini-project applying Ruby on Rails",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "roadmap.sh",
+          "title": "Framework & Architecture Learning Paths",
+          "description": "Curated step-by-step web and backend framework guides.",
+          "url": "https://roadmap.sh/backend",
+          "cost": "Free"
+        },
+        {
+          "platform": "MDN Web Docs",
+          "title": "Web Framework & Server-Side Concepts",
+          "description": "Mozilla's free conceptual and hands-on guides for modern web stacks.",
+          "url": "https://developer.mozilla.org/en-US/docs/Learn",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Rust": {
+      "platform": "Rust Official / roadmap.sh",
+      "url": "https://doc.rust-lang.org/book/",
+      "topics": "Ownership, borrowing, lifetimes, enums, Cargo package manager",
+      "project": "Build a fast grep-like CLI text scanner in Rust",
+      "est_time": "4 weeks",
+      "resources": [
+        {
+          "platform": "Rust Official",
+          "title": "The Rust Programming Language Book",
+          "description": "The canonical free book teaching ownership, traits, lifetimes, and Cargo.",
+          "url": "https://doc.rust-lang.org/book/",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "Rust Developer Roadmap",
+          "description": "Guided Rust learning sequence with systems and backend milestones.",
+          "url": "https://roadmap.sh/rust",
+          "cost": "Free"
+        }
+      ]
+    },
+    "SIEM": {
+      "platform": "Coursera (Google) / TryHackMe",
+      "url": "https://www.coursera.org/professional-certificates/google-cybersecurity",
+      "topics": "Log aggregation, correlation rules, alert triage, false-positive tuning",
+      "project": "Parse authentication & web logs to build brute-force alert rules cleanly",
+      "est_time": "2 weeks",
+      "resources": [
+        {
+          "platform": "Coursera (Google)",
+          "title": "Assets, Threats, and SIEM Investigation",
+          "description": "Includes practical hands-on SIEM and log triage exercises.",
+          "url": "https://www.coursera.org/professional-certificates/google-cybersecurity",
+          "cost": "Free Audit / Paid Cert"
+        },
+        {
+          "platform": "TryHackMe",
+          "title": "SOC Level 1 Learning Path",
+          "description": "Interactive browser SIEM & log analysis scenarios for aspiring analysts.",
+          "url": "https://tryhackme.com/paths",
+          "cost": "Free"
+        }
+      ]
+    },
+    "SPI": {
+      "platform": "Arduino Official / FreeRTOS Official",
+      "url": "https://docs.arduino.cc/learn/",
+      "topics": "Core principles, practical syntax/configuration, and real-world workflows in SPI",
+      "project": "Build and document a hands-on mini-project applying SPI",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "Arduino Official",
+          "title": "Embedded Hardware & Firmware Guides",
+          "description": "Hands-on tutorials covering protocols, sensors, and C/C++ firmware.",
+          "url": "https://docs.arduino.cc/learn/",
+          "cost": "Free"
+        },
+        {
+          "platform": "FreeRTOS Official",
+          "title": "Real-Time Embedded Systems Documentation",
+          "description": "Official technical reference for RTOS firmware design.",
+          "url": "https://www.freertos.org/Documentation/00-Overview",
+          "cost": "Free"
+        }
+      ]
+    },
+    "SQL": {
+      "platform": "freeCodeCamp / Kaggle Learn",
+      "url": "https://www.freecodecamp.org/learn/relational-database/",
+      "topics": "SELECT, JOINs, GROUP BY aggregations, CTEs, window functions, indexing",
+      "project": "Analyze an e-commerce sales SQLite/PostgreSQL schema with 15 KPI queries",
+      "est_time": "2-3 weeks",
+      "resources": [
+        {
+          "platform": "freeCodeCamp",
+          "title": "Relational Database Certification",
+          "description": "Interactive hands-on PostgreSQL, SQL, and Bash curriculum with real database projects.",
+          "url": "https://www.freecodecamp.org/learn/relational-database/",
+          "cost": "Free"
+        },
+        {
+          "platform": "Kaggle Learn",
+          "title": "Intro to SQL & Advanced SQL",
+          "description": "Free interactive BigQuery notebooks teaching joins, CTEs, and window functions.",
+          "url": "https://www.kaggle.com/learn/intro-to-sql",
+          "cost": "Free"
+        },
+        {
+          "platform": "Coursera (Google)",
+          "title": "Google Data Analytics — SQL & Data Prep",
+          "description": "Beginner-friendly SQL querying taught with real spreadsheet and database scenarios.",
+          "url": "https://www.coursera.org/professional-certificates/google-data-analytics",
+          "cost": "Free Audit / Paid Cert"
+        }
+      ]
+    },
+    "SQLite": {
+      "platform": "freeCodeCamp / roadmap.sh",
+      "url": "https://www.freecodecamp.org/learn/relational-database/",
+      "topics": "Core principles, practical syntax/configuration, and real-world workflows in SQLite",
+      "project": "Build and document a hands-on mini-project applying SQLite",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "freeCodeCamp",
+          "title": "Relational Database & Data Modeling Track",
+          "description": "Interactive SQL, relational schema design, and query practice.",
+          "url": "https://www.freecodecamp.org/learn/relational-database/",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "Database Engineering Roadmaps",
+          "description": "Structured learning guides covering SQL, indexing, and NoSQL scaling.",
+          "url": "https://roadmap.sh/postgresql-dba",
+          "cost": "Free"
+        }
+      ]
+    },
+    "STM32": {
+      "platform": "STMicroelectronics / FreeRTOS Docs",
+      "url": "https://www.st.com",
+      "topics": "STM32CubeIDE, HAL/LL drivers, DMA, hardware timers, UART/SPI",
+      "project": "Configure DMA UART telemetry cleanly on an STM32 Nucleo board",
+      "est_time": "3 weeks",
+      "resources": [
+        {
+          "platform": "STMicroelectronics",
+          "title": "STM32 Microcontrollers & CubeIDE Resources",
+          "description": "Official datasheets, HAL guides, and getting-started labs.",
+          "url": "https://www.st.com",
+          "cost": "Free"
+        },
+        {
+          "platform": "FreeRTOS Docs",
+          "title": "FreeRTOS on ARM Cortex-M",
+          "description": "Learn real-time multitasking concepts commonly paired with STM32.",
+          "url": "https://www.freertos.org/Documentation/00-Overview",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Scikit-Learn": {
+      "platform": "Scikit-Learn Official / Kaggle Learn",
+      "url": "https://scikit-learn.org/stable/getting_started.html",
+      "topics": "Pipelines, ColumnTransformer, GridSearchCV, ROC-AUC metrics",
+      "project": "Build a clean Scikit-Learn preprocessing + classifier Pipeline avoiding leakage",
+      "est_time": "2 weeks",
+      "resources": [
+        {
+          "platform": "Scikit-Learn Official",
+          "title": "Scikit-Learn Getting Started Guide",
+          "description": "Official user guide on estimators, pipelines, cross-validation, and evaluation.",
+          "url": "https://scikit-learn.org/stable/getting_started.html",
+          "cost": "Free"
+        },
+        {
+          "platform": "Kaggle Learn",
+          "title": "Intermediate Machine Learning (Pipelines)",
+          "description": "Hands-on exercises handling missing values, categorical encoding, and leakage.",
+          "url": "https://www.kaggle.com/learn/intermediate-machine-learning",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Scrum": {
+      "platform": "Scrum Guides / Atlassian University",
+      "url": "https://scrumguides.org/",
+      "topics": "Product Owner, Scrum Master, Sprint Backlog, Daily Scrum, Sprint Review",
+      "project": "Run a mock 1-week sprint backlog with clear Definition of Done checks",
+      "est_time": "3-5 days",
+      "resources": [
+        {
+          "platform": "Scrum Guides",
+          "title": "The Official Scrum Guide (Schaber & Sutherland)",
+          "description": "Short, authoritative primary source defining Scrum events and artifacts.",
+          "url": "https://scrumguides.org/",
+          "cost": "Free"
+        },
+        {
+          "platform": "Atlassian University",
+          "title": "Managing Scrum Teams in Jira",
+          "description": "Free guided workflows for planning sprints and velocity retrospectives.",
+          "url": "https://university.atlassian.com",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Seaborn": {
+      "platform": "Seaborn Official / Kaggle Learn",
+      "url": "https://seaborn.pydata.org/tutorial.html",
+      "topics": "Statistical distributions, boxplots, pairplots, correlation heatmaps",
+      "project": "Create an EDA correlation & distribution visual summary for a dataset",
+      "est_time": "1 week",
+      "resources": [
+        {
+          "platform": "Seaborn Official",
+          "title": "Seaborn Statistical Plotting Tutorial",
+          "description": "Official examples covering relational, categorical, and distribution plots.",
+          "url": "https://seaborn.pydata.org/tutorial.html",
+          "cost": "Free"
+        },
+        {
+          "platform": "Kaggle Learn",
+          "title": "Data Visualization Course",
+          "description": "Completely free browser labs visualizing trends cleanly with Seaborn.",
+          "url": "https://www.kaggle.com/learn/data-visualization",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Selenium": {
+      "platform": "Selenium Official / roadmap.sh",
+      "url": "https://www.selenium.dev/documentation/",
+      "topics": "WebDriver locators, explicit waits, Page Object Model, cross-browser runs",
+      "project": "Automate login, search, and form assertions cleanly using Page Objects",
+      "est_time": "2 weeks",
+      "resources": [
+        {
+          "platform": "Selenium Official",
+          "title": "Selenium WebDriver Documentation",
+          "description": "Official getting-started guides across Python, Java, and JavaScript bindings.",
+          "url": "https://www.selenium.dev/documentation/",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "QA Automation Testing Roadmap",
+          "description": "Structured QA skill progression covering UI, API, and CI testing.",
+          "url": "https://roadmap.sh/qa",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Snowflake": {
+      "platform": "Snowflake Official / dbt Docs",
+      "url": "https://docs.snowflake.com",
+      "topics": "Virtual warehouses, SnowSQL, Stages/COPY INTO, clustering, time travel",
+      "project": "Load JSON/CSV raw files into Snowflake and transform analytical views",
+      "est_time": "2 weeks",
+      "resources": [
+        {
+          "platform": "Snowflake Official",
+          "title": "Snowflake Official Documentation & Guides",
+          "description": "Comprehensive quickstarts on cloud warehousing, SQL loading, and compute scaling.",
+          "url": "https://docs.snowflake.com",
+          "cost": "Free"
+        },
+        {
+          "platform": "dbt Docs",
+          "title": "Modern Data Warehousing with dbt",
+          "description": "Learn SQL modeling workflows commonly paired with Snowflake warehouses.",
+          "url": "https://docs.getdbt.com/docs/introduction",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Spring Boot": {
+      "platform": "Spring Official / Dev.java",
+      "url": "https://spring.io/guides",
+      "topics": "IoC/Dependency Injection, Spring Data JPA, REST Controllers, Security",
+      "project": "Build a Spring Boot CRUD microservice connected cleanly to PostgreSQL",
+      "est_time": "3-4 weeks",
+      "resources": [
+        {
+          "platform": "Spring Official",
+          "title": "Building a RESTful Web Service Guide",
+          "description": "Hands-on 15-minute official Spring Boot guides covering REST, JPA, and Security.",
+          "url": "https://spring.io/guides",
+          "cost": "Free"
+        },
+        {
+          "platform": "Dev.java",
+          "title": "Learn Java for Spring Ecosystems",
+          "description": "Official Oracle Java fundamentals required for productive Spring Boot development.",
+          "url": "https://dev.java/learn/",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Spring Framework": {
+      "platform": "Spring Official / roadmap.sh",
+      "url": "https://spring.io/guides",
+      "topics": "Dependency injection, Spring MVC, AOP, transaction management",
+      "project": "Create a layered Java service using Spring IoC and JDBC/JPA",
+      "est_time": "3 weeks",
+      "resources": [
+        {
+          "platform": "Spring Official",
+          "title": "Spring Guides & Tutorials",
+          "description": "Practical task-focused guides from the Spring engineering team.",
+          "url": "https://spring.io/guides",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "Spring Boot & Java Roadmap",
+          "description": "Visual guide showing how Spring core fits into enterprise Java backends.",
+          "url": "https://roadmap.sh/spring-boot",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Statistics": {
+      "platform": "freeCodeCamp / Coursera (IBM)",
+      "url": "https://www.freecodecamp.org/learn/data-analysis-with-python/",
+      "topics": "Probability distributions, hypothesis testing, p-values, confidence intervals, A/B testing",
+      "project": "Run a statistical A/B conversion analysis with Python SciPy",
+      "est_time": "3 weeks",
+      "resources": [
+        {
+          "platform": "freeCodeCamp",
+          "title": "Data Analysis with Python (Statistical Thinking)",
+          "description": "Build probability and variance calculators alongside real analytical datasets.",
+          "url": "https://www.freecodecamp.org/learn/data-analysis-with-python/",
+          "cost": "Free"
+        },
+        {
+          "platform": "Coursera (IBM)",
+          "title": "IBM Data Science & Statistical Foundations",
+          "description": "Covers descriptive statistics, correlation, and hypothesis evaluation cleanly.",
+          "url": "https://www.coursera.org/professional-certificates/ibm-data-science",
+          "cost": "Free Audit / Paid Cert"
+        }
+      ]
+    },
+    "Svelte": {
+      "platform": "roadmap.sh / MDN Web Docs",
+      "url": "https://roadmap.sh/backend",
+      "topics": "Core principles, practical syntax/configuration, and real-world workflows in Svelte",
+      "project": "Build and document a hands-on mini-project applying Svelte",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "roadmap.sh",
+          "title": "Framework & Architecture Learning Paths",
+          "description": "Curated step-by-step web and backend framework guides.",
+          "url": "https://roadmap.sh/backend",
+          "cost": "Free"
+        },
+        {
+          "platform": "MDN Web Docs",
+          "title": "Web Framework & Server-Side Concepts",
+          "description": "Mozilla's free conceptual and hands-on guides for modern web stacks.",
+          "url": "https://developer.mozilla.org/en-US/docs/Learn",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Swift": {
+      "platform": "Swift.org Docs / Apple Developer",
+      "url": "https://docs.swift.org/swift-book/",
+      "topics": "Optionals, protocols, Swift concurrency, value types, SwiftUI basics",
+      "project": "Build an expense tracker app in Swift using local persistence",
+      "est_time": "3 weeks",
+      "resources": [
+        {
+          "platform": "Swift.org Docs",
+          "title": "The Swift Programming Language Book",
+          "description": "Official book teaching Swift fundamentals, optionals, protocols, and concurrency.",
+          "url": "https://docs.swift.org/swift-book/",
+          "cost": "Free"
+        },
+        {
+          "platform": "Apple Developer",
+          "title": "Develop in Swift & SwiftUI Tutorials",
+          "description": "Apple's visual hands-on walkthroughs for building modern iOS interfaces.",
+          "url": "https://developer.apple.com/tutorials/swiftui",
+          "cost": "Free"
+        }
+      ]
+    },
+    "SwiftUI": {
+      "platform": "Apple Developer / Swift.org Docs",
+      "url": "https://developer.apple.com/tutorials/swiftui",
+      "topics": "Declarative views, @State/@Observable, NavigationStack, animations",
+      "project": "Build a multi-screen iOS habit tracker using SwiftUI",
+      "est_time": "2-3 weeks",
+      "resources": [
+        {
+          "platform": "Apple Developer",
+          "title": "SwiftUI Tutorials (Official)",
+          "description": "Step-by-step interactive labs straight from Apple using Xcode previews.",
+          "url": "https://developer.apple.com/tutorials/swiftui",
+          "cost": "Free"
+        },
+        {
+          "platform": "Swift.org Docs",
+          "title": "The Swift Language Guide",
+          "description": "Companion reference for Swift language features powering SwiftUI views.",
+          "url": "https://docs.swift.org/swift-book/",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Symfony": {
+      "platform": "Symfony Official / PHP Official Manual",
+      "url": "https://symfony.com/doc/current/index.html",
+      "topics": "Bundles, Doctrine ORM, Dependency Injection container, Twig, Messenger",
+      "project": "Create a modular Symfony REST API backed by Doctrine and MySQL",
+      "est_time": "3 weeks",
+      "resources": [
+        {
+          "platform": "Symfony Official",
+          "title": "Symfony Current Documentation",
+          "description": "Official guides and book tutorials for Symfony web apps and APIs.",
+          "url": "https://symfony.com/doc/current/index.html",
+          "cost": "Free"
+        },
+        {
+          "platform": "PHP Official Manual",
+          "title": "PHP Language Fundamentals",
+          "description": "Official reference covering namespaces, attributes, and OOP in modern PHP.",
+          "url": "https://www.php.net/manual/en/getting-started.php",
+          "cost": "Free"
+        }
+      ]
+    },
+    "System Design": {
+      "platform": "roadmap.sh / roadmap.sh",
+      "url": "https://roadmap.sh/system-design",
+      "topics": "Load balancing, caching, database sharding, rate limiting, CAP theorem",
+      "project": "Draft an architecture diagram & scaling analysis for a URL shortener",
+      "est_time": "3-4 weeks",
+      "resources": [
+        {
+          "platform": "roadmap.sh",
+          "title": "System Design Roadmap",
+          "description": "Visual guide covering CDNs, proxies, replication, partitioning, and queues.",
+          "url": "https://roadmap.sh/system-design",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "Backend Architecture Track",
+          "description": "Connect system design principles to everyday backend engineering choices.",
+          "url": "https://roadmap.sh/backend",
+          "cost": "Free"
+        }
+      ]
+    },
+    "TCP/IP": {
+      "platform": "Cisco NetAcad / Linux Journey",
+      "url": "https://www.netacad.com",
+      "topics": "IPv4/IPv6 CIDR subnetting, TCP 3-way handshake, UDP, DNS, DHCP",
+      "project": "Practice CIDR subnet calculations and capture a TCP handshake cleanly",
+      "est_time": "2 weeks",
+      "resources": [
+        {
+          "platform": "Cisco NetAcad",
+          "title": "Networking Devices & IP Addressing",
+          "description": "Step-by-step subnetting, TCP/UDP ports, and packet forwarding labs.",
+          "url": "https://www.netacad.com",
+          "cost": "Free"
+        },
+        {
+          "platform": "Linux Journey",
+          "title": "Linux Networking & Subnetting Modules",
+          "description": "Beginner-friendly explanations of routing tables, ARP, DNS, and TCP.",
+          "url": "https://linuxjourney.com/",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Tableau": {
+      "platform": "Tableau Official / Coursera (Google)",
+      "url": "https://www.tableau.com/learn/training",
+      "topics": "Calculated fields, LOD expressions, interactive filters, dashboard actions",
+      "project": "Publish an interactive sales & regional profit dashboard to Tableau Public",
+      "est_time": "2-3 weeks",
+      "resources": [
+        {
+          "platform": "Tableau Official",
+          "title": "Tableau Free Training Videos & Paths",
+          "description": "Official self-paced tutorials from connecting data sources to dashboard design.",
+          "url": "https://www.tableau.com/learn/training",
+          "cost": "Free"
+        },
+        {
+          "platform": "Coursera (Google)",
+          "title": "Google Data Analytics — Visualization with Tableau",
+          "description": "Beginner-friendly guided practice building executive dashboards.",
+          "url": "https://www.coursera.org/professional-certificates/google-data-analytics",
+          "cost": "Free Audit / Paid Cert"
+        }
+      ]
+    },
+    "Tailwind CSS": {
+      "platform": "Tailwind Official / MDN Web Docs",
+      "url": "https://tailwindcss.com/docs",
+      "topics": "Utility-first styling, responsive modifiers, custom themes, dark mode",
+      "project": "Style a SaaS pricing page and dashboard purely with Tailwind utilities",
+      "est_time": "1 week",
+      "resources": [
+        {
+          "platform": "Tailwind Official",
+          "title": "Tailwind CSS Core Concepts & Docs",
+          "description": "Official searchable guide covering spacing, flexbox, grid, and custom config.",
+          "url": "https://tailwindcss.com/docs",
+          "cost": "Free"
+        },
+        {
+          "platform": "MDN Web Docs",
+          "title": "CSS Fundamentals for Utility Styling",
+          "description": "Ensure solid underlying Flexbox and Grid intuition alongside Tailwind.",
+          "url": "https://developer.mozilla.org/en-US/docs/Learn/CSS",
+          "cost": "Free"
+        }
+      ]
+    },
+    "TensorFlow": {
+      "platform": "TensorFlow Official / freeCodeCamp",
+      "url": "https://www.tensorflow.org/tutorials",
+      "topics": "tf.keras Sequential/Functional API, tf.data, callbacks, SavedModel",
+      "project": "Train and export a TensorFlow Keras classifier for REST deployment",
+      "est_time": "3-4 weeks",
+      "resources": [
+        {
+          "platform": "TensorFlow Official",
+          "title": "TensorFlow Tutorials (Google Colab)",
+          "description": "Interactive Colab notebooks spanning beginner Keras models through CNNs.",
+          "url": "https://www.tensorflow.org/tutorials",
+          "cost": "Free"
+        },
+        {
+          "platform": "freeCodeCamp",
+          "title": "Machine Learning with Python (TensorFlow)",
+          "description": "Free hands-on TensorFlow neural networks, NLP, and recommendation projects.",
+          "url": "https://www.freecodecamp.org/learn/machine-learning-with-python/",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Terraform": {
+      "platform": "HashiCorp Official / roadmap.sh",
+      "url": "https://developer.hashicorp.com/terraform/tutorials",
+      "topics": "HCL syntax, providers, remote state, modules, plan/apply lifecycle",
+      "project": "Provision an isolated VPC and storage bucket cleanly using Terraform modules",
+      "est_time": "2-3 weeks",
+      "resources": [
+        {
+          "platform": "HashiCorp Official",
+          "title": "Terraform Tutorials",
+          "description": "Official hands-on CLI tutorials for AWS, Azure, GCP, and Docker IaC.",
+          "url": "https://developer.hashicorp.com/terraform/tutorials",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "Terraform Infrastructure Roadmap",
+          "description": "Guided IaC progression from state management to team workflows.",
+          "url": "https://roadmap.sh/terraform",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Test Automation": {
+      "platform": "Playwright Official / freeCodeCamp",
+      "url": "https://playwright.dev/docs/intro",
+      "topics": "Test pyramid, Page Object pattern, CI gates, test data hygiene",
+      "project": "Combine unit, API, and browser UI tests in one automated CI pipeline",
+      "est_time": "2 weeks",
+      "resources": [
+        {
+          "platform": "Playwright Official",
+          "title": "Modern End-to-End Test Automation Docs",
+          "description": "Start quickly with reliable auto-waiting browser and API tests.",
+          "url": "https://playwright.dev/docs/intro",
+          "cost": "Free"
+        },
+        {
+          "platform": "freeCodeCamp",
+          "title": "Quality Assurance Certification",
+          "description": "Free testing challenges covering functional tests and assertions.",
+          "url": "https://www.freecodecamp.org/learn/quality-assurance/",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "QA Engineer Roadmap",
+          "description": "Complete step-by-step map from manual QA to automation architect.",
+          "url": "https://roadmap.sh/qa",
+          "cost": "Free"
+        }
+      ]
+    },
+    "TypeScript": {
+      "platform": "TypeScript Docs / roadmap.sh",
+      "url": "https://www.typescriptlang.org/docs/",
+      "topics": "Interfaces, Generics, Union types, Type narrowing, tsconfig",
+      "project": "Refactor a React or Node.js REST client with strict TypeScript types",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "TypeScript Docs",
+          "title": "The TypeScript Handbook",
+          "description": "Official handbook explaining type inference, interfaces, and generics cleanly.",
+          "url": "https://www.typescriptlang.org/docs/",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "TypeScript Roadmap",
+          "description": "Interactive guide to TypeScript compiler options and advanced types.",
+          "url": "https://roadmap.sh/typescript",
+          "cost": "Free"
+        }
+      ]
+    },
+    "UART": {
+      "platform": "Arduino Official / FreeRTOS Official",
+      "url": "https://docs.arduino.cc/learn/",
+      "topics": "Core principles, practical syntax/configuration, and real-world workflows in UART",
+      "project": "Build and document a hands-on mini-project applying UART",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "Arduino Official",
+          "title": "Embedded Hardware & Firmware Guides",
+          "description": "Hands-on tutorials covering protocols, sensors, and C/C++ firmware.",
+          "url": "https://docs.arduino.cc/learn/",
+          "cost": "Free"
+        },
+        {
+          "platform": "FreeRTOS Official",
+          "title": "Real-Time Embedded Systems Documentation",
+          "description": "Official technical reference for RTOS firmware design.",
+          "url": "https://www.freertos.org/Documentation/00-Overview",
+          "cost": "Free"
+        }
+      ]
+    },
+    "UI/UX Design": {
+      "platform": "Coursera (Google) / roadmap.sh",
+      "url": "https://www.coursera.org/professional-certificates/google-ux-design",
+      "topics": "Visual hierarchy, usability heuristics, accessibility contrast, user flows",
+      "project": "Redesign a confusing checkout flow and document the before/after rationale",
+      "est_time": "3-4 weeks",
+      "resources": [
+        {
+          "platform": "Coursera (Google)",
+          "title": "Google UX Design Professional Certificate",
+          "description": "End-to-end UX process from user empathy through Figma prototyping and testing.",
+          "url": "https://www.coursera.org/professional-certificates/google-ux-design",
+          "cost": "Free Audit / Paid Cert"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "UX Design Interactive Roadmap",
+          "description": "Clear step-by-step path covering typography, color, layout, and usability.",
+          "url": "https://roadmap.sh/ux-design",
+          "cost": "Free"
+        },
+        {
+          "platform": "Figma Official",
+          "title": "Design Craft & Prototyping Guides",
+          "description": "Official guides translating UI/UX principles directly inside Figma.",
+          "url": "https://help.figma.com",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Unit Testing": {
+      "platform": "Pytest Official / Jest Official",
+      "url": "https://docs.pytest.org/en/stable/getting-started.html",
+      "topics": "Isolation, Arrange-Act-Assert, test doubles/mocking, edge-case coverage",
+      "project": "Achieve >85% unit coverage on core business modules without flaky mocks",
+      "est_time": "1 week",
+      "resources": [
+        {
+          "platform": "Pytest Official",
+          "title": "Python Unit Testing Getting Started",
+          "description": "Write clean, readable assertions and fixtures using Pytest.",
+          "url": "https://docs.pytest.org/en/stable/getting-started.html",
+          "cost": "Free"
+        },
+        {
+          "platform": "Jest Official",
+          "title": "JavaScript Unit Testing Guide",
+          "description": "Fast unit testing tutorials for JavaScript and TypeScript functions.",
+          "url": "https://jestjs.io/docs/getting-started",
+          "cost": "Free"
+        }
+      ]
+    },
+    "User Research": {
+      "platform": "Coursera (Google) / roadmap.sh",
+      "url": "https://www.coursera.org/professional-certificates/google-ux-design",
+      "topics": "User interviews, usability testing, personas, affinity mapping, heuristics",
+      "project": "Conduct 5 usability test sessions on an app prototype and synthesize findings",
+      "est_time": "2 weeks",
+      "resources": [
+        {
+          "platform": "Coursera (Google)",
+          "title": "Conduct UX Research and Test Concepts",
+          "description": "Learn ethical user interviews, research synthesis, and usability studies.",
+          "url": "https://www.coursera.org/professional-certificates/google-ux-design",
+          "cost": "Free Audit / Paid Cert"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "UX Research & Strategy Track",
+          "description": "Structured guide to qualitative and quantitative UX discovery methods.",
+          "url": "https://roadmap.sh/ux-design",
+          "cost": "Free"
+        }
+      ]
+    },
+    "VHDL": {
+      "platform": "Arduino Official / FreeRTOS Official",
+      "url": "https://docs.arduino.cc/learn/",
+      "topics": "Core principles, practical syntax/configuration, and real-world workflows in VHDL",
+      "project": "Build and document a hands-on mini-project applying VHDL",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "Arduino Official",
+          "title": "Embedded Hardware & Firmware Guides",
+          "description": "Hands-on tutorials covering protocols, sensors, and C/C++ firmware.",
+          "url": "https://docs.arduino.cc/learn/",
+          "cost": "Free"
+        },
+        {
+          "platform": "FreeRTOS Official",
+          "title": "Real-Time Embedded Systems Documentation",
+          "description": "Official technical reference for RTOS firmware design.",
+          "url": "https://www.freertos.org/Documentation/00-Overview",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Vue.js": {
+      "platform": "Vue.js Official / roadmap.sh",
+      "url": "https://vuejs.org/tutorial/",
+      "topics": "Composition API, single-file components, Pinia state, Vue Router",
+      "project": "Build a real-time kanban board using Vue 3 Composition API",
+      "est_time": "2-3 weeks",
+      "resources": [
+        {
+          "platform": "Vue.js Official",
+          "title": "Interactive Vue 3 Tutorial",
+          "description": "Official 15-step interactive playground teaching reactivity, directives, and components.",
+          "url": "https://vuejs.org/tutorial/",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "Vue Developer Roadmap",
+          "description": "Visual guide to Vue tooling, Pinia state management, and Vite.",
+          "url": "https://roadmap.sh/vue",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Vulnerability Assessment": {
+      "platform": "PortSwigger Academy / Coursera (Google)",
+      "url": "https://portswigger.net/web-security",
+      "topics": "CVSS scoring, dependency/OS scanning, patch prioritization, false positives",
+      "project": "Scan a local lab container image and triage top CVEs with fix steps",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "PortSwigger Academy",
+          "title": "Web Vulnerability Discovery Labs",
+          "description": "Learn how common vulnerabilities arise and how to validate remediation.",
+          "url": "https://portswigger.net/web-security",
+          "cost": "Free"
+        },
+        {
+          "platform": "Coursera (Google)",
+          "title": "Google Cybersecurity Risk & Assessment",
+          "description": "Structured frameworks for scanning, prioritizing, and reporting risk.",
+          "url": "https://www.coursera.org/professional-certificates/google-cybersecurity",
+          "cost": "Free Audit / Paid Cert"
+        }
+      ]
+    },
+    "Wireframing": {
+      "platform": "Coursera (Google) / Figma Official",
+      "url": "https://www.coursera.org/professional-certificates/google-ux-design",
+      "topics": "Low-fidelity layout sketching, user task flows, information hierarchy",
+      "project": "Wireframe core onboarding and dashboard flows cleanly before visual styling",
+      "est_time": "1 week",
+      "resources": [
+        {
+          "platform": "Coursera (Google)",
+          "title": "Google UX Design — Wireframes & Low-Fi Prototypes",
+          "description": "Hands-on assignments practicing paper and digital wireframes cleanly.",
+          "url": "https://www.coursera.org/professional-certificates/google-ux-design",
+          "cost": "Free Audit / Paid Cert"
+        },
+        {
+          "platform": "Figma Official",
+          "title": "Figma & FigJam Wireframing Guides",
+          "description": "Rapid flow diagrams and component wireframing techniques.",
+          "url": "https://help.figma.com",
+          "cost": "Free"
+        }
+      ]
+    },
+    "WordPress": {
+      "platform": "WordPress Official / PHP Official Manual",
+      "url": "https://learn.wordpress.org/",
+      "topics": "Block themes, custom post types, plugin hooks/actions, REST API",
+      "project": "Develop a custom WordPress theme and lightweight portfolio plugin",
+      "est_time": "2 weeks",
+      "resources": [
+        {
+          "platform": "WordPress Official",
+          "title": "Learn WordPress Courses & Workshops",
+          "description": "Free official pathways for WordPress developers and designers.",
+          "url": "https://learn.wordpress.org/",
+          "cost": "Free"
+        },
+        {
+          "platform": "PHP Official Manual",
+          "title": "PHP Getting Started",
+          "description": "Learn server-side PHP basics powering custom WordPress themes and plugins.",
+          "url": "https://www.php.net/manual/en/getting-started.php",
+          "cost": "Free"
+        }
+      ]
+    },
+    "Xcode": {
+      "platform": "Apple Developer / roadmap.sh",
+      "url": "https://developer.apple.com/tutorials/swiftui",
+      "topics": "Simulator, Instruments profiler, LLDB debugging, TestFlight signing",
+      "project": "Profile memory leaks and build a test scheme inside Xcode",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "Apple Developer",
+          "title": "Xcode & SwiftUI Interactive Tutorials",
+          "description": "Learn Xcode canvas previews, project schemes, and debugging hands-on.",
+          "url": "https://developer.apple.com/tutorials/swiftui",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "iOS Tooling Roadmap",
+          "description": "Explore Xcode workflows, CocoaPods/SPM packages, and signing concepts.",
+          "url": "https://roadmap.sh/ios",
+          "cost": "Free"
+        }
+      ]
+    },
+    "dbt": {
+      "platform": "dbt Official / roadmap.sh",
+      "url": "https://docs.getdbt.com/docs/introduction",
+      "topics": "SQL models, ref() dependency DAG, schema tests, incremental builds",
+      "project": "Convert raw SQL scripts into tested dbt staging and mart models",
+      "est_time": "1-2 weeks",
+      "resources": [
+        {
+          "platform": "dbt Official",
+          "title": "dbt Documentation & Introduction",
+          "description": "Official guides covering SQL transformations, lineage graphs, and tests.",
+          "url": "https://docs.getdbt.com/docs/introduction",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "Analytics & Data Engineering Path",
+          "description": "Discover where dbt sits cleanly inside modern ELT stacks.",
+          "url": "https://roadmap.sh/data-engineer",
+          "cost": "Free"
+        }
+      ]
+    },
+    "iOS": {
+      "platform": "Apple Developer / Swift.org Docs",
+      "url": "https://developer.apple.com/tutorials/swiftui",
+      "topics": "UIKit/SwiftUI views, Auto Layout, URLSession networking, CoreData",
+      "project": "Build a native SwiftUI iOS catalog app backed by live JSON APIs",
+      "est_time": "4 weeks",
+      "resources": [
+        {
+          "platform": "Apple Developer",
+          "title": "Apple SwiftUI & iOS App Tutorials",
+          "description": "Official step-by-step iOS tutorials teaching app layout, data flow, and navigation.",
+          "url": "https://developer.apple.com/tutorials/swiftui",
+          "cost": "Free"
+        },
+        {
+          "platform": "Swift.org Docs",
+          "title": "The Swift Programming Language",
+          "description": "Official Swift reference powering native iOS development.",
+          "url": "https://docs.swift.org/swift-book/",
+          "cost": "Free"
+        },
+        {
+          "platform": "roadmap.sh",
+          "title": "iOS Developer Roadmap",
+          "description": "Interactive guide across Swift, Xcode, persistence, and App Store release.",
+          "url": "https://roadmap.sh/ios",
+          "cost": "Free"
+        }
+      ]
+    },
+    "jQuery": {
+      "platform": "freeCodeCamp / MDN Web Docs",
+      "url": "https://www.freecodecamp.org/learn/front-end-development-libraries/",
+      "topics": "DOM selectors, event handling, AJAX requests, legacy code maintenance",
+      "project": "Build dynamic form filtering and live search on an existing HTML page",
+      "est_time": "1 week",
+      "resources": [
+        {
+          "platform": "freeCodeCamp",
+          "title": "Front End Development Libraries (jQuery Section)",
+          "description": "Short interactive challenges covering DOM queries and event handlers.",
+          "url": "https://www.freecodecamp.org/learn/front-end-development-libraries/",
+          "cost": "Free"
+        },
+        {
+          "platform": "MDN Web Docs",
+          "title": "Modern JavaScript DOM Essentials",
+          "description": "Understand native DOM APIs alongside maintaining legacy jQuery apps.",
+          "url": "https://developer.mozilla.org/en-US/docs/Learn/JavaScript",
+          "cost": "Free"
+        }
+      ]
+    }
+  }
+}

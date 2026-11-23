@@ -1,0 +1,861 @@
+{% extends "base.html" %}
+
+{% block title %}Career Analysis &amp; Skill Gap - {{ analysis.filename }} - AI Resume Analyzer{% endblock %}
+
+{% block content %}
+<div class="row g-4">
+  <!-- Top Bar / Action Buttons -->
+  <div class="col-12 d-flex justify-content-between align-items-center flex-wrap gap-3">
+    <div>
+      <div class="d-flex align-items-center gap-2 mb-1">
+        <span class="badge bg-primary-subtle text-primary border border-primary-subtle rounded-pill">Analysis #{{ analysis.id }}</span>
+        <span class="text-muted small"><i class="bi bi-calendar3 me-1"></i>{{ analysis.created_at }}</span>
+      </div>
+      <h1 class="h3 fw-bold mb-0 text-dark d-flex align-items-center gap-2">
+        <i class="bi bi-file-earmark-pdf-fill text-danger"></i>
+        <span>{{ analysis.filename }}</span>
+      </h1>
+    </div>
+    <div class="d-flex gap-2 no-print flex-wrap">
+      <button type="button" onclick="window.print()" class="btn btn-outline-secondary" title="Print a clean 1-2 page summary report">
+        <i class="bi bi-printer me-1"></i> Print Report
+      </button>
+      <a href="{{ url_for('dashboard', analysis_id=analysis.id) }}" class="btn btn-primary shadow-sm">
+        <i class="bi bi-speedometer2 me-1"></i> Interactive Visual Dashboard
+      </a>
+      <a href="{{ url_for('index') }}" class="btn btn-outline-secondary">
+        <i class="bi bi-arrow-up-circle me-1"></i> Upload Another Resume
+      </a>
+    </div>
+  </div>
+
+  {% set top_role = analysis.results.top_roles[0] if analysis.results.top_roles else none %}
+  {% set target = analysis.results.target_role or top_role %}
+  {% set has_explicit_target = analysis.target_role and analysis.target_role != 'Best fit across all roles' and target %}
+  {% set hero_role = target if has_explicit_target else top_role %}
+
+  <!-- =========================================================================
+       SECTION 1: TARGET CAREER-READINESS (OR BEST AUTOMATIC MATCH IN AUTO MODE)
+       ========================================================================= -->
+  {% if hero_role %}
+  <div class="col-12">
+    <div class="hero-match-card p-4 p-md-5 text-white">
+      <div class="row align-items-center g-4 position-relative" style="z-index: 2;">
+        <div class="col-lg-8">
+          <div class="d-flex align-items-center gap-2 mb-3 flex-wrap">
+            {% if has_explicit_target %}
+              {% if hero_role.evaluation_scope == 'specific_job' %}
+                <span class="badge bg-primary px-3 py-1 rounded-pill fw-semibold">
+                  <i class="bi bi-bullseye me-1"></i> Selected Job Comparison
+                </span>
+                {% if hero_role.job_id %}
+                  <span class="badge bg-white bg-opacity-15 text-white border border-white border-opacity-25">{{ hero_role.job_id }}</span>
+                {% endif %}
+              {% else %}
+                <span class="badge bg-success px-3 py-1 rounded-pill fw-semibold">
+                  <i class="bi bi-compass me-1"></i> Target Career-Readiness Evaluation
+                </span>
+                <span class="badge bg-white bg-opacity-15 text-white border border-white border-opacity-25">
+                  Benchmark across {{ hero_role.posting_count or 7 }} Kaggle postings
+                </span>
+              {% endif %}
+            {% else %}
+              <span class="badge bg-primary px-3 py-1 rounded-pill fw-semibold">
+                <i class="bi bi-stars me-1"></i> Best Immediate Match
+              </span>
+            {% endif %}
+            <span class="tier-badge {{ 'tier-strong' if hero_role.skill_score >= 80 else ('tier-moderate' if hero_role.skill_score >= 50 else 'tier-growth') }}">
+              {{ hero_role.tier }}
+            </span>
+            {% if hero_role.experience_level and hero_role.evaluation_scope != 'role_benchmark' %}
+              <span class="badge bg-white bg-opacity-10 text-white border border-white border-opacity-15">{{ hero_role.experience_level }}</span>
+            {% endif %}
+          </div>
+          <h2 class="display-6 fw-bold mb-2 text-white">{{ hero_role.title }}</h2>
+          <p class="text-white-50 mb-4 fs-6" style="max-width: 670px;">
+            {% if has_explicit_target %}
+              Evaluating your current preparation against <strong class="text-white">{{ hero_role.title }}</strong> career requirements:
+              you currently satisfy <strong class="text-white">{{ hero_role.matched|length }}</strong> required competencies and need to build
+              <strong class="text-white">{{ hero_role.missing|length }}</strong> missing skill{{ '' if hero_role.missing|length == 1 else 's' }} to become job-ready.
+            {% else %}
+              Based on the technical skills detected in your resume, you currently satisfy
+              <strong class="text-white">{{ hero_role.matched|length }}</strong> required competencies for this position.
+              You can apply directly to live market listings below.
+            {% endif %}
+          </p>
+
+          <!-- Action Links for Hero Role -->
+          <div class="d-flex flex-wrap gap-2 no-print">
+            {% if has_explicit_target %}
+              <a href="#dream-job-gap-analysis" class="btn btn-sm btn-light fw-semibold text-primary">
+                <i class="bi bi-list-check me-1"></i> Missing Skills &amp; Explanations
+              </a>
+              <a href="#career-roadmap-section" class="btn btn-sm btn-outline-light fw-semibold">
+                <i class="bi bi-signpost-split me-1"></i> Preparation Roadmap
+              </a>
+              <a href="{{ url_for('roles_explorer', role_slug=hero_role.slug, analysis_id=analysis.id) if hero_role.slug else url_for('roles_explorer', role=hero_role.title, analysis_id=analysis.id) }}" class="btn btn-sm btn-outline-light fw-semibold">
+                <i class="bi bi-map me-1"></i> Full Role Guide
+              </a>
+              <a href="{{ url_for('dashboard', analysis_id=analysis.id) }}" class="btn btn-sm btn-outline-light fw-semibold">
+                <i class="bi bi-graph-up me-1"></i> Analytics Dashboard
+              </a>
+            {% else %}
+              <a href="https://www.linkedin.com/jobs/search/?keywords={{ hero_role.title|urlencode }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-light fw-semibold text-primary">
+                <i class="bi bi-linkedin me-1"></i> Search on LinkedIn
+              </a>
+              <a href="https://www.indeed.com/jobs?q={{ hero_role.title|urlencode }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-light fw-semibold text-primary">
+                <i class="bi bi-briefcase me-1"></i> Search on Indeed
+              </a>
+              <a href="https://www.google.com/search?q={{ (hero_role.title ~ ' jobs')|urlencode }}&ibp=htl;jobs" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-light fw-semibold text-primary">
+                <i class="bi bi-google me-1"></i> Search on Google Jobs
+              </a>
+              <a href="#dream-job-gap-analysis" class="btn btn-sm btn-outline-light fw-semibold ms-md-2">
+                <i class="bi bi-arrow-down-circle me-1"></i> View Skill Gap &amp; Roadmap
+              </a>
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="col-lg-4 text-lg-end">
+          <div class="stat-metric-pill d-inline-block text-center text-lg-end">
+            <div class="text-white-50 small fw-bold text-uppercase mb-1" style="letter-spacing: 0.05em;">Headline Skill Match</div>
+            <div class="display-5 fw-bold text-emerald" style="color: #34d399;">{{ "%.1f"|format(hero_role.skill_score) }}%</div>
+            {% if has_explicit_target and hero_role.career_roadmap %}
+              <div class="mt-2 small text-white fw-semibold">
+                <i class="bi bi-signpost-split text-warning me-1"></i>Roadmap Readiness: {{ hero_role.career_roadmap.readiness_pct }}%
+                ({{ hero_role.career_roadmap.known_skills_count }}/{{ hero_role.career_roadmap.total_skills }})
+              </div>
+            {% endif %}
+            <div class="mt-1 text-white-50 small">
+              <span class="context-score-tag" data-bs-toggle="tooltip" data-bs-placement="top" title="Context similarity is a semantic text-similarity score measuring lexical overlap with job descriptions, not a hiring probability.">
+                <i class="bi bi-info-circle me-1"></i>Context similarity: {{ "%.1f"|format(hero_role.text_score) }}%
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- =========================================================================
+       COLUMN 1: EXTRACTED RESUME SKILLS (GROUPED BY DOMAIN)
+       ========================================================================= -->
+  <div class="col-lg-4">
+    <!-- Extracted Skills Card -->
+    <div class="card p-4 border-0 card-elevated mb-4">
+      <div class="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom">
+        <div>
+          <h5 class="fw-bold mb-0 fs-6">
+            <i class="bi bi-cpu text-primary me-2"></i>Skills Found in Your Resume
+          </h5>
+          <span class="text-muted small">Extracted via NLP entity normalization</span>
+        </div>
+        <span class="badge bg-primary-subtle text-primary border border-primary-subtle rounded-pill fs-6 px-3">
+          {{ analysis.detected_skills|length }}
+        </span>
+      </div>
+
+      {% if analysis.results.skills_by_category %}
+        {% for cat_name, skill_list in analysis.results.skills_by_category.items() %}
+          <div class="mb-3">
+            <div class="small fw-bold text-muted text-uppercase mb-1" style="font-size: 0.73rem; letter-spacing: 0.05em;">
+              {{ cat_name }} ({{ skill_list|length }})
+            </div>
+            <div class="d-flex flex-wrap gap-1">
+              {% for sk in skill_list %}
+                <span class="badge-skill">
+                  <i class="bi bi-check-circle-fill text-success small"></i> {{ sk }}
+                </span>
+              {% endfor %}
+            </div>
+          </div>
+        {% endfor %}
+      {% elif analysis.detected_skills %}
+        <div class="d-flex flex-wrap gap-1">
+          {% for skill in analysis.detected_skills %}
+            <span class="badge-skill">
+              <i class="bi bi-check-circle-fill text-success small"></i> {{ skill }}
+            </span>
+          {% endfor %}
+        </div>
+      {% else %}
+        <p class="text-muted small mb-0">No technical skills detected in database lookup.</p>
+      {% endif %}
+    </div>
+
+    <!-- Education & Detected Sections -->
+    <div class="card p-4 border-0 card-elevated">
+      <h5 class="fw-bold mb-3 pb-2 border-bottom fs-6">
+        <i class="bi bi-mortarboard text-primary me-2"></i>Academic &amp; Structure
+      </h5>
+      
+      <div class="mb-3">
+        <div class="small fw-bold text-muted text-uppercase mb-2" style="font-size: 0.73rem; letter-spacing: 0.05em;">Education Keywords</div>
+        {% if analysis.results.education %}
+          <div class="d-flex flex-wrap gap-1">
+            {% for edu in analysis.results.education %}
+              <span class="badge bg-light text-dark border"><i class="bi bi-award me-1 text-primary"></i>{{ edu }}</span>
+            {% endfor %}
+          </div>
+        {% else %}
+          <p class="text-muted small mb-0">No degree keywords identified.</p>
+        {% endif %}
+      </div>
+
+      <div class="mb-3">
+        <div class="small fw-bold text-muted text-uppercase mb-2" style="font-size: 0.73rem; letter-spacing: 0.05em;">Resume Sections Detected</div>
+        {% if analysis.results.sections %}
+          <div class="d-flex flex-wrap gap-1">
+            {% for sec in analysis.results.sections.keys() %}
+              <span class="badge bg-secondary-subtle text-secondary border">
+                <i class="bi bi-card-heading me-1"></i>{{ sec|capitalize }}
+              </span>
+            {% endfor %}
+          </div>
+        {% else %}
+          <p class="text-muted small mb-0">Standard section headers not recognized.</p>
+        {% endif %}
+      </div>
+
+      {% if analysis.results.target_role and analysis.results.target_role.soft_skills %}
+      <div>
+        <div class="small fw-bold text-muted text-uppercase mb-2" style="font-size: 0.73rem; letter-spacing: 0.05em;">Soft Skills Detected</div>
+        <div class="d-flex flex-wrap gap-1">
+          {% for ss in analysis.results.target_role.soft_skills %}
+            <span class="badge bg-info-subtle text-info-emphasis border border-info-subtle">
+              <i class="bi bi-people me-1"></i>{{ ss }}
+            </span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+    </div>
+
+    {% if has_explicit_target and target.qualification_check %}
+    <!-- Qualifications & Soft Skills Benchmark Check -->
+    {% set qc = target.qualification_check %}
+    <div class="card p-4 border-0 card-elevated mt-4">
+      <div class="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom">
+        <h5 class="fw-bold mb-0 fs-6">
+          <i class="bi bi-clipboard2-check text-success me-2"></i>Qualifications &amp; Fit Check
+        </h5>
+        <span class="badge {{ 'bg-success-subtle text-success' if qc.education_aligned else 'bg-warning-subtle text-warning-emphasis' }} border small">
+          {{ 'Degree Aligned' if qc.education_aligned else 'Check Degree' }}
+        </span>
+      </div>
+
+      <div class="mb-3">
+        <div class="small fw-bold text-muted text-uppercase mb-1" style="font-size: 0.72rem;">Expected Education</div>
+        <div class="small text-dark fw-semibold mb-1">{{ qc.expected_education }}</div>
+        <div class="small {{ 'text-success' if qc.education_aligned else 'text-secondary' }}">
+          <i class="bi {{ 'bi-check-circle-fill' if qc.education_aligned else 'bi-info-circle' }} me-1"></i>{{ qc.education_status }}
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="small fw-bold text-muted text-uppercase mb-1" style="font-size: 0.72rem;">General Expectations</div>
+        <div class="small text-secondary mb-1">
+          <i class="bi bi-briefcase text-primary me-1"></i>{{ qc.typical_experience }}
+        </div>
+        {% if qc.salary_benchmark %}
+          <div class="small text-secondary mb-2">
+            <i class="bi bi-cash-stack text-success me-1"></i>{{ qc.salary_benchmark }}
+          </div>
+        {% endif %}
+        {% if qc.expectations %}
+          <ul class="small text-secondary ps-3 mb-0">
+            {% for exp in qc.expectations %}
+              <li>{{ exp }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+
+      <div class="mb-3">
+        <div class="small fw-bold text-muted text-uppercase mb-2" style="font-size: 0.72rem;">Soft Skills for {{ target.title }}</div>
+        <div class="d-flex flex-wrap gap-1">
+          {% for sm in qc.soft_matched %}
+            <span class="badge-matched" style="font-size: 0.72rem;"><i class="bi bi-check-circle-fill me-1"></i>{{ sm }}</span>
+          {% endfor %}
+          {% for smiss in qc.soft_missing %}
+            <span class="badge bg-light text-secondary border" style="font-size: 0.72rem;"><i class="bi bi-plus-circle me-1"></i>{{ smiss }}</span>
+          {% endfor %}
+        </div>
+      </div>
+
+      {% if qc.helpful_certifications %}
+      <div>
+        <div class="small fw-bold text-muted text-uppercase mb-1" style="font-size: 0.72rem;">Helpful Certifications</div>
+        <ul class="small text-secondary ps-3 mb-0">
+          {% for cert in qc.helpful_certifications %}
+            <li>{{ cert }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+    </div>
+    {% endif %}
+  </div>
+
+  <!-- =========================================================================
+       COLUMN 2: TARGET ROLE READINESS PROFILE OR AUTOMATIC TOP 5 JOB MATCHES
+       ========================================================================= -->
+  <div class="col-lg-8">
+    {% if has_explicit_target %}
+    <div class="card p-4 p-md-5 border-0 card-elevated mb-4">
+      <div class="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom flex-wrap gap-2">
+        <div>
+          <span class="badge bg-success-subtle text-success border border-success-subtle mb-1">
+            Target Role Career-Readiness &middot; Role Exploration
+          </span>
+          <h4 class="fw-bold mb-1 fs-5">
+            <i class="bi bi-compass text-success me-2"></i>Preparing for {{ target.title }}
+          </h4>
+          <p class="text-muted small mb-0">
+            Independent readiness benchmark evaluating what <strong>{{ target.title }}</strong> professionals do, required technologies, and your current skill coverage.
+          </p>
+        </div>
+        <a href="{{ url_for('dashboard', analysis_id=analysis.id) }}" class="btn btn-sm btn-outline-primary no-print">
+          <i class="bi bi-graph-up me-1"></i> Interactive Analytics
+        </a>
+      </div>
+
+      <!-- Core Skill Coverage Progress Box -->
+      <div class="p-3 rounded-3 border bg-light mb-4">
+        <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap gap-2">
+          <span class="fw-bold text-dark small">
+            Required Skill Coverage for {{ target.title }}
+          </span>
+          <span class="fw-bold text-primary">
+            {{ "%.1f"|format(target.skill_score) }}% ({{ target.matched|length }}/{{ (target.matched|length) + (target.missing|length) }} Core Skills)
+          </span>
+        </div>
+        <div class="progress mb-2" style="height: 10px;">
+          <div class="progress-bar {{ 'bg-success' if target.skill_score >= 80 else ('bg-primary' if target.skill_score >= 50 else 'bg-warning') }}" role="progressbar" style="width: {{ target.skill_score }}%;"></div>
+        </div>
+        <div class="d-flex justify-content-between small text-muted flex-wrap gap-2">
+          <span><i class="bi bi-check2-circle text-success me-1"></i>Satisfied: <strong>{{ target.matched|length }}</strong></span>
+          <span><i class="bi bi-exclamation-circle text-danger me-1"></i>Missing to Learn: <strong>{{ target.missing|length }}</strong></span>
+          {% if target.career_roadmap %}
+            <span><i class="bi bi-signpost-split text-primary me-1"></i>Roadmap Completion: <strong>{{ target.career_roadmap.readiness_pct }}%</strong></span>
+          {% endif %}
+        </div>
+      </div>
+
+      {% if target.role_info %}
+        {% set ri = target.role_info %}
+        <!-- Beginner Explanation & What They Actually Do -->
+        <div class="mb-4">
+          <h6 class="fw-bold text-dark mb-2">
+            <i class="bi bi-lightbulb text-warning me-2"></i>What Professionals Actually Do in This Role
+          </h6>
+          <p class="small text-dark fw-semibold mb-2">{{ ri.beginner_summary }}</p>
+          <p class="small text-secondary mb-0">{{ ri.what_they_do }}</p>
+        </div>
+
+        <div class="row g-3 mb-4">
+          {% if ri.day_to_day_responsibilities %}
+          <div class="col-md-6">
+            <div class="p-3 rounded-3 border bg-white h-100">
+              <div class="small fw-bold text-uppercase text-muted mb-2" style="font-size: 0.72rem;">
+                <i class="bi bi-list-task text-primary me-1"></i>Day-to-Day Activities &amp; Responsibilities
+              </div>
+              <ul class="small text-secondary ps-3 mb-0">
+                {% for resp in ri.day_to_day_responsibilities %}
+                  <li class="mb-1">{{ resp }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          {% endif %}
+
+          {% if ri.career_growth %}
+          <div class="col-md-6">
+            <div class="p-3 rounded-3 border bg-white h-100">
+              <div class="small fw-bold text-uppercase text-muted mb-2" style="font-size: 0.72rem;">
+                <i class="bi bi-graph-up-arrow text-success me-1"></i>Career Growth Progression
+              </div>
+              <ul class="small text-secondary ps-3 mb-0">
+                {% for step in ri.career_growth %}
+                  <li class="mb-1">{{ step }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+
+        {% if ri.technical_skills and ri.technical_skills.languages_frameworks_tools %}
+        {% set lft = ri.technical_skills.languages_frameworks_tools %}
+        {% set detected_lower = analysis.detected_skills|map('lower')|list %}
+        <div>
+          <h6 class="fw-bold text-dark mb-2">
+            <i class="bi bi-tools text-primary me-2"></i>Common Technologies, Frameworks &amp; Tools
+            <span class="text-muted fw-normal small">(Green = detected in your resume)</span>
+          </h6>
+          <div class="row g-2">
+            {% for group_label, group_items in [
+              ('Programming Languages', lft.languages),
+              ('Frameworks & Libraries', lft.frameworks_libraries),
+              ('Databases & Storage', lft.databases_data),
+              ('Tools & Platforms', lft.tools_platforms)
+            ] %}
+              {% if group_items %}
+              <div class="col-sm-6">
+                <div class="p-2 px-3 rounded-3 border bg-light h-100">
+                  <div class="small fw-bold text-muted mb-1" style="font-size: 0.73rem;">{{ group_label }}</div>
+                  <div class="d-flex flex-wrap gap-1">
+                    {% for tech in group_items %}
+                      {% if tech|lower in detected_lower %}
+                        <span class="badge-matched" style="font-size: 0.73rem;"><i class="bi bi-check2 me-1"></i>{{ tech }}</span>
+                      {% else %}
+                        <span class="badge bg-white text-dark border" style="font-size: 0.73rem;">{{ tech }}</span>
+                      {% endif %}
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+      {% endif %}
+    </div>
+    {% else %}
+    <div class="card p-4 p-md-5 border-0 card-elevated mb-4">
+      <div class="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom flex-wrap gap-2">
+        <div>
+          <span class="badge bg-primary-subtle text-primary border border-primary-subtle mb-1">Feature 1 &middot; Career Fit Explorer</span>
+          <h4 class="fw-bold mb-1 fs-5">
+            <i class="bi bi-briefcase-fill text-primary me-2"></i>Top 5 Role Matches
+          </h4>
+          <p class="text-muted small mb-0">
+            Ranked options for roles you can apply for right now with the skills currently in your resume.
+          </p>
+        </div>
+        <a href="{{ url_for('dashboard', analysis_id=analysis.id) }}" class="btn btn-sm btn-outline-primary no-print">
+          <i class="bi bi-graph-up me-1"></i> View Visual Analytics
+        </a>
+      </div>
+
+      <div class="d-flex flex-column gap-3">
+        {% for role in analysis.results.top_roles %}
+          <div class="border rounded-3 p-4 bg-white card-hover">
+            <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-2">
+              <div>
+                <span class="text-muted small fw-semibold me-2">#{{ loop.index }}</span>
+                <span class="h5 fw-bold text-dark me-2 mb-0">{{ role.title }}</span>
+                <span class="tier-badge {{ 'tier-strong' if role.skill_score >= 80 else ('tier-moderate' if role.skill_score >= 50 else 'tier-growth') }}">
+                  {{ role.tier }}
+                </span>
+                {% if role.experience_level %}
+                  <span class="badge bg-light text-secondary border small ms-1">{{ role.experience_level }}</span>
+                {% endif %}
+              </div>
+              <div class="text-end">
+                <span class="fw-bold text-primary fs-5">{{ "%.1f"|format(role.skill_score) }}%</span>
+                <span class="text-muted small d-block">
+                  <span class="context-score-tag" data-bs-toggle="tooltip" title="Context similarity score based on TF-IDF textual overlap.">
+                    Context: {{ "%.1f"|format(role.text_score) }}%
+                  </span>
+                </span>
+              </div>
+            </div>
+
+            <!-- Progress bar -->
+            <div class="progress mb-3" style="height: 6px;">
+              <div class="progress-bar" role="progressbar" style="width: {{ role.skill_score }}%;"></div>
+            </div>
+
+            <!-- Matched Skills -->
+            <div class="mb-2">
+              <span class="small fw-bold text-success me-2">
+                <i class="bi bi-check2-circle me-1"></i>Skills You Have ({{ role.matched|length }}):
+              </span>
+              {% if role.matched %}
+                {% for m in role.matched %}
+                  <span class="badge-matched">{{ m }}</span>
+                {% endfor %}
+              {% else %}
+                <span class="text-muted small">None</span>
+              {% endif %}
+            </div>
+
+            <!-- Missing Skills -->
+            <div class="mb-3">
+              <span class="small fw-bold text-danger me-2">
+                <i class="bi bi-x-circle me-1"></i>Missing Skills ({{ role.missing|length }}):
+              </span>
+              {% if role.missing %}
+                {% for miss in role.missing %}
+                  <span class="badge-missing">{{ miss }}</span>
+                {% endfor %}
+              {% else %}
+                <span class="badge bg-success-subtle text-success border border-success-subtle small">100% Core Requirements Satisfied!</span>
+              {% endif %}
+            </div>
+
+            <!-- Actions: Direct Live Job Search & Learning Bridge -->
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 pt-3 border-top no-print">
+              <!-- Live Search Links to Apply -->
+              <div class="d-flex flex-wrap gap-1 align-items-center">
+                <span class="text-muted small me-1">Apply via search:</span>
+                <a href="https://www.linkedin.com/jobs/search/?keywords={{ role.title|urlencode }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary" style="font-size: 0.78rem;">
+                  <i class="bi bi-linkedin me-1"></i> LinkedIn
+                </a>
+                <a href="https://www.indeed.com/jobs?q={{ role.title|urlencode }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary" style="font-size: 0.78rem;">
+                  <i class="bi bi-briefcase me-1"></i> Indeed
+                </a>
+                <a href="https://www.google.com/search?q={{ (role.title ~ ' jobs')|urlencode }}&ibp=htl;jobs" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary" style="font-size: 0.78rem;">
+                  <i class="bi bi-google me-1"></i> Google Jobs
+                </a>
+              </div>
+
+              <!-- Button to select as dream role / view learning roadmap -->
+              <div class="d-flex flex-wrap gap-2">
+                <a href="{{ url_for('roles_explorer', role=role.title, analysis_id=analysis.id) }}" class="btn btn-sm btn-outline-secondary fw-semibold shadow-xs">
+                  <i class="bi bi-compass me-1"></i> Role Guide &amp; Roadmap
+                </a>
+                <a href="{{ url_for('dashboard', analysis_id=analysis.id) }}#roadmap" class="btn btn-sm btn-primary fw-semibold shadow-xs">
+                  <i class="bi bi-mortarboard-fill me-1"></i> View Learning Roadmap &rarr;
+                </a>
+              </div>
+            </div>
+
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+
+  <!-- =========================================================================
+       SECTION 3: SKILL GAP EXPLANATIONS, LEARNING PLATFORMS & STEP-BY-STEP ROADMAP
+       ========================================================================= -->
+  <div class="col-12" id="dream-job-gap-analysis">
+    <div class="card p-4 p-md-5 border-0 card-elevated" style="background: linear-gradient(180deg, #ffffff 0%, #fbfcfe 100%);">
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4 pb-3 border-bottom">
+        <div>
+          {% if has_explicit_target %}
+            <span class="badge bg-success-subtle text-success border border-success-subtle mb-1">
+              Target Career-Readiness &middot; Missing Skills &amp; Preparation Plan
+            </span>
+            <h3 class="h4 fw-bold text-dark mb-1">
+              <i class="bi bi-compass text-success me-2"></i>Career-Readiness Plan: {{ target.title }}
+            </h3>
+            <p class="text-muted small mb-0">
+              Detailed gap breakdown for <strong>{{ target.title }}</strong>: what each missing skill does, why it matters for this career, where to learn it, and your step-by-step preparation roadmap.
+            </p>
+          {% else %}
+            <span class="badge bg-emerald-subtle text-emerald-text border border-emerald-border mb-1" style="background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0;">
+              Feature 2 &middot; Dream Job Skill Gap &amp; Learning Roadmap
+            </span>
+            <h3 class="h4 fw-bold text-dark mb-1">
+              <i class="bi bi-compass text-primary me-2"></i>Target Role: {{ target.title }}
+            </h3>
+            <p class="text-muted small mb-0">
+              Comparing your resume skills against the benchmark qualifications for <strong>{{ target.title }}</strong>. Here are the exact missing skills and curated platforms where you can learn them.
+            </p>
+          {% endif %}
+        </div>
+
+        <div class="d-flex gap-2 align-items-center flex-wrap">
+          <a href="{{ url_for('roles_explorer', role_slug=target.slug, analysis_id=analysis.id) if target.slug else url_for('roles_explorer', role=target.title, analysis_id=analysis.id) }}" class="btn btn-primary fw-semibold">
+            <i class="bi bi-map me-1"></i> Explore Full Role Guide &amp; Roadmap
+          </a>
+          <a href="{{ url_for('dashboard', analysis_id=analysis.id) }}" class="btn btn-outline-primary fw-semibold">
+            <i class="bi bi-crosshair me-1"></i> Change Target Role in Dashboard
+          </a>
+        </div>
+      </div>
+
+      {% if target.role_info %}
+        <!-- Beginner Role Overview (Auto Mode) & Step-by-Step Career Preparation Roadmap -->
+        <div class="p-4 rounded-4 border bg-white mb-4 shadow-xs" id="career-roadmap-section">
+          <div class="row g-4">
+            {% if not has_explicit_target %}
+            <div class="col-lg-6">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="badge bg-primary-subtle text-primary border border-primary-subtle">{{ target.role_info.category }}</span>
+                <span class="small fw-bold text-uppercase text-muted" style="letter-spacing: 0.04em;">Role Overview &amp; Expectations</span>
+              </div>
+              <p class="small text-dark fw-semibold mb-2">{{ target.role_info.beginner_summary }}</p>
+              <p class="small text-secondary mb-3">{{ target.role_info.what_they_do }}</p>
+
+              {% if target.role_info.day_to_day_responsibilities %}
+                <div class="small fw-bold text-muted text-uppercase mb-1" style="font-size: 0.72rem;">Key Day-to-Day Responsibilities</div>
+                <ul class="small text-secondary ps-3 mb-2">
+                  {% for resp in target.role_info.day_to_day_responsibilities[:3] %}
+                    <li>{{ resp }}</li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+
+              {% if target.role_info.qualifications %}
+                <div class="d-flex flex-wrap gap-2 mt-2 pt-2 border-top small text-muted">
+                  <span><i class="bi bi-briefcase me-1 text-primary"></i>{{ target.role_info.qualifications.typical_experience }}</span>
+                  <span>&middot;</span>
+                  <span><i class="bi bi-cash-stack me-1 text-success"></i>{{ target.role_info.qualifications.salary_benchmark }}</span>
+                </div>
+              {% endif %}
+            </div>
+            {% endif %}
+
+            {% if target.career_roadmap and target.career_roadmap.stages %}
+              <div class="{{ 'col-12' if has_explicit_target else 'col-lg-6 border-start-lg' }}">
+                <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+                  <div>
+                    <span class="small fw-bold text-uppercase text-muted d-block" style="letter-spacing: 0.04em;">
+                      <i class="bi bi-signpost-split text-primary me-1"></i>Personalized Step-by-Step Career Preparation Roadmap
+                    </span>
+                    {% if target.career_roadmap.recommended_next_stage %}
+                      <span class="small text-primary fw-semibold">
+                        Recommended Next Focus: {{ target.career_roadmap.recommended_next_stage }}
+                      </span>
+                    {% endif %}
+                  </div>
+                  <span class="badge bg-success-subtle text-success border border-success-subtle px-3 py-2">
+                    {{ target.career_roadmap.readiness_pct }}% Ready ({{ target.career_roadmap.known_skills_count }}/{{ target.career_roadmap.total_skills }} Roadmap Skills)
+                  </span>
+                </div>
+                <div class="{{ 'row g-3' if has_explicit_target else 'd-flex flex-column gap-2' }}">
+                  {% for st in target.career_roadmap.stages %}
+                    <div class="{{ 'col-md-6' if has_explicit_target else '' }}">
+                      <div class="p-3 rounded-3 border bg-light h-100">
+                        <div class="d-flex justify-content-between align-items-start gap-2 mb-1">
+                          <span class="fw-bold text-dark small">Stage {{ st.stage }}: {{ st.title }}</span>
+                          <span class="badge {% if st.stage_status == 'Completed' %}bg-success-subtle text-success{% elif st.stage_status == 'In Progress' %}bg-primary-subtle text-primary{% else %}bg-white text-secondary border{% endif %}" style="font-size: 0.7rem;">
+                            {{ st.stage_status or 'Upcoming' }} &middot; {{ st.known_count }}/{{ st.total_count }}
+                          </span>
+                        </div>
+                        {% if has_explicit_target and st.description %}
+                          <p class="text-muted mb-2" style="font-size: 0.76rem; line-height: 1.35;">{{ st.description }}</p>
+                        {% endif %}
+                        <div class="d-flex flex-wrap gap-1 mb-1">
+                          {% for sk in st.skills %}
+                            {% if sk.status == 'known' %}
+                              <span class="badge-matched" style="font-size: 0.72rem;" title="{{ 'Matched via ' ~ sk.matched_via if sk.matched_via else 'Detected on your resume' }}">
+                                <i class="bi bi-check-circle-fill me-1"></i>{{ sk.name }}{% if sk.matched_via %} <small>(via {{ sk.matched_via }})</small>{% endif %}
+                              </span>
+                            {% else %}
+                              <span class="badge-missing" style="font-size: 0.72rem;" title="{{ sk.what_it_is or 'Missing skill to learn' }}">
+                                <i class="bi bi-mortarboard me-1"></i>{{ sk.name }}
+                              </span>
+                            {% endif %}
+                          {% endfor %}
+                        </div>
+                        {% if st.duration %}
+                          <div class="text-muted mt-1" style="font-size: 0.71rem;">
+                            <i class="bi bi-clock me-1"></i>Estimated stage duration: {{ st.duration }}
+                          </div>
+                        {% endif %}
+                      </div>
+                    </div>
+                  {% endfor %}
+                </div>
+                <div class="mt-3 text-end">
+                  <a href="{{ url_for('roles_explorer', role_slug=target.slug, analysis_id=analysis.id) if target.slug else url_for('roles_explorer', role=target.title, analysis_id=analysis.id) }}#career-roadmap" class="small fw-semibold text-primary text-decoration-none">
+                    Open Interactive Stage-by-Stage Career Roadmap &amp; Courses <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
+
+      <!-- Quick Summary Row: Matched vs Missing -->
+      <div class="row g-3 mb-4">
+        <div class="col-md-6">
+          <div class="p-3 rounded-3 border bg-white h-100">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <i class="bi bi-check-circle-fill text-success fs-5"></i>
+              <span class="fw-bold text-dark">Skills You Currently Possess</span>
+              <span class="badge bg-success-subtle text-success ms-auto">{{ target.matched|length }}</span>
+            </div>
+            <div class="d-flex flex-wrap gap-1">
+              {% if target.matched %}
+                {% for m in target.matched %}
+                  <span class="badge-matched">{{ m }}</span>
+                {% endfor %}
+              {% else %}
+                <span class="text-muted small">No overlapping skills found yet for {{ target.title }}.</span>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="p-3 rounded-3 border bg-white h-100">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <i class="bi bi-exclamation-triangle-fill text-danger fs-5"></i>
+              <span class="fw-bold text-dark">Missing Skills &amp; Knowledge Areas</span>
+              <span class="badge bg-danger-subtle text-danger ms-auto">{{ target.missing|length }}</span>
+            </div>
+            <div class="d-flex flex-wrap gap-1">
+              {% if target.missing %}
+                {% for miss in target.missing %}
+                  <span class="badge-missing">{{ miss }}</span>
+                {% endfor %}
+              {% else %}
+                <span class="badge bg-success-subtle text-success">Zero skill gap! You satisfy all core requirements.</span>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Curated Learning Roadmap for Missing Skills -->
+      {% if target.learning_checklist %}
+        <h5 class="fw-bold text-dark mb-1">
+          <i class="bi bi-book-half text-primary me-2"></i>Missing Skills Explained &amp; Where to Learn Them
+        </h5>
+        <p class="text-muted small mb-3">
+          Understand what each missing skill is, why <strong>{{ target.title }}</strong> roles expect it, and follow 2–3 verified courses or documentation guides below.
+        </p>
+
+        <div class="row g-3">
+          {% for item in target.learning_checklist %}
+            <div class="col-md-6">
+              <div class="card p-3 h-100 border bg-white shadow-xs card-hover">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <div>
+                    <h6 class="fw-bold text-dark mb-0 fs-6">{{ item.skill }}</h6>
+                    <span class="badge bg-light text-secondary border small">{{ item.category }}</span>
+                  </div>
+                  <span class="badge bg-secondary-subtle text-secondary small">
+                    <i class="bi bi-clock me-1"></i>{{ item.est_time or '1-2 weeks' }}
+                  </span>
+                </div>
+
+                {% if item.what_it_is or item.why_important %}
+                <div class="p-2 px-3 rounded-3 bg-light border-start border-3 border-primary mb-3" style="font-size: 0.8rem;">
+                  {% if item.what_it_is %}
+                    <div class="mb-1"><strong class="text-dark">What it is:</strong> <span class="text-secondary">{{ item.what_it_is }}</span></div>
+                  {% endif %}
+                  {% if item.why_important %}
+                    <div><strong class="text-primary">Why it matters for {{ target.title }}:</strong> <span class="text-secondary">{{ item.why_important }}</span></div>
+                  {% endif %}
+                </div>
+                {% endif %}
+
+                <!-- Recommended Learning Platforms (2-3 Verified Resources per Missing Skill) -->
+                <div class="mb-2">
+                  <div class="small text-muted fw-bold mb-2">
+                    <i class="bi bi-link-45deg text-primary"></i> Recommended Learning Resources ({{ item.resources|length if item.resources else 1 }}):
+                  </div>
+                  {% if item.resources %}
+                    <div class="d-flex flex-column gap-2">
+                      {% for res in item.resources %}
+                        <a href="{{ res.url }}" target="_blank" rel="noopener noreferrer"
+                           class="d-block p-2 rounded-3 bg-light border text-decoration-none resource-mini-card">
+                          <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="badge bg-primary-subtle text-primary small">{{ res.platform }}</span>
+                            <span class="badge {% if 'Free' in (res.cost or 'Free') %}bg-success-subtle text-success{% else %}bg-white text-secondary border{% endif %} small" style="font-size: 0.7rem;">
+                              {{ res.cost or 'Free' }}
+                            </span>
+                          </div>
+                          <div class="fw-semibold text-primary small lh-sm mb-1">
+                            {{ res.title }} <i class="bi bi-box-arrow-up-right ms-1" style="font-size: 0.72rem;"></i>
+                          </div>
+                          <div class="text-secondary" style="font-size: 0.76rem; line-height: 1.35;">
+                            {{ res.description }}
+                          </div>
+                        </a>
+                      {% endfor %}
+                    </div>
+                  {% else %}
+                    <div class="p-2 rounded bg-light">
+                      <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" class="fw-semibold text-primary text-decoration-none small d-inline-flex align-items-center gap-1">
+                        <span>{{ item.platform }}</span>
+                        <i class="bi bi-box-arrow-up-right small"></i>
+                      </a>
+                    </div>
+                  {% endif %}
+                </div>
+
+                <!-- Topics to Master -->
+                <div class="mb-2">
+                  <div class="small text-muted fw-semibold mb-1">Core Topics to Master:</div>
+                  <p class="small text-secondary mb-0 lh-sm">{{ item.topics }}</p>
+                </div>
+
+                <!-- Hands-on Project Idea -->
+                <div class="mt-auto pt-2 border-top">
+                  <div class="small text-success fw-bold mb-1">
+                    <i class="bi bi-laptop me-1"></i> Resume Project Idea:
+                  </div>
+                  <p class="small text-muted mb-0 fst-italic">{{ item.project }}</p>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      {% else %}
+        <div class="p-4 text-center rounded-3 bg-light text-success">
+          <i class="bi bi-trophy-fill fs-3 text-warning mb-2 d-block"></i>
+          <h6 class="fw-bold mb-1">No Skill Gaps Detected for {{ target.title }}!</h6>
+          <p class="small text-muted mb-0">Your profile meets 100% of the required competencies for this benchmark role.</p>
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+
+  {% if has_explicit_target and analysis.results.top_roles %}
+  <!-- Independent General Job Recommendation Mode (Collapsed by Default in Target Mode) -->
+  <div class="col-12 mt-2 no-print">
+    <div class="card p-4 border bg-light">
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <div>
+          <span class="badge bg-secondary-subtle text-secondary border mb-1">Independent Feature &middot; Automatic Matching</span>
+          <h5 class="fw-bold mb-0 fs-6 text-dark">Want to explore other roles your resume already qualifies for?</h5>
+          <p class="text-muted small mb-0">
+            Kept separate from your dedicated <strong>{{ target.title }}</strong> career-readiness evaluation above.
+          </p>
+        </div>
+        <button class="btn btn-sm btn-outline-secondary fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#independentTopRolesCollapse" aria-expanded="false" aria-controls="independentTopRolesCollapse">
+          <i class="bi bi-stars me-1"></i> View General Role Recommendations ({{ analysis.results.top_roles|length }})
+        </button>
+      </div>
+      <div class="collapse mt-3" id="independentTopRolesCollapse">
+        <div class="pt-3 border-top">
+          <h6 class="fw-bold text-dark mb-3">
+            <i class="bi bi-briefcase-fill text-primary me-2"></i>Top 5 Role Matches (Based on Your Current Resume)
+          </h6>
+          <div class="row g-2">
+            {% for role in analysis.results.top_roles %}
+            <div class="col-md-6">
+              <div class="p-3 rounded-3 border bg-white d-flex justify-content-between align-items-center gap-2">
+                <div>
+                  <span class="text-muted small fw-semibold me-1">#{{ loop.index }}</span>
+                  <span class="fw-bold text-dark">{{ role.title }}</span>
+                  <div class="small text-muted">
+                    {{ role.matched|length }} matched &middot; {{ role.missing|length }} missing
+                  </div>
+                </div>
+                <div class="text-end">
+                  <div class="fw-bold text-primary">{{ "%.1f"|format(role.skill_score) }}%</div>
+                  <a href="{{ url_for('roles_explorer', role=role.title, analysis_id=analysis.id) }}" class="small text-decoration-none">Role Guide &rarr;</a>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  // Initialize Bootstrap tooltips
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+</script>
+{% endblock %}

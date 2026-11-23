@@ -1,0 +1,122 @@
+Let's finalize the project description first, so we have a clear scope to follow throughout implementation. Then we'll continue building from the environment setup you already completed.
+
+# Final project description
+
+[Skywork Best Resume Writing Tool | AI-Powered Resume Builder](https://images.openai.com/static-rsc-4/0iyu_yV-bMAXgXDJ0kgjQACzCYkK0QYTdVjKKF9Ak0nIxw4W3CeooYka10vF3Xtef5x_qSSjFImStlBsvFkMBQWlhP_V6s9pW8p3PEX835lH-1k9CgvYDW08OaXWXEV2oHyHBQSGGqzGG4j89egHM11ofynq2O_D6lSZLVC697M?purpose=inline)
+
+[skywork.ai](https://skywork.ai/agent/en/skywork-resume-writing-tool-2011778631871311872?utm_source=chatgpt.com)
+
+# AI-Powered Resume Analyzer and Intelligent Job Recommendation System Using Natural Language Processing
+
+Artificial Intelligence
+
+Natural Language Processing
+
+Machine Learning
+
+Web Development
+
+Abstract / Project description
+
+The AI-Powered Resume Analyzer and Intelligent Job Recommendation System is a web-based application designed to help job seekers identify suitable job opportunities and improve their resumes. The system extracts text and technical skills from uploaded PDF resumes using natural language processing techniques. It compares the extracted information with job descriptions stored in a database using TF-IDF vectorization and cosine similarity to rank relevant job opportunities.
+
+The application also performs job-specific skill-gap analysis by identifying required skills that are present in the resume and skills that were not detected. It presents matching results, job details, and career improvement suggestions through an interactive dashboard. Users can access available application links and maintain a basic record of their job applications.
+
+The proposed system aims to simplify job discovery, provide understandable resume-to-job comparisons, and help candidates make informed decisions about improving their employability.
+
+## 1. Objectives
+
+- Extract text and identify technical skills from PDF resumes.
+- Recommend relevant job opportunities using NLP-based similarity matching.
+- Calculate and display resume-to-job similarity scores.
+- Identify skills detected in the resume and missing or undetected required skills.
+- Provide a web interface for viewing job descriptions, application links, and analysis results.
+- Evaluate the system using test resumes and labelled examples.
+
+## 2. Three modules
+
+| Module | Title                                        | Main responsibility                                                          |
+| ------ | -------------------------------------------- | ---------------------------------------------------------------------------- |
+| 1      | Resume Processing and Skill Extraction       | Upload PDF, extract text, identify skills                                    |
+| 2      | AI-Based Job Matching and Skill-Gap Analysis | Rank jobs, calculate similarity, identify missing skills                     |
+| 3      | Web Application and Career Dashboard         | Display results, manage job listings, provide application links and tracking |
+
+## 3. Technology stack
+
+| Component       | Technology                              |
+| --------------- | --------------------------------------- |
+| Frontend        | HTML, CSS, JavaScript, Bootstrap        |
+| Backend         | Python Flask                            |
+| AI/NLP          | scikit-learn, TF-IDF, cosine similarity |
+| PDF processing  | PyMuPDF                                 |
+| Data processing | Pandas                                  |
+| Database        | SQLite                                  |
+| Charts          | Chart.js                                |
+| Development     | VS Code, Python virtual environment     |
+
+## 4. Project scope
+
+Included in the first version: PDF resume upload, skill extraction, stored job listings, AI-based job recommendations, job-specific skill-gap analysis, a results dashboard, external application links where verified, and basic application tracking.
+
+Future upgrades: Recruiter accounts, recruiter job-posting dashboards, live job-data integrations, and more advanced personalized career recommendations.
+
+The similarity score will indicate textual relevance, not the probability of getting hired. Likewise, a skill missing from the extracted text may still be a skill the candidate possesses.
+
+# Now let's begin implementation
+
+You've already installed the necessary Python libraries and created the project folder and virtual environment. So we don't need to repeat those steps.
+
+Our first implementation task is to build and test the resume-processing module independently.
+
+## Step 1 — Create the project structure
+
+Inside your existing `AI_Resume_Analyzer` folder in VS Code, create the following folders and files:
+
+AI_Resume_Analyzer/
+
+`data/`
+
+`modules/`
+
+`app.py`
+
+`requirements.txt`
+
+### Why are we creating these folders?
+
+- `data/` will hold our job-description dataset, which the AI will use to compare resumes against available jobs.
+- `modules/` will contain the separate Python components for resume processing, skill extraction, and job matching. Keeping them separate makes the application easier to maintain and upgrade.
+- `app.py` will eventually be the main Flask backend. It will receive requests from the website and connect the different modules.
+- `requirements.txt` will list the Python libraries required to run the project on another computer.
+
+We'll add the frontend files and database components when we reach those stages.
+
+## Step 2 — Create the first Python module
+
+Inside `modules/`, create a file named `resume_parser.py`.
+
+This module will extract readable text from an uploaded PDF using PyMuPDF. The extracted text will then be passed to our skill-extraction component and AI matching component.
+
+The flow will eventually be:
+
+Website upload form
+
+Candidate selects a PDF resume
+
+Flask backend — `app.py`
+
+Receives the uploaded file
+
+`modules/resume_parser.py`
+
+Extracts text from the PDF
+
+Next: Skill extraction and AI matching
+
+Identifies skills and compares job descriptions
+
+We will first make the parser work with a local PDF, then connect it to Flask. This way, we can test the core functionality before adding the website interface.
+
+Your task now: Create the `data` and `modules` folders, along with `app.py` and `requirements.txt`. Then create `resume_parser.py` inside `modules`.
+
+Once you've created them, tell me, and we'll write the first working code for extracting text from a PDF.

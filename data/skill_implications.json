@@ -1,0 +1,23 @@
+{
+  "implications": {
+    "TypeScript": ["JavaScript"],
+    "PostgreSQL": ["SQL"],
+    "MySQL": ["SQL"],
+    "SQLite": ["SQL"],
+    "Microsoft SQL Server": ["SQL"],
+    "Oracle Database": ["SQL"],
+    "MariaDB": ["SQL"],
+    "Spring Boot": ["Java", "Spring Framework"],
+    "Django": ["Python"],
+    "Flask": ["Python"],
+    "FastAPI": ["Python"],
+    "React Native": ["React", "JavaScript"],
+    "Next.js": ["React", "JavaScript"],
+    "Nuxt.js": ["Vue.js", "JavaScript"],
+    "Express.js": ["Node.js", "JavaScript"],
+    "NestJS": ["Node.js", "TypeScript", "JavaScript"],
+    "PyTorch Lightning": ["PyTorch", "Python"],
+    "Keras": ["TensorFlow", "Python"],
+    "ASP.NET Core": [".NET Core"]
+  }
+}

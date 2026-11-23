@@ -1,0 +1,252 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard &amp; Roadmap - {{ analysis.filename }} - AI Resume Analyzer{% endblock %}
+
+{% block content %}
+<!-- Container with embedded JSON data for dashboard.js -->
+<div id="dashboard-data"
+     class="d-none"
+     data-analysis-id="{{ analysis.id }}"
+     data-initial-role="{{ analysis.target_role if analysis.target_role and analysis.target_role != 'Best fit across all roles' else (analysis.results.top_roles[0].title if analysis.results.top_roles else '') }}"
+     data-top-roles='{{ analysis.results.top_roles|tojson }}'
+     data-all-roles='{{ analysis.results.all_roles|tojson }}'
+     data-target-role='{{ (analysis.results.target_role or {})|tojson }}'
+     data-learning-resources='{{ learning_resources|tojson }}'>
+</div>
+
+<div class="row g-4">
+  <!-- Header & Navigation -->
+  <div class="col-12 d-flex justify-content-between align-items-center flex-wrap gap-3">
+    <div>
+      <div class="d-flex align-items-center gap-2 mb-1">
+        <span class="badge bg-primary-subtle text-primary border border-primary-subtle">Interactive Analytics</span>
+        <span class="text-muted small"><i class="bi bi-file-earmark-pdf-fill text-danger me-1"></i>{{ analysis.filename }}</span>
+      </div>
+      <h1 class="h3 fw-bold mb-0 text-dark">Skill Match Visuals &amp; Learning Roadmap</h1>
+    </div>
+    <div class="d-flex gap-2">
+      <a href="{{ url_for('results', analysis_id=analysis.id) }}" class="btn btn-outline-secondary">
+        <i class="bi bi-arrow-left me-1"></i> Back to Results
+      </a>
+      <a href="{{ url_for('index') }}" class="btn btn-outline-primary">
+        <i class="bi bi-cloud-arrow-up me-1"></i> New Upload
+      </a>
+    </div>
+  </div>
+
+  <!-- Role Switcher Bar -->
+  <div class="col-12">
+    <div class="card p-4 border-0 card-elevated bg-white">
+      <div class="row align-items-center g-3">
+        <div class="col-md-5">
+          <label for="role-switcher-select" class="form-label fw-bold mb-1 small text-uppercase text-muted" style="letter-spacing: 0.05em;">
+            <i class="bi bi-crosshair text-primary me-1"></i> Switch Evaluated Role (Instant Re-indexing)
+          </label>
+          <select id="role-switcher-select" class="form-select form-select-lg">
+            {% for r in analysis.results.all_roles %}
+              <option value="{{ r.title }}" {% if (analysis.target_role == r.title) or (not analysis.target_role and loop.first) %}selected{% endif %}>
+                {{ r.title }} ({{ "%.1f"|format(r.skill_score) }}% Match - {{ r.tier }})
+              </option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="col-md-7">
+          <div class="d-flex align-items-center justify-content-md-end gap-3 flex-wrap pt-2 pt-md-0">
+            <div>
+              <span class="text-muted small d-block">Selected Role</span>
+              <span class="h5 fw-bold text-dark mb-0" id="active-role-title">--</span>
+            </div>
+            <div class="vr d-none d-md-block opacity-25"></div>
+            <div>
+              <span class="text-muted small d-block">Skill Match</span>
+              <span class="h5 fw-bold text-success mb-0" id="active-role-skill-score">--%</span>
+            </div>
+            <div class="vr d-none d-md-block opacity-25"></div>
+            <div>
+              <span class="text-muted small d-block">Qualification Tier</span>
+              <span class="tier-badge" id="active-role-tier">--</span>
+            </div>
+            <div class="vr d-none d-md-block opacity-25"></div>
+            <div class="d-flex gap-2 flex-wrap">
+              <a href="{{ url_for('roles_explorer', analysis_id=analysis.id) }}" id="active-role-guide-btn" class="btn btn-sm btn-primary fw-semibold">
+                <i class="bi bi-map me-1"></i> Role Guide &amp; Roadmap
+              </a>
+              <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#activeRoleModal">
+                <i class="bi bi-eye me-1"></i> View Description
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- External Job Search Links for Active Role -->
+      <div class="search-links-box mt-3">
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-1 mb-2">
+          <span class="small fw-bold text-dark">
+            <i class="bi bi-box-arrow-up-right text-primary me-1"></i> Live External Job Searches for <span id="active-search-role-name">this role</span>:
+          </span>
+          <span class="text-muted small" style="font-size: 0.78rem;">Queries live job search engines</span>
+        </div>
+        <div class="d-flex flex-wrap gap-2">
+          <a href="#" id="search-linkedin-link" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
+            <i class="bi bi-linkedin me-1"></i> Search on LinkedIn
+          </a>
+          <a href="#" id="search-indeed-link" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
+            <i class="bi bi-briefcase me-1"></i> Search on Indeed
+          </a>
+          <a href="#" id="search-google-link" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
+            <i class="bi bi-google me-1"></i> Search on Google Jobs
+          </a>
+        </div>
+        <div class="text-muted small mt-1" style="font-size: 0.75rem;">
+          <i class="bi bi-info-circle me-1"></i> External query links to live market searches. These are not pre-verified listings.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Row 1: Visual Charts (Bar & Doughnut) -->
+  <div class="col-lg-8">
+    <div class="card p-4 border-0 card-elevated h-100">
+      <div class="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom">
+        <h5 class="fw-bold mb-0 fs-6">
+          <i class="bi bi-bar-chart-fill text-primary me-2"></i>Top 5 Role Competency Comparison
+        </h5>
+        <span class="badge bg-light text-muted border">Skill Match vs Context</span>
+      </div>
+      <div style="height: 320px; position: relative;">
+        <canvas id="rolesBarChart"></canvas>
+      </div>
+      <div class="text-muted small mt-2">
+        <i class="bi bi-info-circle me-1"></i>
+        Blue bars show technical skill requirement coverage. Grey bars denote TF-IDF lexical overlap across job postings.
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-4">
+    <div class="card p-4 border-0 card-elevated h-100">
+      <div class="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom">
+        <h5 class="fw-bold mb-0 fs-6">
+          <i class="bi bi-pie-chart-fill text-primary me-2"></i>Skill Breakdown
+        </h5>
+        <span class="badge bg-light text-muted border">Matched vs Missing</span>
+      </div>
+      <div style="height: 250px; position: relative;">
+        <canvas id="skillsDoughnutChart"></canvas>
+      </div>
+      <div class="mt-3 text-center">
+        <div class="small text-muted">Active role requirement distribution</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Row 2: Learning Roadmap & Priority Checklist -->
+  <div class="col-12" id="roadmap">
+    <div class="card p-4 p-md-5 border-0 card-elevated">
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4 pb-3 border-bottom">
+        <div>
+          <div class="d-flex align-items-center gap-2 mb-1">
+            <span class="badge bg-success-subtle text-success border border-success-subtle">Feature 2: Target Skill Bridge</span>
+            <span class="text-muted small">Where &amp; How to Learn Missing Skills</span>
+          </div>
+          <h4 class="fw-bold mb-1 fs-5">
+            <i class="bi bi-mortarboard-fill text-success me-2"></i>Actionable Learning &amp; Project Roadmap for <span id="active-roadmap-role-title">Selected Role</span>
+          </h4>
+          <p class="text-muted small mb-0">
+            Curated official documentation, tutorial links, key topics to master, and portfolio project suggestions for missing competencies. Check off skills as you learn them; progress is saved in your browser.
+          </p>
+        </div>
+        <div>
+          <span class="badge bg-success-subtle text-success border border-success-subtle px-3 py-2 fw-semibold fs-6" id="checklist-progress-text">
+            0 mastered
+          </span>
+        </div>
+      </div>
+
+      <div id="checklist-items-container">
+        <!-- Rendered dynamically by static/js/dashboard.js -->
+        <div class="text-center py-4">
+          <div class="spinner-border spinner-border-sm text-primary" role="status"></div>
+          <span class="text-muted small ms-2">Loading interactive checklist...</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Active Role Description Modal -->
+<div class="modal fade" id="activeRoleModal" tabindex="-1" aria-labelledby="activeRoleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div>
+          <div class="d-flex align-items-center gap-2 mb-1">
+            <span class="badge bg-secondary-subtle text-secondary border" id="active-modal-job-id">--</span>
+            <span class="badge bg-primary-subtle text-primary border border-primary-subtle" id="active-modal-category">--</span>
+            <span class="badge bg-light text-dark border" id="active-modal-exp">Entry-level</span>
+          </div>
+          <h5 class="modal-title fw-bold text-dark" id="activeRoleModalLabel">Role Details</h5>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-4">
+          <h6 class="fw-bold text-uppercase small text-muted mb-2">Job Description</h6>
+          <div class="p-3 bg-light rounded-3 text-secondary lh-base" id="active-modal-desc">
+            --
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <h6 class="fw-bold text-uppercase small text-muted mb-2">Matched Competencies</h6>
+          <div class="d-flex flex-wrap gap-1" id="active-modal-matched">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <h6 class="fw-bold text-uppercase small text-muted mb-2">Missing Priority Skills</h6>
+          <div class="d-flex flex-wrap gap-1" id="active-modal-missing">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+
+        <div class="search-links-box">
+          <div class="small fw-bold text-dark mb-2">
+            <i class="bi bi-box-arrow-up-right text-primary me-1"></i> Live External Job Searches:
+          </div>
+          <div class="d-flex flex-wrap gap-2">
+            <a href="#" id="modal-search-linkedin" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
+              <i class="bi bi-linkedin me-1"></i> Search on LinkedIn
+            </a>
+            <a href="#" id="modal-search-indeed" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
+              <i class="bi bi-briefcase me-1"></i> Search on Indeed
+            </a>
+            <a href="#" id="modal-search-google" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
+              <i class="bi bi-google me-1"></i> Search on Google Jobs
+            </a>
+          </div>
+          <div class="text-muted small mt-2" style="font-size: 0.78rem;">
+            <i class="bi bi-info-circle me-1"></i> External query links to live market searches. These are not pre-verified listings.
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <a href="{{ url_for('roles_explorer', analysis_id=analysis.id) }}" id="active-modal-guide-btn" class="btn btn-outline-primary fw-semibold">
+          <i class="bi bi-map me-1"></i> Explore Role &amp; Career Roadmap
+        </a>
+        <a href="{{ url_for('results', analysis_id=analysis.id) }}#dream-job-gap-analysis" class="btn btn-primary fw-semibold">
+          <i class="bi bi-mortarboard me-1"></i> View Detailed Roadmap
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+{% endblock %}
